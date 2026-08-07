@@ -1,0 +1,234 @@
+﻿Jay AMBE Industries ΓÇô Short Contact Page Planning Document 
+JAY AMBE INDUSTRIES 
+Contact Us Page ΓÇô Short Planning Document 
+Compact global B2B contact-page structure for React / AI-assisted development 
+Recommended direction 
+Keep the Contact Us page short. Its purpose is to help a buyer contact the correct AMBE team, share a useful 
+requirement and trust that the enquiry will be handled professionally. 
+ 
+Recommended length: 5 sections 
+ 
+
+---PAGE BREAK---
+Jay AMBE Industries ΓÇô Short Contact Page Planning Document 
+Contact Page Objective 
+The page should serve domestic buyers, international buyers, OEM partners and customers seeking custom 
+stainless-steel equipment. It should not look like a long marketing landing page. The form and contact details 
+should be visible quickly. 
+Visitor flow 
+Choose enquiry type ΓåÆ Share product or project details ΓåÆ Upload drawing if required ΓåÆ Submit ΓåÆ Receive 
+confirmation 
+ 
+1. Compact Contact Hero 
+Goal: Tell visitors what they can contact AMBE about and direct them immediately to the main action. 
+Layout: Use a medium-height two-column hero. Place the heading and short copy on the left and one real AMBE 
+factory or equipment image on the right. 
+Include 
+ΓÇó 
+Heading focused on product, project, OEM and export enquiries. 
+ΓÇó 
+One short sentence about dairy, process, institutional kitchen and custom stainless-steel equipment. 
+ΓÇó 
+A small trust line: manufacturing, custom engineering and export support. 
+Primary actions 
+ΓÇó 
+Request a Quote 
+ΓÇó 
+Contact Export Team 
+Avoid 
+ΓÇó 
+Full-screen hero. 
+ΓÇó 
+Stock call-centre photography. 
+ΓÇó 
+Long company introduction. 
+ 
+2. Main Enquiry Form 
+Goal: Collect enough information for AMBE to understand the buyerΓÇÖs requirement without making the form 
+difficult. 
+Layout: Use one clean two-column form on desktop and one column on mobile. Keep it near the top of the page. 
+Include 
+ΓÇó 
+Name and company. 
+ΓÇó 
+Business email and phone / WhatsApp with country code. 
+ΓÇó 
+Country. 
+ΓÇó 
+Enquiry type: product, custom project, export, OEM or distributor. 
+ΓÇó 
+Product or solution category. 
+ΓÇó 
+Required capacity, quantity or dimensions. 
+
+---PAGE BREAK---
+Jay AMBE Industries ΓÇô Short Contact Page Planning Document 
+ΓÇó 
+Requirement message. 
+ΓÇó 
+Drawing, specification or reference-file upload. 
+Primary actions 
+ΓÇó 
+Submit Requirement 
+Avoid 
+ΓÇó 
+Very long forms with many compulsory fields. 
+ΓÇó 
+A single message box without technical fields. 
+ΓÇó 
+Generic button text such as Submit or Inquire. 
+ 
+3. Direct Contact and Export Team 
+Goal: Give buyers a fast alternative to the form and make export support clearly visible. 
+Layout: Use one horizontal contact band or a simple two-column section: General Sales and Export Team. 
+Include 
+ΓÇó 
+Main sales phone and email. 
+ΓÇó 
+Export phone / WhatsApp and export email. 
+ΓÇó 
+Working days and hours. 
+ΓÇó 
+Clear international dialling format. 
+ΓÇó 
+Short export note covering documentation, packaging and international dispatch support. 
+Primary actions 
+ΓÇó 
+Call Sales Team 
+ΓÇó 
+Message on WhatsApp 
+ΓÇó 
+Email Export Team 
+Avoid 
+ΓÇó 
+Too many unlabeled phone numbers. 
+ΓÇó 
+Separate decorative cards for every contact method. 
+ΓÇó 
+Unverified response-time promises. 
+ 
+4. Factory Location 
+Goal: Show that AMBE is a real manufacturer and make factory visits and directions simple. 
+Layout: Use a two-column layout with the verified Google Map on one side and the factory address and visit 
+information on the other. 
+Include 
+ΓÇó 
+Manufacturing-unit address. 
+ΓÇó 
+Google Maps directions. 
+ΓÇó 
+Visit by appointment note. 
+
+---PAGE BREAK---
+Jay AMBE Industries ΓÇô Short Contact Page Planning Document 
+ΓÇó 
+One real exterior factory photograph. 
+ΓÇó 
+Nearest major city or transport connection only after confirmation. 
+Primary actions 
+ΓÇó 
+Get Directions 
+ΓÇó 
+Schedule a Factory Visit 
+Avoid 
+ΓÇó 
+Map without a written address. 
+ΓÇó 
+Incorrect map pin. 
+ΓÇó 
+Large map taking most of the page. 
+ 
+5. Trust Strip and Final CTA 
+Goal: Reassure the buyer at the final decision point and provide one last direct action. 
+Layout: Place a compact trust strip above a short final CTA. Keep the section visually strong but restrained. 
+Include 
+ΓÇó 
+Since 2006, after client confirmation. 
+ΓÇó 
+Food-grade SS304 / SS316. 
+ΓÇó 
+Custom and OEM manufacturing. 
+ΓÇó 
+Export-ready packaging. 
+ΓÇó 
+Company Profile and Product Catalogue downloads. 
+ΓÇó 
+Final line inviting the visitor to share a requirement or drawing. 
+Primary actions 
+ΓÇó 
+Request a Quote 
+ΓÇó 
+Download Company Profile 
+ΓÇó 
+Contact Export Team 
+Avoid 
+ΓÇó 
+Repeating a second form. 
+ΓÇó 
+Generic phrases such as LetΓÇÖs Build the Future. 
+ΓÇó 
+Unverified certificates or country counts. 
+ 
+Recommended Form Behaviour 
+ΓÇó 
+Show only relevant fields after the visitor selects the enquiry type. 
+ΓÇó 
+Allow PDF, JPG, PNG, DOCX and common drawing-file uploads based on the final backend capability. 
+ΓÇó 
+Preserve entered data if validation fails. 
+ΓÇó 
+Prevent duplicate submissions. 
+ΓÇó 
+Send an acknowledgement email and show an enquiry reference number. 
+ΓÇó 
+Route export enquiries separately from domestic enquiries. 
+
+---PAGE BREAK---
+Jay AMBE Industries ΓÇô Short Contact Page Planning Document 
+Suggested React Components 
+ΓÇó 
+ContactHero 
+ΓÇó 
+EnquiryForm 
+ΓÇó 
+SalesAndExportContacts 
+ΓÇó 
+FactoryLocation 
+ΓÇó 
+ContactTrustCTA 
+Mobile Rules 
+ΓÇó 
+Stack all two-column sections. 
+ΓÇó 
+Use large tap targets and visible labels. 
+ΓÇó 
+Make phone, WhatsApp, email and map actions directly clickable. 
+ΓÇó 
+Show selected file names and upload progress. 
+ΓÇó 
+Do not let sticky buttons cover form fields. 
+Client Information Required 
+ΓÇó 
+[ ] Verified company and factory address 
+ΓÇó 
+[ ] Correct Google Maps pin 
+ΓÇó 
+[ ] Sales phone and email 
+ΓÇó 
+[ ] Export phone / WhatsApp and email 
+ΓÇó 
+[ ] Working hours 
+ΓÇó 
+[ ] Company Profile PDF 
+ΓÇó 
+[ ] Product Catalogue PDF 
+ΓÇó 
+[ ] Real factory exterior image 
+ΓÇó 
+[ ] Privacy consent wording 
+Final design objective 
+A buyer should reach the form or correct contact option quickly, understand that AMBE is a real export-
+capable manufacturer and feel confident sharing a technical requirement. 
+ 
+
+---PAGE BREAK---

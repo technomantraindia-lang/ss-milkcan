@@ -1,0 +1,695 @@
+﻿Jay Ambe Industries - Export Page Planning 
+JAY AMBE INDUSTRIES 
+Export Page Planning Document 
+Section-by-Section Structure for React Website Development 
+Internal working document for content planning, UI design and AI-editor implementation 
+ 
+
+---PAGE BREAK---
+Jay Ambe Industries - Export Page Planning 
+Purpose of This Document 
+This document defines the complete layout and content direction for the dedicated Export page of the Jay 
+AMBE Industries React website. The page must build confidence among international buyers by proving 
+that AMBE understands export requirements, custom manufacturing, documentation, packaging, container 
+loading and long-term buyer support. 
+Primary Page Objective 
+An international buyer should finish the page with the confidence that Jay AMBE Industries is a serious 
+manufacturer capable of executing, packing, documenting and dispatching stainless-steel equipment for 
+global markets. 
+Export Page Conversion Journey 
+Understand Export Capability  ΓåÆ  Verify Manufacturing Strength  ΓåÆ  Review Documentation & 
+Packaging  ΓåÆ  See Global Proof  ΓåÆ  Contact Export Team 
+Recommended Page Structure: 10 Sections 
+No. 
+Section 
+Main Purpose 
+1 
+Export Hero 
+Position AMBE as an export-
+ready manufacturer 
+2 
+Immediate Export Trust Bar 
+Create instant buyer confidence 
+3 
+Export Capability Introduction 
+Explain what AMBE can supply 
+internationally 
+4 
+International Buyer Journey 
+Show the complete export 
+workflow 
+5 
+Documentation & Commercial 
+Support 
+Prove export process knowledge 
+6 
+Export Packaging & Container 
+Loading 
+Show protection, packing and 
+dispatch capability 
+7 
+OEM, Private Label & Distributor 
+Partnerships 
+Generate long-term international 
+opportunities 
+8 
+Global Presence & Export 
+Markets 
+Visualise confirmed international 
+reach 
+9 
+Export Projects & Case Studies 
+Provide real evidence of 
+completed work 
+10 
+Export Enquiry & Final CTA 
+Convert qualified buyers into 
+enquiries 
+1. Export Hero 
+Section goal 
+Immediately communicate that AMBE manufactures stainless-steel dairy, process and institutional 
+equipment for international markets. 
+Recommended layout 
+A wide but controlled hero banner, approximately 500-600 px high. Use a real photograph of packed 
+equipment, factory dispatch, container loading or finished stainless-steel machinery. Place concise content 
+on the left and retain clean negative space. 
+Suggested heading direction 
+Manufactured in India. Engineered for Global Markets. 
+
+---PAGE BREAK---
+Jay Ambe Industries - Export Page Planning 
+Content to include 
+ΓÇó 
+Clear export-focused company positioning 
+ΓÇó 
+Manufacturing since 2006 
+ΓÇó 
+Food-grade SS304 and SS316 capability 
+ΓÇó 
+Custom manufacturing and OEM support 
+ΓÇó 
+International supply and shipping support 
+ΓÇó 
+Short supporting statement explaining the main product areas 
+Required real photography / proof 
+ΓÇó 
+Real container-loading image 
+ΓÇó 
+Export-ready packed equipment 
+ΓÇó 
+Finished AMBE equipment inside the factory 
+Recommended calls to action 
+ΓÇó 
+Contact Export Team 
+ΓÇó 
+Download Export Catalogue 
+Avoid 
+ΓÇó 
+Generic world-trade stock image 
+ΓÇó 
+AI-generated factory or port image 
+ΓÇó 
+Rotating 3D globe 
+ΓÇó 
+Long marketing paragraph 
+Implementation notes for the AI editor 
+ΓÇó 
+Preserve large typography and white space 
+ΓÇó 
+Keep one primary and one secondary CTA 
+ΓÇó 
+Do not place many statistics inside the hero 
+2. Immediate Export Trust Bar 
+Section goal 
+Create buyer confidence within the first screen after the hero. 
+Recommended layout 
+Use one full-width horizontal band with six compact trust points separated by fine vertical dividers. Do not 
+use six floating rounded cards. 
+Suggested heading direction 
+Export-Ready Manufacturing at Every Stage 
+Content to include 
+ΓÇó 
+Since 2006 
+ΓÇó 
+Food-Grade SS304 / SS316 
+ΓÇó 
+Export Documentation Support 
+ΓÇó 
+OEM Manufacturing 
+ΓÇó 
+Custom Engineering 
+ΓÇó 
+International Packaging & Shipping 
+Required real photography / proof 
+ΓÇó 
+Optional close-up icons derived from real tools, materials or packaging 
+
+---PAGE BREAK---
+Jay Ambe Industries - Export Page Planning 
+Avoid 
+ΓÇó 
+Unverified country counts 
+ΓÇó 
+Fake certification icons 
+ΓÇó 
+Animated counters without confirmed data 
+Implementation notes for the AI editor 
+ΓÇó 
+Keep labels short 
+ΓÇó 
+Use subtle entrance animation only once 
+ΓÇó 
+Make the band responsive as a two-column or stacked grid on mobile 
+3. Export Capability Introduction 
+Section goal 
+Explain what AMBE supplies internationally and why the company is suitable for overseas buyers. 
+Recommended layout 
+Two-column editorial layout. Use a real manufacturing or finished-equipment image on one side and 
+concise, factual export content on the other. Add a small factual summary below. 
+Suggested heading direction 
+A Manufacturing Partner for International Equipment Requirements 
+Content to include 
+ΓÇó 
+Standard and custom stainless-steel equipment 
+ΓÇó 
+Dairy collection and processing equipment 
+ΓÇó 
+Institutional and mega-kitchen systems 
+ΓÇó 
+Process tanks and hygienic vessels 
+ΓÇó 
+Drawing-based and application-based fabrication 
+ΓÇó 
+Bulk orders, project supply and repeat distributor orders 
+ΓÇó 
+Buyer communication from enquiry through dispatch 
+Required real photography / proof 
+ΓÇó 
+Real factory floor 
+ΓÇó 
+Large finished equipment 
+ΓÇó 
+Product lineup prepared for dispatch 
+Recommended calls to action 
+ΓÇó 
+Explore Product Solutions 
+ΓÇó 
+Discuss Your Requirement 
+Avoid 
+ΓÇó 
+Generic statements such as ΓÇ£best exporterΓÇ¥ 
+ΓÇó 
+Claims about markets or volumes without proof 
+Implementation notes for the AI editor 
+ΓÇó 
+Use facts rather than promotional adjectives 
+ΓÇó 
+Link product references to relevant solution pages 
+
+---PAGE BREAK---
+Jay Ambe Industries - Export Page Planning 
+4. International Buyer Journey 
+Section goal 
+Show international buyers exactly how AMBE handles an export requirement from first enquiry to final 
+dispatch. 
+Recommended layout 
+Create a clean process flow using numbered steps, connected by a simple line or directional path. Use 
+supporting real images for selected steps rather than icons for every step. 
+Suggested heading direction 
+From Requirement to International Dispatch 
+Content to include 
+ΓÇó 
+1. Buyer enquiry and application details 
+ΓÇó 
+2. Technical discussion and product selection 
+ΓÇó 
+3. Capacity, material and configuration confirmation 
+ΓÇó 
+4. Quotation and commercial terms 
+ΓÇó 
+5. Drawing or specification approval 
+ΓÇó 
+6. Manufacturing and quality inspection 
+ΓÇó 
+7. Export packing and documentation 
+ΓÇó 
+8. Container loading and dispatch 
+ΓÇó 
+9. Shipment communication and buyer support 
+Required real photography / proof 
+ΓÇó 
+Technical discussion 
+ΓÇó 
+Fabrication process 
+ΓÇó 
+Inspection 
+ΓÇó 
+Packing 
+ΓÇó 
+Container loading 
+Recommended calls to action 
+ΓÇó 
+Start an Export Enquiry 
+Avoid 
+ΓÇó 
+Overcomplicated animated timeline 
+ΓÇó 
+Promises of services the client does not provide 
+Implementation notes for the AI editor 
+ΓÇó 
+On mobile, display the process as a vertical stepper 
+ΓÇó 
+Keep each step description to one or two lines 
+5. Documentation & Commercial Support 
+Section goal 
+Prove that AMBE understands the documentation and coordination required for international transactions. 
+Recommended layout 
+Use a structured two-part layout: documentation support on one side and commercial coordination on the 
+other. Include actual redacted document samples when the client provides them. 
+
+---PAGE BREAK---
+Jay Ambe Industries - Export Page Planning 
+Suggested heading direction 
+Documentation Support for Smoother International Transactions 
+Content to include 
+ΓÇó 
+Commercial invoice 
+ΓÇó 
+Packing list 
+ΓÇó 
+Proforma invoice 
+ΓÇó 
+Certificate of origin, where applicable 
+ΓÇó 
+HS code and shipment information 
+ΓÇó 
+Bill of lading coordination 
+ΓÇó 
+Insurance or inspection documents, where applicable 
+ΓÇó 
+Product specification and drawing records 
+ΓÇó 
+Payment terms such as bank transfer or letter of credit, only if confirmed 
+ΓÇó 
+Buyer and freight-forwarder coordination 
+Required real photography / proof 
+ΓÇó 
+Redacted export documents 
+ΓÇó 
+Specification sheets 
+ΓÇó 
+Packing-list or invoice samples 
+Avoid 
+ΓÇó 
+Displaying sensitive customer information 
+ΓÇó 
+Listing documents AMBE cannot actually provide 
+ΓÇó 
+Legal guarantees about customs clearance 
+Implementation notes for the AI editor 
+ΓÇó 
+Mark variable documents with ΓÇ£where applicableΓÇ¥ 
+ΓÇó 
+Ask the client to confirm the exact document list before publishing 
+6. Export Packaging & Container Loading 
+Section goal 
+Demonstrate how finished equipment is protected for long-distance transport. 
+Recommended layout 
+Use a large photographic story with packing stages. Combine one main image with smaller supporting 
+images and concise technical notes. 
+Suggested heading direction 
+Packed to Protect Equipment Across Long-Distance Shipping 
+Content to include 
+ΓÇó 
+Equipment cleaning and pre-dispatch inspection 
+ΓÇó 
+Protective wrapping and moisture protection 
+ΓÇó 
+Wooden crates or pallets, where required 
+ΓÇó 
+Internal support and movement protection 
+ΓÇó 
+Protection of polished stainless-steel surfaces 
+ΓÇó 
+Product and package identification 
+ΓÇó 
+Container space planning 
+
+---PAGE BREAK---
+Jay Ambe Industries - Export Page Planning 
+ΓÇó 
+Secure loading and lashing 
+ΓÇó 
+Loading photographs and dispatch records 
+Required real photography / proof 
+ΓÇó 
+Protective wrapping 
+ΓÇó 
+Wooden packing or palletisation 
+ΓÇó 
+Equipment inside container 
+ΓÇó 
+Container sealing or dispatch 
+Recommended calls to action 
+ΓÇó 
+Discuss Export Packaging 
+Avoid 
+ΓÇó 
+Stock shipping-container images with no AMBE proof 
+ΓÇó 
+Claims of damage-free delivery guarantees 
+Implementation notes for the AI editor 
+ΓÇó 
+Use only actual packing methods followed by AMBE 
+ΓÇó 
+Add packaging options based on product size and destination 
+7. OEM, Private Label & Distributor Partnerships 
+Section goal 
+Generate enquiries from overseas brands, equipment dealers and regional distributors. 
+Recommended layout 
+Use a split layout with three clear partnership types. Avoid a generic card grid; use strong headings, short 
+explanations and one relevant image per partnership type. 
+Suggested heading direction 
+Manufacturing Partnerships Beyond a Single Order 
+Content to include 
+ΓÇó 
+OEM manufacturing based on buyer drawings or specifications 
+ΓÇó 
+Private-label product supply, if confirmed 
+ΓÇó 
+Custom product branding and identification, if available 
+ΓÇó 
+Bulk production for distributors and dealers 
+ΓÇó 
+Repeat order planning 
+ΓÇó 
+Application-specific modifications 
+ΓÇó 
+Packaging aligned with buyer or market requirements 
+ΓÇó 
+Confidentiality and drawing control, subject to agreed terms 
+ΓÇó 
+Distributor opportunities in selected markets 
+Required real photography / proof 
+ΓÇó 
+Bulk product lineup 
+ΓÇó 
+Custom nameplates or packaging, if available 
+ΓÇó 
+Dealer or exhibition photographs 
+Recommended calls to action 
+ΓÇó 
+Discuss OEM Manufacturing 
+ΓÇó 
+Become a Distribution Partner 
+
+---PAGE BREAK---
+Jay Ambe Industries - Export Page Planning 
+Avoid 
+ΓÇó 
+Promising exclusivity without commercial approval 
+ΓÇó 
+Using logos of buyers without permission 
+Implementation notes for the AI editor 
+ΓÇó 
+Create separate enquiry types for OEM and distributors 
+ΓÇó 
+Keep all private-label claims conditional until confirmed 
+8. Global Presence & Export Markets 
+Section goal 
+Visually communicate international reach without exaggerating or inventing markets. 
+Recommended layout 
+Use an elegant flat world map with markers only for confirmed countries. Add a short market list and 
+optional region-based filters. Place supporting export images below the map. 
+Suggested heading direction 
+Supporting Buyers Across International Markets 
+Content to include 
+ΓÇó 
+Confirmed export countries 
+ΓÇó 
+Key regions served 
+ΓÇó 
+Product categories supplied by market 
+ΓÇó 
+Year or project type where appropriate 
+ΓÇó 
+International exhibitions or buyer meetings 
+ΓÇó 
+Future distributor markets, clearly separated from existing export markets 
+Required real photography / proof 
+ΓÇó 
+Real project or dispatch images tied to confirmed countries 
+ΓÇó 
+Trade exhibition photographs 
+Recommended calls to action 
+ΓÇó 
+Contact Export Team 
+Avoid 
+ΓÇó 
+Random markers 
+ΓÇó 
+Animated flight paths 
+ΓÇó 
+Rotating globe 
+ΓÇó 
+Unverified ΓÇ£worldwide presenceΓÇ¥ claims 
+Implementation notes for the AI editor 
+ΓÇó 
+Use two marker states: existing markets and opportunity markets 
+ΓÇó 
+Country data should come from a single editable React data file 
+9. Export Projects & Case Studies 
+Section goal 
+Build credibility through real international supplies, institutional orders and dispatch evidence. 
+
+---PAGE BREAK---
+Jay Ambe Industries - Export Page Planning 
+Recommended layout 
+Use three to five detailed case-study previews rather than a large gallery. Each case study should have a 
+real image, location, requirement, solution and result. 
+Suggested heading direction 
+International Work That Demonstrates Capability 
+Content to include 
+ΓÇó 
+Bangladesh supply 
+ΓÇó 
+Sri Lanka projects 
+ΓÇó 
+Container dispatches 
+ΓÇó 
+Trade exhibitions 
+ΓÇó 
+Large institutional orders 
+ΓÇó 
+OEM or distributor orders, where permission exists 
+Required real photography / proof 
+ΓÇó 
+Equipment supplied 
+ΓÇó 
+Packing and dispatch 
+ΓÇó 
+Installation or customer-site photos 
+ΓÇó 
+Exhibition participation 
+Recommended calls to action 
+ΓÇó 
+View All Projects 
+ΓÇó 
+Discuss a Similar Requirement 
+Avoid 
+ΓÇó 
+Case studies with no factual information 
+ΓÇó 
+Fake customer names 
+ΓÇó 
+Unverified project results 
+Implementation notes for the AI editor 
+ΓÇó 
+Recommended card fields: country, year, equipment, capacity, material, requirement, solution 
+ΓÇó 
+Create a reusable case-study template for future additions 
+10. Export Enquiry & Final CTA 
+Section goal 
+Convert qualified international visitors into detailed export enquiries. 
+Recommended layout 
+Use a strong final section with concise text and a serious technical enquiry form. The form should be 
+simple enough to complete but detailed enough to qualify the lead. 
+Suggested heading direction 
+Planning an International Equipment Requirement? 
+Content to include 
+ΓÇó 
+Buyer name 
+ΓÇó 
+Company name 
+ΓÇó 
+Country 
+
+---PAGE BREAK---
+Jay Ambe Industries - Export Page Planning 
+ΓÇó 
+Business email 
+ΓÇó 
+Phone / WhatsApp 
+ΓÇó 
+Buyer type: end user, dealer, distributor, OEM or project company 
+ΓÇó 
+Product or solution required 
+ΓÇó 
+Required capacity and quantity 
+ΓÇó 
+Material grade 
+ΓÇó 
+Destination port or country 
+ΓÇó 
+Expected purchase timeline 
+ΓÇó 
+Project details 
+ΓÇó 
+Drawing or specification upload 
+Required real photography / proof 
+ΓÇó 
+Optional background image of actual export-ready equipment 
+Recommended calls to action 
+ΓÇó 
+Request an Export Quote 
+ΓÇó 
+Contact Export Team 
+ΓÇó 
+Download Product Catalogue 
+Avoid 
+ΓÇó 
+Generic ΓÇ£Inquire NowΓÇ¥ button 
+ΓÇó 
+Very long form without grouping 
+ΓÇó 
+Mandatory fields that are not essential 
+Implementation notes for the AI editor 
+ΓÇó 
+Group the form into Buyer Details, Requirement and Uploads 
+ΓÇó 
+Send submissions to the correct export email or CRM 
+ΓÇó 
+Show a clear confirmation message and expected response process 
+ 
+
+---PAGE BREAK---
+Jay Ambe Industries - Export Page Planning 
+Recommended Export Page Content Flow 
+1. Prove AMBE is an export-ready manufacturer. 
+2. Explain the products and solutions available for international supply. 
+3. Show how export enquiries are technically and commercially handled. 
+4. Demonstrate documentation, packaging and container-loading capability. 
+5. Present OEM and distributor opportunities. 
+6. Show confirmed global markets and real project proof. 
+7. Guide the visitor toward a detailed export quotation request. 
+Site-Wide Export CTAs 
+ΓÇó 
+Contact Export Team 
+ΓÇó 
+Request an Export Quote 
+ΓÇó 
+Download Export Catalogue 
+ΓÇó 
+Discuss OEM Manufacturing 
+ΓÇó 
+Become a Distribution Partner 
+ΓÇó 
+Send Your Technical Requirement 
+ΓÇó 
+Upload Your Drawing 
+Real Content and Assets Required From the Client 
+ΓÇó 
+Confirmed list of export countries and regions 
+ΓÇó 
+Export project names or anonymised project descriptions 
+ΓÇó 
+Real container-loading and packaging photographs 
+ΓÇó 
+Export-ready product photographs 
+ΓÇó 
+Confirmed export documents and redacted samples 
+ΓÇó 
+Packaging methods used for different product sizes 
+ΓÇó 
+Payment terms accepted for international orders 
+ΓÇó 
+Dispatch ports and logistics process 
+ΓÇó 
+OEM and private-label services actually offered 
+ΓÇó 
+Distributor partnership terms or enquiry process 
+ΓÇó 
+Export contact person, email and phone number 
+ΓÇó 
+Company profile and export catalogue PDFs 
+ΓÇó 
+International testimonials with permission 
+ΓÇó 
+Trade exhibition and overseas meeting photographs 
+Claims That Must Be Confirmed Before Publishing 
+ΓÇó 
+Number of countries served 
+ΓÇó 
+Worldwide shipping coverage 
+ΓÇó 
+Exact documentation support 
+ΓÇó 
+Inspection and certification capabilities 
+ΓÇó 
+Letter of credit or other payment options 
+ΓÇó 
+Private-label and OEM scope 
+ΓÇó 
+Distributor territories and exclusivity 
+ΓÇó 
+Warranty and after-sales support for export orders 
+
+---PAGE BREAK---
+Jay Ambe Industries - Export Page Planning 
+ΓÇó 
+Installation or commissioning support outside India 
+ΓÇó 
+Production capacity and export lead times 
+Design Rules for the Export Page 
+ΓÇó 
+Use only real AMBE factory, product, packaging and dispatch photography. 
+ΓÇó 
+Maintain large headings, white space and minimal colour usage. 
+ΓÇó 
+Avoid generic cargo ships, globes, fake routes and AI-generated factory imagery. 
+ΓÇó 
+Do not turn the page into a list of product cards. 
+ΓÇó 
+Use technical facts and real evidence instead of broad marketing claims. 
+ΓÇó 
+Keep animations subtle and purposeful. 
+ΓÇó 
+Use verified countries and project information only. 
+ΓÇó 
+Every major section should naturally guide the visitor toward an export enquiry. 
+Recommended React Component Structure 
+ΓÇó 
+ExportHero 
+ΓÇó 
+ExportTrustBar 
+ΓÇó 
+ExportCapabilityIntro 
+ΓÇó 
+ExportProcessTimeline 
+ΓÇó 
+ExportDocumentation 
+ΓÇó 
+ExportPackagingStory 
+ΓÇó 
+PartnershipOpportunities 
+ΓÇó 
+GlobalMarketMap 
+ΓÇó 
+ExportCaseStudies 
+ΓÇó 
+ExportEnquiryForm 
+Store export countries, trust points, process steps, documentation items and case studies in separate 
+editable data files. This will allow the AI editor to update content without changing the component structure. 
+End of Export Page Planning Document 
+
+---PAGE BREAK---

@@ -1,0 +1,433 @@
+﻿JAY AMBE INDUSTRIES
+Products Page Planning Document
+Internal planning guide for React / AI-assisted website development
+Purpose of this document
+Define the approved product hierarchy for the current website build.
+Create a section-by-section Products landing page structure.
+Define one reusable technical product-detail template for all approved products.
+Use clearly marked dummy information only where client-verified data is still unavailable.
+Approved scope: 4 product categories, 33 products and 1 custom fabrication division
+
+
+Products Page Strategy
+The Products page must not feel like a basic online catalogue. It should present Jay AMBE Industries as a manufacturer of complete stainless-steel solutions for dairy, food processing, institutional kitchens and hygienic process applications.
+The page should help a buyer move from broad solution discovery to a technically informative product page and finally to a quotation or project discussion.
+Buyer journey
+Understand product divisions -> choose a solution category -> review relevant equipment -> open technical product page -> compare options -> request a quote or discuss a custom requirement
+Approved Product Architecture
+Milk Collection & Handling
+* Stainless-Steel Milk Cans
+* Insulated Milk Cans
+* Ice-Chamber Milk Cans
+* Milking-Machine Milk Cans
+* Milking Buckets
+* Milk Receiver Tanks
+* Teat Shells & Teat Cups
+Dairy Processing Equipment
+* Bulk Milk Coolers
+* Milk Storage Tanks
+* Batch Pasteurisers
+* Milk Boilers
+* Butter Churners
+* Paneer Press Machines
+* Paneer Moulds
+* Khoya Machines
+* Ghee Boiler Machines
+Institutional & Mega Kitchen Equipment
+* Rice Cauldrons
+* Daal & Sambar Cauldrons
+* Food-Cooking Cauldrons
+* Steam Cooking Systems
+* Jacketed Cooking Vessels
+* Bhagona, Kadhai & Tapela
+* Food-Distribution Vessels
+* Rice Chutes
+* Commercial Stoves
+Process & Storage Equipment
+* Stainless-Steel Tanks
+* Heating & Cooling Tanks
+* Agitated Vessels
+* Stainless-Steel Barrels
+* Stainless-Steel Drums
+* Stainless-Steel Topes
+* Syrup Tanks
+* Custom Hygienic Vessels
+Custom Stainless-Steel Fabrication
+* Custom capacities
+* Custom dimensions
+* SS304, SS316 and selected SS202 construction
+* Insulated construction
+* Jacketed construction
+* Heating and cooling systems
+* Agitators
+* Tilting mechanisms
+* Custom outlets and lids
+* OEM or drawing-based fabrication
+
+
+1. Products Page Hero
+SECTION GOAL
+Position the company as a stainless-steel equipment manufacturer and explain the main industries and applications covered by the product range.
+RECOMMENDED LAYOUT
+Use a medium-height, image-led hero with a strong heading, one concise paragraph, category breadcrumb and two clear actions. The visual should use a real group of AMBE products or a real factory photograph.
+CONTENT TO INCLUDE
+* Main heading focused on stainless-steel dairy, process and institutional equipment.
+* Short description covering standard and custom manufacturing.
+* Mention food-grade SS304 and SS316 capability without overloading the hero.
+* Keep technical detail for the product sections below.
+PRIMARY ACTIONS
+* Explore Product Categories
+* Request Product Catalogue
+IMAGE / VISUAL REQUIREMENTS
+* Real AMBE equipment group photograph or manufacturing image.
+* No fake composite of unrelated machinery.
+AVOID
+* Generic marketing headlines.
+* Prices or discount messaging.
+* AI-generated factory imagery.
+* Full-screen hero that pushes products too far down.
+
+2. Product Category Navigation
+SECTION GOAL
+Let buyers quickly move to the product family relevant to their operation.
+RECOMMENDED LAYOUT
+Use a clean sticky or in-page category navigation with five labels. On desktop it can be horizontal; on mobile it should become a compact select menu or scrollable tab row with clear active state.
+CONTENT TO INCLUDE
+* Milk Collection & Handling.
+* Dairy Processing Equipment.
+* Institutional & Mega Kitchen Equipment.
+* Process & Storage Equipment.
+* Custom Stainless-Steel Fabrication.
+PRIMARY ACTIONS
+* Jump to Category
+IMAGE / VISUAL REQUIREMENTS
+* Simple text-first navigation with optional small category icon.
+* Maintain the current global typography and colour system.
+AVOID
+* A second full website navigation.
+* Large decorative cards before the actual products.
+* Filters that hide products without clear reset behaviour.
+
+3. Milk Collection & Handling
+SECTION GOAL
+Present the approved products used for milk collection, milking-machine connection, receiving and hygienic transportation.
+RECOMMENDED LAYOUT
+Use one short category introduction followed by a responsive product grid. Product cards should be image-led and technically clean, with no prices.
+CONTENT TO INCLUDE
+* Stainless-Steel Milk Cans
+* Insulated Milk Cans
+* Ice-Chamber Milk Cans
+* Milking-Machine Milk Cans
+* Milking Buckets
+* Milk Receiver Tanks
+* Teat Shells & Teat Cups
+PRIMARY ACTIONS
+* View Technical Details
+* Request a Quote
+IMAGE / VISUAL REQUIREMENTS
+* One real product image per card.
+* Keep product scale and background treatment consistent.
+* Use a clear placeholder label until correct photography is supplied.
+AVOID
+* Marketplace-style pricing.
+* Long descriptions inside cards.
+* Different decorative styles for each product.
+* Promoting SS202 unless confirmed for that product.
+
+4. Dairy Processing Equipment
+SECTION GOAL
+Show equipment that supports milk cooling, storage, pasteurisation, heating and value-added dairy production.
+RECOMMENDED LAYOUT
+Use a strong section introduction followed by the product grid. One featured product may use a larger card, while the remaining products use a consistent technical card format.
+CONTENT TO INCLUDE
+* Bulk Milk Coolers
+* Milk Storage Tanks
+* Batch Pasteurisers
+* Milk Boilers
+* Butter Churners
+* Paneer Press Machines
+* Paneer Moulds
+* Khoya Machines
+* Ghee Boiler Machines
+PRIMARY ACTIONS
+* View Technical Details
+* Discuss Your Requirement
+IMAGE / VISUAL REQUIREMENTS
+* Use real equipment and installed-application photography when available.
+* Show front or three-quarter equipment views with uncluttered backgrounds.
+AVOID
+* Fake exact specifications.
+* Showing all products as identical small cards.
+* Generic dairy stock images replacing the equipment itself.
+
+5. Institutional & Mega Kitchen Equipment
+SECTION GOAL
+Present high-capacity cooking, steam-processing and food-distribution solutions for institutions and large kitchens.
+RECOMMENDED LAYOUT
+Use an application-led section with a short introduction for central kitchens, schools, temples, canteens, hostels and catering facilities, followed by the approved equipment grid.
+CONTENT TO INCLUDE
+* Rice Cauldrons
+* Daal & Sambar Cauldrons
+* Food-Cooking Cauldrons
+* Steam Cooking Systems
+* Jacketed Cooking Vessels
+* Bhagona, Kadhai & Tapela
+* Food-Distribution Vessels
+* Rice Chutes
+* Commercial Stoves
+PRIMARY ACTIONS
+* Explore Equipment
+* Discuss an Institutional Requirement
+IMAGE / VISUAL REQUIREMENTS
+* Use real AMBE cooking vessels, installations and fabrication details.
+* Where available, include scale references showing industrial capacity.
+AVOID
+* Household kitchen imagery.
+* Generic chef stock images.
+* Claims about government projects without proof.
+* Crowding the section with too many application badges.
+
+6. Process & Storage Equipment
+SECTION GOAL
+Show hygienic storage, heating, cooling, mixing and liquid-handling equipment for dairy, food, beverage and selected process applications.
+RECOMMENDED LAYOUT
+Use a cleaner technical visual style with equipment images, short application text and quick material/customisation indicators.
+CONTENT TO INCLUDE
+* Stainless-Steel Tanks
+* Heating & Cooling Tanks
+* Agitated Vessels
+* Stainless-Steel Barrels
+* Stainless-Steel Drums
+* Stainless-Steel Topes
+* Syrup Tanks
+* Custom Hygienic Vessels
+PRIMARY ACTIONS
+* View Technical Details
+* Request Custom Configuration
+IMAGE / VISUAL REQUIREMENTS
+* Use close-ups of weld quality, outlets, lids, agitators and polished surfaces where relevant.
+* Show real tanks and vessels rather than generic 3D renders.
+AVOID
+* Unverified pharmaceutical claims.
+* One-size-fits-all technical copy.
+* Showing heating, cooling or agitation on products where it does not apply.
+
+7. Custom Stainless-Steel Fabrication
+SECTION GOAL
+Explain that AMBE can manufacture equipment around customer drawings, capacity, material and process requirements.
+RECOMMENDED LAYOUT
+This section must look different from the product grids. Use a split editorial layout with a real engineering or fabrication image, a concise capability list and a requirement CTA.
+CONTENT TO INCLUDE
+* Custom capacities and dimensions.
+* SS304, SS316 and selected SS202 construction.
+* Insulated and jacketed designs.
+* Heating and cooling integration.
+* Agitators and tilting systems.
+* Custom outlets, lids and support structures.
+* OEM and drawing-based fabrication.
+PRIMARY ACTIONS
+* Discuss Custom Manufacturing
+* Upload Your Drawing
+* Request a Quote
+IMAGE / VISUAL REQUIREMENTS
+* Use real drawing review, fabrication or custom equipment photography.
+* Clearly label image placeholders for later AMBE photography.
+AVOID
+* Treating each capability as a separate product.
+* Inventing OEM or private-label claims beyond the approved temporary wording.
+* Futuristic blueprint graphics as final imagery.
+
+8. Product Information and Buyer Support
+SECTION GOAL
+Explain what buyers will find on every technical product page and reduce uncertainty before they open a product.
+RECOMMENDED LAYOUT
+Use a compact technical-information band or split section listing the standard information available on product pages.
+CONTENT TO INCLUDE
+* Multiple product images.
+* Features and applications.
+* Technical specification table.
+* Capacity options.
+* Material-grade options.
+* Customisation options.
+* Standard and optional accessories.
+* Packaging and delivery information.
+* Brochure download and quotation action.
+PRIMARY ACTIONS
+* Browse Product Details
+* Download Product Catalogue
+IMAGE / VISUAL REQUIREMENTS
+* Use small specification or document visuals only when useful.
+* Keep the layout text-led and restrained.
+AVOID
+* Repeating full product cards.
+* Showing fake brochure thumbnails.
+* Making every item a large icon card.
+
+9. Product Catalogue and Technical Enquiry
+SECTION GOAL
+Convert visitors who want a complete catalogue or need help identifying the correct equipment.
+RECOMMENDED LAYOUT
+Use a two-column section: catalogue/company profile download on one side and a short product-selection enquiry on the other.
+CONTENT TO INCLUDE
+* Product or solution category.
+* Required capacity or dimensions.
+* Quantity.
+* Application or industry.
+* Country and destination.
+* Drawing or specification upload.
+* Contact details.
+PRIMARY ACTIONS
+* Request Product Catalogue
+* Ask Our Team to Recommend Equipment
+IMAGE / VISUAL REQUIREMENTS
+* Use real brochure cover only when the current brochure is approved.
+* Use one real equipment or engineering consultation image.
+AVOID
+* A full long contact form.
+* Automatic download of an outdated brochure.
+* Generic Submit button wording.
+
+10. Final Product CTA
+SECTION GOAL
+Guide buyers toward a quotation or technical discussion after reviewing the full product range.
+RECOMMENDED LAYOUT
+Use one restrained full-width CTA above the footer with a direct manufacturing-focused heading and no repeated product grid.
+CONTENT TO INCLUDE
+* Invite the buyer to share application, capacity, material and quantity requirements.
+* Mention that standard and customised configurations are available.
+* Provide separate domestic and export contact actions if verified.
+PRIMARY ACTIONS
+* Request a Quote
+* Discuss Your Project
+* Contact Export Team
+IMAGE / VISUAL REQUIREMENTS
+* Use real finished equipment, inspection or export-packaging photography.
+* Keep text readable with a subtle overlay if needed.
+AVOID
+* Generic slogans.
+* More than three buttons.
+* Repeated long enquiry form.
+* Animated decorative backgrounds.
+
+
+
+Reusable Product Detail Page Template
+All 33 approved products should use one reusable React template. Product-specific content must come from structured data so that updates remain consistent and easy to verify.
+1. Product Hero
+Product name, category, concise technical summary, main image, Request a Quote and Download Brochure.
+2. Product Image Gallery
+Front view, side view, construction detail, internal view where relevant, installed application and packaging/dispatch.
+3. Product Overview
+What the product is, its purpose, main users and main construction approach.
+4. Key Features
+Product-specific benefits and construction features. Temporary generic features must be clearly marked pending verification.
+5. Applications
+Only relevant sectors and uses for that product.
+6. Technical Specifications
+Structured table for capacity, dimensions, material, thickness, finish, motor, electrical, heating/cooling, outlet and customisation.
+7. Capacity Options
+Verified standard capacities when supplied; otherwise use safe temporary wording.
+8. Material & Construction
+SS grade, contact-surface material, finish, insulation, jacket or frame details where applicable.
+9. Customisation Options
+Capacity, dimensions, grade, heating, cooling, agitation, tilting, lid, outlet, branding and packaging.
+10. Quality & Testing
+Only verified material, dimensional, weld, leak, functional, finish and final inspection claims.
+11. Accessories
+Standard and optional accessories, clearly separated.
+12. Packaging & Delivery
+Domestic/export packaging, dispatch method and temporary delivery wording.
+13. Related Products
+Three or four relevant products from the same or connected category.
+14. Final CTA
+Request a Quote, Discuss Your Requirement, Upload Your Drawing and Contact Export Team.
+Standard Product Card Content
+* Product image.
+* Product name.
+* One-line application summary.
+* Temporary material wording where applicable.
+* Multiple capacities available.
+* View Technical Details.
+* Request a Quote.
+Temporary card wording
+Material options available based on product and application.
+Multiple standard and customised capacities available.
+Final technical data and real AMBE product photography will be added after client verification.
+
+
+Dummy Information Rules
+The user has approved temporary dummy information for missing technical fields. Dummy values must never look like confirmed engineering data. Use transparent placeholder wording rather than invented numerical specifications.
+Missing / Unverified FieldTemporary Website WordingFinal active product listUse the approved current list in this document; mark final client confirmation as pending.Products no longer manufacturedStatus to be confirmed by AMBE.New products not on old websiteAdditional products to be added after client confirmation.Exact product namesUse current approved website names; final naming to be confirmed.Capacity rangesMultiple capacities available; exact range to be confirmed.DimensionsBased on selected capacity and configuration.Sheet thicknessTo be confirmed.Motor powerDepends on selected equipment configuration.Heating / cooling specificationsAvailable where applicable; final system to be confirmed.Electrical requirementsAvailable according to product and destination requirements.Surface finishHygienic polished finish; final finish grade to be confirmed.Insulation typeAvailable for applicable equipment; type to be confirmed.WarrantyTo be confirmed by AMBE.Testing proceduresProduct-specific inspection and testing; final procedure to be confirmed.Standard accessoriesDepends on selected product model and configuration.Optional accessoriesAvailable based on product and customer requirement.Packaging detailsDomestic and export packaging available; final method depends on order.Delivery timelinesDepends on quantity, configuration and production schedule.Current brochures / datasheetsComing soon or available on request until approved documents are supplied.Correct product photographsReal AMBE photography to be added.SS202 promotionUse only for selected products after client confirmation.Standard vs custom productStatus to be confirmed per product.Export suitabilityExport configuration available on request; confirm per product.OEM / private label availabilityTo be confirmed with AMBE.Suggested React Data Structure
+Keep all category, product and temporary verification data in structured JSON or JavaScript objects. Do not hard-code product content directly inside page components.
+* categories: id, slug, name, shortDescription, heroImage, order.
+* products: id, slug, categoryId, name, shortDescription, overview, images, applications, features, specifications, capacities, materials, customisation, accessories, packaging, brochure, relatedProducts.
+* verificationStatus: verified, partially_verified or pending.
+* isActive: temporary client-confirmation field.
+* isStandardProduct: pending confirmation where unknown.
+* isExportSuitable: pending confirmation where unknown.
+* oemAvailable: pending confirmation where unknown.
+* placeholderNotes: internal-only notes that must never appear in the final public interface.
+Important development rule
+Every unverified specification must carry verificationStatus: "pending" or an equivalent flag.
+The public interface should display safe temporary wording, while the internal data file keeps a clear list of fields awaiting client approval.
+Do not publish fake numeric values merely to make a specification table look complete.
+Suggested React Components
+* ProductsHero
+* ProductCategoryNav
+* ProductCategorySection
+* ProductCard
+* CustomFabricationSection
+* ProductBuyerSupport
+* CatalogueEnquirySection
+* FinalProductCTA
+* ProductDetailTemplate
+* ProductGallery
+* SpecificationTable
+* CapacityOptions
+* CustomisationOptions
+* RelatedProducts
+* ProductEnquiryForm
+Client Verification Checklist
+* [ ] Confirm the final active product list.
+* [ ] Identify discontinued products.
+* [ ] Share any new products not shown on the old website.
+* [ ] Approve exact product names and category placement.
+* [ ] Provide capacity ranges and standard models.
+* [ ] Provide dimensions and sheet thickness.
+* [ ] Provide motor, gearbox and electrical data where applicable.
+* [ ] Provide heating, cooling and control-system specifications.
+* [ ] Provide surface finish and insulation details.
+* [ ] Confirm warranty and testing procedures.
+* [ ] Confirm standard and optional accessories.
+* [ ] Confirm packaging and delivery details.
+* [ ] Provide approved brochures and datasheets.
+* [ ] Provide correct product photography.
+* [ ] Confirm which products may use SS202.
+* [ ] Confirm standard versus custom-made status.
+* [ ] Confirm export suitability for each product.
+* [ ] Confirm OEM and private-label manufacturing availability.
+AI Editor Implementation Rules
+* Use only the approved product categories and products in this document.
+* Do not invent additional products or technical specifications.
+* Do not show prices on the Products landing page or product-detail pages.
+* Use real AMBE photography when supplied; clearly labelled placeholders may be used temporarily.
+* Do not make the page look like a marketplace or ecommerce store.
+* Do not use repeated AI-style rounded cards for every section.
+* Keep technical information readable and consistent across all product pages.
+* Make every Request a Quote action open or scroll to a working enquiry form with the product preselected.
+* Preserve the current global header, footer, typography and minimal colour system.
+* Do not expose internal placeholder notes or verification flags on the public page.
+Final Products Page Flow
+1. Understand the complete AMBE product range.
+2. Choose the relevant solution category.
+3. Review products without marketplace-style clutter.
+4. Open a technically structured product-detail page.
+5. Review applications, specifications, capacities and customisation.
+6. Download approved technical material or request it.
+7. Request a quote or discuss a custom requirement.
+Final design objective
+The Products page should show breadth without feeling like a catalogue dump.
+An international buyer should understand the product families, see technical depth and feel confident that AMBE can manufacture both standard and custom equipment.
+Every product path should naturally lead toward a technical discussion or quotation.
+Jay AMBE Industries - Products Page Planning Document
+

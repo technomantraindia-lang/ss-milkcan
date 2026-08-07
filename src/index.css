@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Color Palette - Red, White & Black Design System */
+  --color-bg: #fcfcfc;                 /* Chalk White */
+  --color-navy: #0a0a0a;               /* Matt Black */
+  --color-blue: #c91c1c;               /* Sanitary Crimson */
+  --color-silver: #888888;             /* Muted Charcoal / Grey */
+  --color-border: #e0e0e0;             /* Clean grid border */
+  --color-text-primary: #111111;       /* Jet Black for primary body */
+  --color-text-secondary: #555555;     /* Dark grey for subtext */
+  --color-surface-card: #ffffff;
+  --color-surface-muted: #f4f4f4;      /* Soft light grey */
+  
+  /* Additional Design Tokens */
+  --color-red: #c91c1c;
+  --color-red-dark: #9c1010;
+  --color-red-light: #fdebeb;
+  --color-black: #0a0a0a;
+  --color-charcoal: #151515;
+  --color-white: #ffffff;
+  --color-border-dark: #2a2a2a;
+  
+  /* Fonts */
+  --font-headline: 'Hanken Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-tech: 'JetBrains Mono', monospace;
+
+  /* Spacing Scale */
+  --space-base: 8px;
+  --space-gutter: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+  color: var(--color-navy);
+  font-weight: 700;
+}
+
