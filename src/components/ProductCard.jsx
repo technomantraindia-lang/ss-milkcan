@@ -1,9 +1,7 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function ProductCard({ product }) {
-  const navigate = useNavigate();
-
   if (!product) return null;
 
   const categorySlug = product.categoryId;
@@ -16,18 +14,6 @@ function ProductCard({ product }) {
   const primaryApp = (product.primaryApplications && product.primaryApplications.length > 0)
     ? product.primaryApplications[0]
     : 'Industrial Processing';
-
-  const handleQuoteClick = (e) => {
-    e.preventDefault();
-    navigate('/contact', {
-      state: {
-        category: product.categoryName || 'Dairy & Process Equipment',
-        productName: product.name,
-        enquiryType: 'Quote Request',
-        sourcePage: productDetailUrl
-      }
-    });
-  };
 
   return (
     <div className="product-card">
@@ -50,28 +36,10 @@ function ProductCard({ product }) {
         </h3>
         <p className="product-card-desc">{product.shortDescription}</p>
 
-        <div className="product-card-meta-list">
-          <div className="product-card-meta-item">
-            <span className="meta-dot">•</span>
-            <span className="meta-text">Multiple capacities available</span>
-          </div>
-          <div className="product-card-meta-item">
-            <span className="meta-dot">•</span>
-            <span className="meta-text">Material options based on product & application</span>
-          </div>
-          <div className="product-card-meta-item">
-            <span className="meta-dot">•</span>
-            <span className="meta-text">Custom configurations available</span>
-          </div>
-        </div>
-
         <div className="product-card-actions">
-          <Link to={productDetailUrl} className="product-btn-secondary">
-            View Technical Details &rarr;
+          <Link to={productDetailUrl} className="product-btn-premium">
+            Explore Model &rarr;
           </Link>
-          <button onClick={handleQuoteClick} className="product-btn-primary">
-            Request a Quote
-          </button>
         </div>
       </div>
     </div>

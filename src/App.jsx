@@ -6,6 +6,9 @@ import ExportsPage from './pages/ExportsPage'
 import ContactPage from './pages/ContactPage'
 import ProductsPage from './pages/ProductsPage'
 import ProductDetailPage from './pages/ProductDetailPage'
+import IndustriesPage from './pages/IndustriesPage'
+import ManufacturingPage from './pages/ManufacturingPage'
+import ProjectsPage from './pages/ProjectsPage'
 import './App.css'
 
 function App() {
@@ -18,6 +21,9 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/products/:categorySlug/:productSlug" element={<ProductDetailPage />} />
+        <Route path="/industries" element={<IndustriesPage />} />
+        <Route path="/manufacturing" element={<ManufacturingPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
       </Routes>
     </div>
   )

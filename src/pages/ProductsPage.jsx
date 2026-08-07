@@ -142,44 +142,43 @@ function ProductsPage() {
       <Navbar />
 
       {/* 1. PRODUCTS HERO */}
-      <section className="products-hero-section">
-        <div className="container-centered">
-          <div className="products-hero-grid">
-            <div className="products-hero-content">
-              <span className="text-label-caps accent-red">MANUFACTURING & FABRICATION DIVISION</span>
-              <h1 className="products-hero-heading">
-                Stainless Steel Equipment for Dairy, Food Processing & Institutional Applications
-              </h1>
-              <p className="products-hero-subtext">
-                Jay AMBE Industries engineers standard and custom stainless-steel process machinery, sanitary storage vessels, bulk coolers, and mega-kitchen systems for milk collection, dairy processing, institutional canteens, and hygienic industrial facilities.
-              </p>
+      <header className="about-hero-section" style={{ minHeight: '520px', backgroundColor: '#0a0a0a', display: 'flex', flexPosition: 'relative', overflow: 'hidden', alignItems: 'center' }}>
+        <div className="about-hero-bg">
+          <img src={factoryViewImg} alt="Jay AMBE Stainless Steel Manufacturing Facility" className="about-hero-bg-img" style={{ opacity: 0.35 }} />
+          <div className="about-hero-overlay"></div>
+        </div>
 
-              <div className="products-hero-capabilities-badges">
-                <span className="hero-cap-badge">Food-Grade SS304 & SS316</span>
-                <span className="hero-cap-badge">ASME Guidelines</span>
-                <span className="hero-cap-badge">Export Seaworthy Packaging</span>
-              </div>
+        <div className="container-centered about-hero-content" style={{ zIndex: 10, paddingTop: '110px', paddingBottom: '50px' }}>
+          <div className="about-breadcrumbs" style={{ marginBottom: '16px' }}>
+            <Link to="/" className="breadcrumb-link" style={{ color: '#aaaaaa', textDecoration: 'none' }}>Home</Link>
+            <span className="breadcrumb-sep" style={{ color: '#666666', margin: '0 8px' }}>/</span>
+            <span className="breadcrumb-active" style={{ color: '#ffffff', fontWeight: 600 }}>Products & Process Equipment</span>
+          </div>
 
-              <div className="products-hero-actions">
-                <a href="#milk-collection-handling" onClick={(e) => handleNavClick(e, 'milk-collection-handling')} className="vort-btn-primary">
-                  Explore Product Categories &rarr;
-                </a>
-                <button onClick={() => setCatalogueModalOpen(true)} className="vort-btn-secondary">
-                  Request Product Catalogue
-                </button>
-              </div>
-            </div>
+          <h1 className="about-hero-title" style={{ fontFamily: 'var(--font-headline)', fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: 800, color: '#ffffff', lineHeight: 1.15, maxWidth: '880px' }}>
+            Stainless Steel Equipment for Dairy, Food Processing & Institutional Applications
+          </h1>
 
-            <div className="products-hero-visual-box">
-              <img src={factoryViewImg} alt="Jay AMBE Stainless Steel Manufacturing Facility" className="products-hero-img" />
-              <div className="products-hero-visual-badge">
-                <span className="badge-num">33+</span>
-                <span className="badge-txt">Approved Process Equipment Models</span>
-              </div>
-            </div>
+          <p className="about-hero-desc" style={{ fontFamily: 'var(--font-body)', fontSize: '16px', color: '#dddddd', lineHeight: 1.6, maxWidth: '750px', marginTop: '18px' }}>
+            Jay AMBE Industries engineers standard and custom stainless-steel process machinery, sanitary storage vessels, bulk coolers, and mega-kitchen systems for milk collection, dairy processing, institutional canteens, and hygienic industrial facilities.
+          </p>
+
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginTop: '16px', background: 'rgba(201, 28, 28, 0.15)', border: '1px solid rgba(201, 28, 28, 0.4)', padding: '6px 14px', borderRadius: '20px' }}>
+            <span style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#ff4d4d', fontWeight: 700 }}>
+              33+ Approved Process Equipment Models • Food-Grade SS304 / SS316
+            </span>
+          </div>
+
+          <div className="hero-cta-group" style={{ display: 'flex', gap: '16px', marginTop: '32px', flexWrap: 'wrap' }}>
+            <a href="#milk-collection-handling" onClick={(e) => handleNavClick(e, 'milk-collection-handling')} className="vort-btn-primary" style={{ cursor: 'pointer', textDecoration: 'none' }}>
+              Explore Product Categories &rarr;
+            </a>
+            <button onClick={() => setCatalogueModalOpen(true)} className="vort-btn-secondary" style={{ border: '1px solid rgba(255,255,255,0.3)', color: '#ffffff', background: 'rgba(255,255,255,0.05)', cursor: 'pointer' }}>
+              Request Product Catalogue ↓
+            </button>
           </div>
         </div>
-      </section>
+      </header>
 
       {/* 2. STICKY CATEGORY NAVIGATION */}
       <nav className="products-sticky-category-nav" aria-label="Product Category Navigation">

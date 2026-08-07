@@ -26,7 +26,7 @@ function Footer() {
             <span className="footer-col-title">Company</span>
             <ul className="footer-col-links">
               <li><Link to="/about" className="footer-col-link">About Us</Link></li>
-              <li><a href="#process-section" className="footer-col-link" onClick={(e) => handleSectionClick(e, '#process-section')}>Manufacturing</a></li>
+              <li><Link to="/manufacturing" className="footer-col-link">Manufacturing</Link></li>
               <li><a href="#quality-philosophy-section" className="footer-col-link" onClick={(e) => handleSectionClick(e, '#quality-philosophy-section')}>Quality Standards</a></li>
               <li><Link to="/exports" className="footer-col-link">Export Markets</Link></li>
               <li><Link to="/contact" className="footer-col-link">Contact Desk</Link></li>
@@ -47,11 +47,11 @@ function Footer() {
           <div className="footer-col">
             <span className="footer-col-title">Industries</span>
             <ul className="footer-col-links">
-              <li><a href="#divisions" className="footer-col-link" onClick={(e) => handleSectionClick(e, '#divisions')}>Dairy Processing</a></li>
-              <li><a href="#divisions" className="footer-col-link" onClick={(e) => handleSectionClick(e, '#divisions')}>Food Processing</a></li>
-              <li><a href="#divisions" className="footer-col-link" onClick={(e) => handleSectionClick(e, '#divisions')}>Institutional Kitchens</a></li>
-              <li><a href="#divisions" className="footer-col-link" onClick={(e) => handleSectionClick(e, '#divisions')}>Beverage Industry</a></li>
-              <li><a href="#divisions" className="footer-col-link" onClick={(e) => handleSectionClick(e, '#divisions')}>Hygienic Storage</a></li>
+              <li><Link to="/industries#dairy-farms" className="footer-col-link">Dairy Farms & Collection</Link></li>
+              <li><Link to="/industries#dairy-processing" className="footer-col-link">Dairy Processing Plants</Link></li>
+              <li><Link to="/industries#food-processing" className="footer-col-link">Food Processing Plants</Link></li>
+              <li><Link to="/industries#institutional-kitchens" className="footer-col-link">Institutional Kitchens</Link></li>
+              <li><Link to="/industries#custom-fabrication" className="footer-col-link">Custom OEM Fabrication</Link></li>
             </ul>
           </div>
 

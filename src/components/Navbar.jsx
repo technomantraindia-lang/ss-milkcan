@@ -38,11 +38,10 @@ function Navbar() {
           <Link to="/" className={`vort-menu-item ${location.pathname === '/' ? 'active' : ''}`}>Home</Link>
           <Link to="/about" className={`vort-menu-item ${location.pathname === '/about' ? 'active' : ''}`}>About Us</Link>
           <Link to="/products" className={`vort-menu-item ${location.pathname.startsWith('/products') ? 'active' : ''}`}>Products</Link>
-          <a href="/#divisions" className="vort-menu-item" onClick={(e) => handleSectionClick(e, '#divisions')}>Industries</a>
-          <a href="/#process-section" className="vort-menu-item" onClick={(e) => handleSectionClick(e, '#process-section')}>Manufacturing</a>
+          <Link to="/industries" className={`vort-menu-item ${location.pathname.startsWith('/industries') ? 'active' : ''}`}>Industries</Link>
+          <Link to="/manufacturing" className={`vort-menu-item ${location.pathname.startsWith('/manufacturing') ? 'active' : ''}`}>Manufacturing</Link>
           <Link to="/exports" className={`vort-menu-item ${location.pathname === '/exports' ? 'active' : ''}`}>Exports</Link>
-          <a href="/#projects" className="vort-menu-item" onClick={(e) => handleSectionClick(e, '#projects')}>Projects</a>
-          <a href="/#knowledge" className="vort-menu-item" onClick={(e) => handleSectionClick(e, '#knowledge')}>Knowledge Centre</a>
+          <Link to="/projects" className={`vort-menu-item ${location.pathname.startsWith('/projects') ? 'active' : ''}`}>Projects</Link>
           <Link to="/contact" className={`vort-menu-item ${location.pathname === '/contact' ? 'active' : ''}`}>Contact</Link>
         </div>
         
