@@ -16,6 +16,51 @@ import inspectionImg from '../assets/inspection_close_up.png';
 import dispatchImg from '../assets/dispatch_loading.png';
 import factoryViewImg from '../assets/factory_view.png';
 
+// Specific high-quality product images copied from imagessite
+import lockableMilkCan20LImg from '../assets/Lockable-Milk-Can-20-Ltr-jay-ambe.png';
+import insulatedMilkCan40LImg from '../assets/insulated-milk-can-40-litre-jay-ambe.png';
+import milkingBucket20LImg from '../assets/stainless-steel-milking-bucket-20-litre-jay-ambe.png';
+import milkingBucketPremiumImg from '../assets/Stainless-Steel-Premium-Milking-Bucket.png';
+import teatShellImg from '../assets/milking-machine-teat-shell-jay-ambe.png';
+import bulkMilkCoolerImgNew from '../assets/bulk-milk-cooler-dairy-jay-ambe.png';
+import milkTankImgNew from '../assets/stainless-steel-milk-tank-jay-ambe.png';
+import liquidStorageTankImg from '../assets/stainless-steel-liquid-storage-tank-17000-litre-jay-ambe.png';
+import batchPasteurizerImg from '../assets/batch-milk-pasteurizer-dairy-jay-ambe.png';
+import electricButterChurnerImgNew from '../assets/electric-butter-churner-jay-ambe.png';
+import manualButterChurnerImg from '../assets/manual-butter-churner-jay-ambe.png';
+import paneerPressImgNew from '../assets/Paneer-Press-Machine-jay-ambe.png';
+import khoyaMachineImgNew from '../assets/Khoya-Making-Machine-200-Ltr-jay-ambe.png';
+import brewingKettleImg from '../assets/SS-Brewing-Kettle-jay-ambe.png';
+import riceCauldronImg from '../assets/Rice-Cauldron-jay-ambe.png';
+import steamCookingVesselImgNew from '../assets/steam-cooking-vessel-jay-ambe.png';
+import miniSteamGeneratorImg from '../assets/mini-steam-generator-jay-ambe.png';
+import bhagonaStockPotImg from '../assets/Bhagona-Stock-Pot-200-Ltr-jay-ambe.png';
+import foodServingVessel20LImg from '../assets/stainless-steel-food-serving-vessel-20-litre-jay-ambe.png';
+import foodServingVessel10LImg from '../assets/stainless-steel-food-serving-vessel-10-litre-jay-ambe.png';
+import foodServingVessel35LImg from '../assets/stainless-steel-food-serving-vessel-35-litre-jay-ambe.png';
+import serviceTrolleyImg from '../assets/stainless-steel-service-trolley-jay-ambe.png';
+import tableTrolleyImg from '../assets/stainless-steel-table-trolley-jay-ambe.png';
+import utilityTrolleyImg from '../assets/stainless-steel-utility-trolley-jay-ambe.png';
+import kitchenTrolleyImg from '../assets/Kitchen-Trolley-jay-ambe.png';
+import tableWithSinkImg from '../assets/stainless-steel-table-with-sink-jay-ambe.png';
+import dhoklaSteamerImg from '../assets/khaman-dhokla-steamer-jay-ambe.png';
+import conicalFermenterImg from '../assets/SS-Conical-Fermenter-jay-ambe.png';
+import curdTankImg from '../assets/stainless-steel-curd-tank-jay-ambe.png';
+import cheeseVatImg from '../assets/stainless-steel-cheese-vat-jay-ambe.png';
+import foodContainer20LImg from '../assets/stainless-steel-food-container-20-litre-jay-ambe.png';
+import funnelStrainerImg from '../assets/stainless-steel-funnel-strainer-jay-ambe.png';
+import milkMeasuringSetImg from '../assets/milk-measuring-set-jay-ambe.png';
+import milkProcessingPlantImg from '../assets/milk-processing-plant-jay-ambe.png';
+
+// Specific milk can capacities
+import milkCan5LImg from '../assets/stainless-steel-milk-can-5-litre-jay-ambe.png';
+import milkCan10LImg from '../assets/stainless-steel-milk-can-10-litre-jay-ambe.png';
+import milkCan15LImg from '../assets/stainless-steel-milk-can-15-litre-jay-ambe.png';
+import milkCan20LImg from '../assets/stainless-steel-milk-can-20-litre-jay-ambe.png';
+import milkCan30LImg from '../assets/stainless-steel-milk-can-30-litre-jay-ambe.png';
+import milkCan40LImg from '../assets/stainless-steel-milk-can-40-litre-jay-ambe.png';
+import milkCan50LImg from '../assets/stainless-steel-milk-can-50-litre-jay-ambe.png';
+
 export const categories = [
   {
     id: 'milk-collection-handling',
@@ -96,7 +141,7 @@ export const products = [
     delivery: 'Standard models dispatched in 7-10 business days; custom quantities subject to production schedule.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [milkCanImg, blueprintImg, polishingImg, dispatchImg],
+    images: [milkCan20LImg, milkCan10LImg, milkCan30LImg, milkCan40LImg, milkCan50LImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['insulated-milk-cans', 'ice-chamber-milk-cans', 'milking-buckets', 'milk-receiver-tanks'],
     verificationStatus: 'pending',
@@ -140,7 +185,7 @@ export const products = [
     delivery: 'Based on order quantity and custom specifications.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [milkCanImg, polishingImg, dispatchImg],
+    images: [insulatedMilkCan40LImg, milkCan40LImg, dispatchImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['ss-milk-cans', 'ice-chamber-milk-cans', 'milk-receiver-tanks'],
     verificationStatus: 'pending',
@@ -183,7 +228,7 @@ export const products = [
     delivery: '10-14 days standard production lead time.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [milkCanImg, blueprintImg, inspectionImg],
+    images: [lockableMilkCan20LImg, milkCanImg, inspectionImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['ss-milk-cans', 'insulated-milk-cans', 'milking-buckets'],
     verificationStatus: 'pending',
@@ -226,7 +271,7 @@ export const products = [
     delivery: 'Subject to machine model compatibility requirements.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [milkCanImg, weldingImg, inspectionImg],
+    images: [milkCan15LImg, milkCan10LImg, weldingImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['ss-milk-cans', 'milking-buckets', 'teat-shells-teat-cups'],
     verificationStatus: 'pending',
@@ -269,7 +314,7 @@ export const products = [
     delivery: '7-10 business days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [milkCanImg, polishingImg],
+    images: [milkingBucketPremiumImg, milkingBucket20LImg, polishingImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['ss-milk-cans', 'milking-machine-milk-cans', 'teat-shells-teat-cups'],
     verificationStatus: 'pending',
@@ -312,7 +357,7 @@ export const products = [
     delivery: '14-21 business days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [milkTankImg, blueprintImg, weldingImg, dispatchImg],
+    images: [milkTankImgNew, blueprintImg, weldingImg, dispatchImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['bulk-milk-coolers', 'milk-storage-tanks', 'ss-milk-cans'],
     verificationStatus: 'pending',
@@ -354,7 +399,7 @@ export const products = [
     delivery: 'Stock items 3-5 days; custom batches 10-14 days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [polishingImg, blueprintImg],
+    images: [teatShellImg, blueprintImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['milking-machine-milk-cans', 'milking-buckets'],
     verificationStatus: 'pending',
@@ -401,7 +446,7 @@ export const products = [
     delivery: '2-3 weeks manufacturing lead time.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [milkCoolerImg, blueprintImg, weldingImg, factoryViewImg],
+    images: [bulkMilkCoolerImgNew, blueprintImg, weldingImg, factoryViewImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['milk-storage-tanks', 'batch-pasteurisers', 'milk-receiver-tanks'],
     verificationStatus: 'pending',
@@ -444,7 +489,7 @@ export const products = [
     delivery: '3-4 weeks.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [milkTankImg, factoryViewImg, dispatchImg],
+    images: [liquidStorageTankImg, milkTankImgNew, factoryViewImg, dispatchImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['bulk-milk-coolers', 'batch-pasteurisers', 'heating-cooling-tanks'],
     verificationStatus: 'pending',
@@ -487,7 +532,7 @@ export const products = [
     delivery: '2-3 weeks.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [milkCoolerImg, blueprintImg, weldingImg],
+    images: [batchPasteurizerImg, blueprintImg, weldingImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['milk-boilers', 'paneer-press-machines', 'khoya-machines'],
     verificationStatus: 'pending',
@@ -530,7 +575,7 @@ export const products = [
     delivery: '10-14 days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [gheeBoilerImg, steamVesselImg, polishingImg],
+    images: [bhagonaStockPotImg, brewingKettleImg, polishingImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['batch-pasteurisers', 'khoya-machines', 'ghee-boiler-machines'],
     verificationStatus: 'pending',
@@ -573,7 +618,7 @@ export const products = [
     delivery: '14-21 days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [butterChurnerImg, blueprintImg, inspectionImg],
+    images: [electricButterChurnerImgNew, manualButterChurnerImg, blueprintImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['ghee-boiler-machines', 'paneer-press-machines', 'milk-storage-tanks'],
     verificationStatus: 'pending',
@@ -616,7 +661,7 @@ export const products = [
     delivery: '10-14 days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [paneerPressImg, blueprintImg, weldingImg],
+    images: [paneerPressImgNew, blueprintImg, weldingImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['paneer-moulds', 'batch-pasteurisers', 'khoya-machines'],
     verificationStatus: 'pending',
@@ -658,7 +703,7 @@ export const products = [
     delivery: '5-7 business days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [paneerPressImg, polishingImg],
+    images: [paneerPressImgNew, polishingImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['paneer-press-machines', 'batch-pasteurisers'],
     verificationStatus: 'pending',
@@ -701,7 +746,7 @@ export const products = [
     delivery: '10-14 days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [khoyaMachineImg, blueprintImg, weldingImg],
+    images: [khoyaMachineImgNew, blueprintImg, weldingImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['ghee-boiler-machines', 'milk-boilers', 'batch-pasteurisers'],
     verificationStatus: 'pending',
@@ -744,7 +789,7 @@ export const products = [
     delivery: '2-3 weeks.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [gheeBoilerImg, steamVesselImg, factoryViewImg],
+    images: [brewingKettleImg, steamCookingVesselImgNew, factoryViewImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['butter-churners', 'khoya-machines', 'milk-boilers'],
     verificationStatus: 'pending',
@@ -789,7 +834,7 @@ export const products = [
     delivery: '14-21 days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [steamVesselImg, blueprintImg, weldingImg],
+    images: [riceCauldronImg, steamCookingVesselImgNew, blueprintImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['daal-sambar-cauldrons', 'steam-cooking-systems', 'jacketed-cooking-vessels'],
     verificationStatus: 'pending',
@@ -832,7 +877,7 @@ export const products = [
     delivery: '14-21 days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [steamVesselImg, polishingImg, inspectionImg],
+    images: [steamCookingVesselImgNew, bhagonaStockPotImg, polishingImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['rice-cauldrons', 'food-cooking-cauldrons', 'steam-cooking-systems'],
     verificationStatus: 'pending',
@@ -875,7 +920,7 @@ export const products = [
     delivery: '10-14 days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [steamVesselImg, factoryViewImg],
+    images: [steamCookingVesselImgNew, factoryViewImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['rice-cauldrons', 'daal-sambar-cauldrons', 'jacketed-cooking-vessels'],
     verificationStatus: 'pending',
@@ -917,7 +962,7 @@ export const products = [
     delivery: '3-4 weeks for complete plant integration.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [steamVesselImg, blueprintImg, factoryViewImg, dispatchImg],
+    images: [miniSteamGeneratorImg, steamCookingVesselImgNew, blueprintImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['rice-cauldrons', 'daal-sambar-cauldrons', 'jacketed-cooking-vessels'],
     verificationStatus: 'pending',
@@ -959,7 +1004,7 @@ export const products = [
     delivery: '2-3 weeks.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [steamVesselImg, weldingImg, inspectionImg],
+    images: [brewingKettleImg, weldingImg, inspectionImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['rice-cauldrons', 'food-cooking-cauldrons', 'heating-cooling-tanks'],
     verificationStatus: 'pending',
@@ -1001,7 +1046,7 @@ export const products = [
     delivery: '5-7 business days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [polishingImg, milkCanImg],
+    images: [bhagonaStockPotImg, polishingImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['food-distribution-vessels', 'commercial-stoves', 'rice-cauldrons'],
     verificationStatus: 'pending',
@@ -1044,7 +1089,7 @@ export const products = [
     delivery: '7-10 business days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [dispatchImg, milkCanImg],
+    images: [foodServingVessel20LImg, foodServingVessel10LImg, foodServingVessel35LImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['bhagona-kadhai-tapela', 'rice-chutes', 'insulated-milk-cans'],
     verificationStatus: 'pending',
@@ -1086,7 +1131,7 @@ export const products = [
     delivery: '7-10 days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [polishingImg, blueprintImg],
+    images: [serviceTrolleyImg, kitchenTrolleyImg, polishingImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['rice-cauldrons', 'food-distribution-vessels'],
     verificationStatus: 'pending',
@@ -1128,7 +1173,7 @@ export const products = [
     delivery: '7-10 days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [weldingImg, factoryViewImg],
+    images: [dhoklaSteamerImg, weldingImg, factoryViewImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['bhagona-kadhai-tapela', 'food-cooking-cauldrons'],
     verificationStatus: 'pending',
@@ -1173,7 +1218,7 @@ export const products = [
     delivery: '2-4 weeks based on capacity.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [milkTankImg, blueprintImg, factoryViewImg, dispatchImg],
+    images: [milkTankImgNew, liquidStorageTankImg, blueprintImg, factoryViewImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['heating-cooling-tanks', 'agitated-vessels', 'syrup-tanks'],
     verificationStatus: 'pending',
@@ -1216,7 +1261,7 @@ export const products = [
     delivery: '3-4 weeks.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [milkCoolerImg, blueprintImg, weldingImg],
+    images: [curdTankImg, cheeseVatImg, blueprintImg, weldingImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['stainless-steel-tanks', 'agitated-vessels', 'syrup-tanks'],
     verificationStatus: 'pending',
@@ -1259,7 +1304,7 @@ export const products = [
     delivery: '2-3 weeks.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [milkTankImg, blueprintImg, inspectionImg],
+    images: [conicalFermenterImg, brewingKettleImg, blueprintImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['stainless-steel-tanks', 'syrup-tanks', 'heating-cooling-tanks'],
     verificationStatus: 'pending',
@@ -1302,7 +1347,7 @@ export const products = [
     delivery: '7-10 business days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [milkCanImg, polishingImg, dispatchImg],
+    images: [foodContainer20LImg, milkCan50LImg, polishingImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['stainless-steel-drums', 'stainless-steel-topes', 'stainless-steel-tanks'],
     verificationStatus: 'pending',
@@ -1345,7 +1390,7 @@ export const products = [
     delivery: '5-7 business days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [milkCanImg, polishingImg],
+    images: [foodContainer20LImg, polishingImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['stainless-steel-barrels', 'stainless-steel-topes', 'custom-hygienic-vessels'],
     verificationStatus: 'pending',
@@ -1387,7 +1432,7 @@ export const products = [
     delivery: '5-7 business days.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [polishingImg, milkCanImg],
+    images: [bhagonaStockPotImg, foodServingVessel35LImg, polishingImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['stainless-steel-drums', 'bhagona-kadhai-tapela'],
     verificationStatus: 'pending',
@@ -1430,7 +1475,7 @@ export const products = [
     delivery: '3-4 weeks.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [milkTankImg, blueprintImg, weldingImg],
+    images: [liquidStorageTankImg, milkTankImgNew, weldingImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['agitated-vessels', 'heating-cooling-tanks', 'stainless-steel-tanks'],
     verificationStatus: 'pending',
@@ -1473,7 +1518,7 @@ export const products = [
     delivery: 'Based on drawing complexity and fabrication approval.',
     exportSuitable: true,
     oemAvailable: true,
-    images: [blueprintImg, weldingImg, polishingImg, inspectionImg, dispatchImg],
+    images: [conicalFermenterImg, cheeseVatImg, curdTankImg, blueprintImg, weldingImg],
     brochure: { status: 'pending', note: 'Product brochure will be available soon.' },
     relatedProductIds: ['stainless-steel-tanks', 'agitated-vessels', 'heating-cooling-tanks'],
     verificationStatus: 'pending',

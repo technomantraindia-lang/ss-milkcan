@@ -102,6 +102,10 @@ html.lenis body {
   color: var(--color-red);
 }
 
+.accent-red {
+  color: var(--color-red) !important;
+}
+
 .text-tech {
   font-family: var(--font-tech);
   font-size: 13px;
@@ -297,24 +301,23 @@ html.lenis body {
   border-color: rgba(255, 255, 255, 0.4);
 }
 
-/* --- EXACT VORT HERO MATCH (WITH SCROLL TRACKING) --- */
+/* --- EXACT VORT HERO MATCH (SLIDER) --- */
 .hero-page-wrapper {
   background-color: #f8f9fa;
   /* Off-white page background */
   padding: 16px;
   width: 100%;
   box-sizing: border-box;
-  height: 300vh;
-  /* Scroll track height for 3 slides */
+  height: auto;
   position: relative;
 }
 
 .vort-hero {
-  position: sticky;
-  top: 16px;
+  position: relative;
+  top: 0;
   width: 100%;
   height: calc(100vh - 32px);
-  min-height: 700px;
+  min-height: 680px;
   background-color: var(--color-charcoal);
   border-radius: 24px;
   overflow: hidden;
@@ -324,15 +327,13 @@ html.lenis body {
 
 @media (max-width: 992px) {
   .hero-page-wrapper {
-    height: auto;
     padding: 0;
   }
 
   .vort-hero {
-    position: relative;
-    top: 0;
-    height: auto;
     border-radius: 0;
+    height: auto;
+    min-height: 620px;
   }
 }
 
@@ -387,6 +388,25 @@ html.lenis body {
   display: flex;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
+}
+
+.nav-brand-logo-img {
+  height: 54px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
+  background-color: #ffffff;
+  padding: 4px 6px;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.nav-brand:hover .nav-brand-logo-img {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
 .nav-brand-logo-svg {
@@ -540,25 +560,87 @@ html.lenis body {
   gap: 16px;
 }
 
-.hero-slide-dots {
+.hero-slider-controls {
   grid-area: dots;
   display: flex;
-  gap: 12px;
+  align-items: center;
+  gap: 20px;
   margin-top: 48px;
 }
 
+.hero-slide-dots {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 .hero-slide-dots .dot {
-  width: 48px;
-  height: 3px;
-  background-color: rgba(255, 255, 255, 0.2);
+  position: relative;
+  width: 36px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.25);
   border: none;
+  border-radius: 2px;
   padding: 0;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  overflow: hidden;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+}
+
+.hero-slide-dots .dot:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .hero-slide-dots .dot.active {
+  width: 60px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.hero-slide-dots .dot.active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background-color: var(--color-red);
+  transform-origin: left;
+  animation: heroDotProgress 5s linear forwards;
+}
+
+@keyframes heroDotProgress {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.hero-slider-arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.hero-arrow-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0;
+}
+
+.hero-arrow-btn:hover {
+  background: var(--color-red);
+  border-color: var(--color-red);
+  transform: scale(1.06);
 }
 
 .vort-btn-primary {
@@ -626,6 +708,19 @@ html.lenis body {
   font-family: var(--font-body);
   font-size: 13px;
   color: #aaaaaa;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease, transform 0.2s ease;
+  padding: 0;
+}
+
+.vort-scroll-indicator:hover {
+  color: #ffffff;
+  transform: translateY(2px);
 }
 
 /* Glassmorphism Dynamic Metric Card exactly like Vort! */
@@ -6619,7 +6714,8 @@ textarea.form-input {
 .final-cta-title {
   font-family: var(--font-headline);
   font-size: 34px;
-  font-weight: 600;
+  font-weight: 700;
+  color: #ffffff !important;
   margin: 12px 0 20px 0;
   line-height: 1.2;
 }
@@ -6627,7 +6723,7 @@ textarea.form-input {
 .final-cta-desc {
   font-family: var(--font-body);
   font-size: 15px;
-  color: #aaaaaa;
+  color: #d1d5db;
   line-height: 1.65;
   margin-bottom: 36px;
 }
@@ -7084,15 +7180,18 @@ textarea.form-input {
 
 .detail-final-title {
   font-family: var(--font-headline);
-  font-size: 30px;
-  margin: 10px 0 16px 0;
+  font-size: 34px;
+  font-weight: 700;
+  color: #ffffff !important;
+  margin: 12px 0 16px 0;
+  line-height: 1.25;
 }
 
 .detail-final-desc {
   font-family: var(--font-body);
-  font-size: 14.5px;
-  color: #aaaaaa;
-  margin-bottom: 32px;
+  font-size: 15px;
+  color: #d1d5db;
+  margin-bottom: 36px;
   line-height: 1.6;
 }
 

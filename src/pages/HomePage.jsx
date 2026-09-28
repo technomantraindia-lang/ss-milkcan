@@ -68,7 +68,6 @@ function HomePage() {
 
   // Lenis & Scroll Effect Hooks
   const heroImageRef = useRef(null)
-  const heroTrackRef = useRef(null)
   const trackContainerRef = useRef(null)
   const slidingTrackRef = useRef(null)
   
@@ -280,22 +279,20 @@ function HomePage() {
     }, 4000)
   }
 
-  // Hero Autoplay & Interactions Effect
+  // Hero Autoplay & Interactions Effect (Loops smoothly every 5 seconds)
   useEffect(() => {
-    const startAutoplay = () => {
-      if (autoplayTimerRef.current) clearInterval(autoplayTimerRef.current)
+    if (autoplayTimerRef.current) clearInterval(autoplayTimerRef.current)
+
+    if (!isHoveringHero) {
       autoplayTimerRef.current = setInterval(() => {
-        if (!isHoveringHero && window.innerWidth <= 992) {
-          setCurrentHeroSlide(prev => (prev + 1) % 3)
-        }
+        setCurrentHeroSlide(prev => (prev + 1) % heroSlides.length)
       }, 5000)
     }
 
-    startAutoplay()
     return () => {
       if (autoplayTimerRef.current) clearInterval(autoplayTimerRef.current)
     }
-  }, [isHoveringHero])
+  }, [currentHeroSlide, isHoveringHero])
 
   // GSAP Smooth Slide Animation Effect
   useEffect(() => {
@@ -554,27 +551,6 @@ function HomePage() {
     const handleScroll = () => {
       const scrollY = window.scrollY
 
-      if (heroImageRef.current) {
-        const zoomFactor = Math.max(1, 1.15 - scrollY * 0.0005)
-        heroImageRef.current.style.setProperty('--hero-zoom', zoomFactor)
-      }
-
-      if (heroTrackRef.current && window.innerWidth > 992) {
-        const track = heroTrackRef.current
-        const rect = track.getBoundingClientRect()
-        const containerHeight = track.offsetHeight
-        const viewportHeight = window.innerHeight
-        
-        const scrolledInTrack = -rect.top
-        const maxScroll = containerHeight - viewportHeight
-
-        if (scrolledInTrack >= 0 && scrolledInTrack <= maxScroll) {
-          const progress = scrolledInTrack / maxScroll
-          const index = Math.min(2, Math.floor(progress * 3.01))
-          setCurrentHeroSlide(index)
-        }
-      }
-
       if (trackContainerRef.current && slidingTrackRef.current && window.innerWidth > 768) {
         const container = trackContainerRef.current
         const track = slidingTrackRef.current
@@ -672,7 +648,7 @@ function HomePage() {
       {loading && <Loader onComplete={() => setLoading(false)} />}
       
       {/* Hero Section */}
-      <div className="hero-page-wrapper" ref={heroTrackRef}>
+      <div className="hero-page-wrapper">
         <div 
           className="hero-wrapper vort-hero" 
           ref={heroContainerRef}
@@ -731,23 +707,39 @@ function HomePage() {
                 </div>
               ))}
               
-              <div className="hero-slide-dots">
-                {heroSlides.map((_, index) => (
+              <div className="hero-slider-controls">
+                <div className="hero-slide-dots">
+                  {heroSlides.map((_, index) => (
+                    <button 
+                      key={index} 
+                      className={`dot ${currentHeroSlide === index ? 'active' : ''}`} 
+                      onClick={() => setCurrentHeroSlide(index)}
+                      aria-label={`Slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
+                <div className="hero-slider-arrows">
                   <button 
-                    key={index} 
-                    className={`dot ${currentHeroSlide === index ? 'active' : ''}`} 
-                    onClick={() => {
-                      if (window.innerWidth <= 992) {
-                        setCurrentHeroSlide(index)
-                      } else if (heroTrackRef.current) {
-                        const track = heroTrackRef.current
-                        const rect = track.getBoundingClientRect()
-                        const slideScrollOffset = window.scrollY + rect.top + (index * (track.offsetHeight - window.innerHeight) / 2)
-                        window.scrollTo({ top: slideScrollOffset, behavior: 'smooth' })
-                      }
-                    }}
-                  />
-                ))}
+                    type="button"
+                    className="hero-arrow-btn prev"
+                    onClick={() => setCurrentHeroSlide(prev => (prev === 0 ? heroSlides.length - 1 : prev - 1))}
+                    aria-label="Previous slide"
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                  </button>
+                  <button 
+                    type="button"
+                    className="hero-arrow-btn next"
+                    onClick={() => setCurrentHeroSlide(prev => (prev + 1) % heroSlides.length)}
+                    aria-label="Next slide"
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -772,9 +764,19 @@ function HomePage() {
               </div>
             ))}
             
-            <div className="vort-scroll-indicator">
+            <button 
+              type="button"
+              className="vort-scroll-indicator"
+              onClick={() => {
+                const trustBar = document.querySelector('.trust-bar');
+                if (trustBar) {
+                  trustBar.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              aria-label="Scroll down to explore"
+            >
               Scroll to Explore &darr;
-            </div>
+            </button>
           </div>
         </div>
       </div>
