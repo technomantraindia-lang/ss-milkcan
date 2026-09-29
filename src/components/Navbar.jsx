@@ -1,46 +1,145 @@
-import React from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import mainLogo from '../assets/main logo.png';
 
 function Navbar() {
   const location = useLocation();
-  const navigate = useNavigate();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const handleSectionClick = (e, hash) => {
-    e.preventDefault();
-    if (location.pathname !== '/') {
-      navigate('/' + hash);
+  // Close mobile menu whenever location changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  // Prevent background scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
     } else {
-      const el = document.querySelector(hash);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
+      document.body.style.overflow = '';
     }
-  };
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
+  const navLinks = [
+    { label: 'Home', path: '/' },
+    { label: 'About Us', path: '/about' },
+    { label: 'Products', path: '/products' },
+    { label: 'Industries', path: '/industries' },
+    { label: 'Manufacturing', path: '/manufacturing' },
+    { label: 'Exports', path: '/exports' },
+    { label: 'Projects', path: '/projects' },
+    { label: 'Contact', path: '/contact' }
+  ];
 
   return (
-    <nav className="navbar-overlay vort-nav" style={{ position: 'absolute', top: '24px', left: 0, width: '100%', zIndex: 100 }}>
-      <div className="vort-nav-inner">
-        <Link to="/" className="nav-brand" style={{ cursor: 'pointer', textDecoration: 'none' }} aria-label="Jay AMBE Industries Home">
-          <img src={mainLogo} alt="Jay AMBE Industries" className="nav-brand-logo-img" />
-        </Link>
-        
-        <div className="vort-menu-pill">
-          <Link to="/" className={`vort-menu-item ${location.pathname === '/' ? 'active' : ''}`}>Home</Link>
-          <Link to="/about" className={`vort-menu-item ${location.pathname === '/about' ? 'active' : ''}`}>About Us</Link>
-          <Link to="/products" className={`vort-menu-item ${location.pathname.startsWith('/products') ? 'active' : ''}`}>Products</Link>
-          <Link to="/industries" className={`vort-menu-item ${location.pathname.startsWith('/industries') ? 'active' : ''}`}>Industries</Link>
-          <Link to="/manufacturing" className={`vort-menu-item ${location.pathname.startsWith('/manufacturing') ? 'active' : ''}`}>Manufacturing</Link>
-          <Link to="/exports" className={`vort-menu-item ${location.pathname === '/exports' ? 'active' : ''}`}>Exports</Link>
-          <Link to="/projects" className={`vort-menu-item ${location.pathname.startsWith('/projects') ? 'active' : ''}`}>Projects</Link>
-          <Link to="/contact" className={`vort-menu-item ${location.pathname === '/contact' ? 'active' : ''}`}>Contact</Link>
+    <>
+      <nav className="navbar-overlay vort-nav">
+        <div className="vort-nav-inner">
+          <Link to="/" className="nav-brand" aria-label="Jay AMBE Industries Home">
+            <img src={mainLogo} alt="Jay AMBE Industries" className="nav-brand-logo-img" />
+          </Link>
+          
+          <div className="vort-menu-pill">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`vort-menu-item ${
+                  link.path === '/' 
+                    ? location.pathname === '/' ? 'active' : ''
+                    : location.pathname.startsWith(link.path) ? 'active' : ''
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+          
+          <div className="nav-right-actions">
+            <Link to="/contact" className="vort-cta-pill">
+              Request a Quote &rarr;
+            </Link>
+
+            {/* Mobile Hamburger Button */}
+            <button
+              type="button"
+              className={`mobile-menu-toggle ${mobileMenuOpen ? 'open' : ''}`}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
+              aria-expanded={mobileMenuOpen}
+            >
+              <span className="hamburger-line top"></span>
+              <span className="hamburger-line middle"></span>
+              <span className="hamburger-line bottom"></span>
+            </button>
+          </div>
         </div>
-        
-        <Link to="/contact" className="vort-cta-pill" style={{ textDecoration: 'none' }}>
-          Request a Quote &rarr;
-        </Link>
+      </nav>
+
+      {/* Mobile Menu Backdrop & Drawer */}
+      <div 
+        className={`mobile-menu-drawer-wrapper ${mobileMenuOpen ? 'active' : ''}`}
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        <div 
+          className="mobile-menu-drawer"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="mobile-drawer-header">
+            <Link to="/" onClick={() => setMobileMenuOpen(false)} className="nav-brand">
+              <img src={mainLogo} alt="Jay AMBE Industries" className="nav-brand-logo-img" style={{ height: '42px' }} />
+            </Link>
+            <button
+              type="button"
+              className="mobile-drawer-close"
+              onClick={() => setMobileMenuOpen(false)}
+              aria-label="Close Menu"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+
+          <div className="mobile-drawer-links">
+            {navLinks.map((link) => {
+              const isActive = link.path === '/' 
+                ? location.pathname === '/' 
+                : location.pathname.startsWith(link.path);
+              return (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`mobile-drawer-link ${isActive ? 'active' : ''}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span>{link.label}</span>
+                  <span className="mobile-link-arrow">&rarr;</span>
+                </Link>
+              );
+            })}
+          </div>
+
+          <div className="mobile-drawer-footer">
+            <Link 
+              to="/contact" 
+              className="vort-btn-primary mobile-quote-btn"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Request a Fast Quote &rarr;
+            </Link>
+            <div className="mobile-contact-snippet">
+              <p>📞 <a href="tel:+919426360756">+91 94263 60756</a></p>
+              <p>✉️ <a href="mailto:jayambeindustries111@gmail.com">jayambeindustries111@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
+    </>
   );
 }
 
