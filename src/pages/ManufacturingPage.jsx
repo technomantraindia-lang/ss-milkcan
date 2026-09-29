@@ -474,7 +474,7 @@ function ManufacturingPage() {
                     ></textarea>
                   </div>
 
-                  <button type="submit" className="vort-btn-primary" style={{ width: '100%', padding: '14px' }}>
+                  <button type="submit" className="vort-btn-primary">
                     Submit Manufacturing Requirement &rarr;
                   </button>
                 </form>

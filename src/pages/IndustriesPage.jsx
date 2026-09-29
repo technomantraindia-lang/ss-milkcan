@@ -36,7 +36,7 @@ function IndustriesPage() {
       const el = document.getElementById(targetId);
       if (el) {
         setTimeout(() => {
-          const yOffset = -90;
+          const yOffset = -55;
           const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: 'smooth' });
           setActiveSector(targetId);
@@ -90,7 +90,7 @@ function IndustriesPage() {
     setActiveSector(sectorId);
     const el = document.getElementById(sectorId);
     if (el) {
-      const yOffset = -90;
+      const yOffset = -55;
       const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
@@ -166,16 +166,22 @@ function IndustriesPage() {
                 </a>
               ))}
             </div>
-            <select
-              className="ind-nav-mobile-select"
-              value={activeSector}
-              onChange={(e) => handleNavClick(e, e.target.value)}
-              aria-label="Select Target Sector"
-            >
-              {industriesData.map((sec) => (
-                <option key={sec.id} value={sec.id}>{sec.name}</option>
-              ))}
-            </select>
+
+            {/* Mobile Sector Dropdown Selector */}
+            <div className="ind-nav-mobile-dropdown-wrap">
+              <label htmlFor="ind-mobile-select" className="ind-nav-mobile-dropdown-label">SECTOR:</label>
+              <select
+                id="ind-mobile-select"
+                className="ind-nav-mobile-select"
+                value={activeSector}
+                onChange={(e) => handleNavClick(e, e.target.value)}
+                aria-label="Select Target Sector"
+              >
+                {industriesData.map((sec) => (
+                  <option key={sec.id} value={sec.id}>{sec.name}</option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
       </nav>

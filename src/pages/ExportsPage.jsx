@@ -249,7 +249,7 @@ function ExportsPage() {
             and institutional applications — with complete export support from enquiry to international dispatch.
           </p>
 
-          <div style={{ display: 'flex', gap: '16px', marginTop: '32px', flexWrap: 'wrap' }}>
+          <div className="hero-cta-group" style={{ display: 'flex', gap: '16px', marginTop: '32px', flexWrap: 'wrap' }}>
             <a href="#export-enquiry" className="vort-btn-primary" style={{ textDecoration: 'none' }}>
               Contact Export Team →
             </a>
@@ -284,10 +284,10 @@ function ExportsPage() {
       {/* ═══════════════════════════════════════════
           SECTION 3: EXPORT CAPABILITY INTRODUCTION
       ═══════════════════════════════════════════ */}
-      <section className="exp-reveal" id="export-capability" style={{ padding: '100px 0', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
+      <section className="exp-capability-section exp-reveal" id="export-capability">
         <div className="container-centered">
-          <div className="grid-2col" style={{ gap: '60px', alignItems: 'center' }}>
-            <div style={{ borderRadius: '18px', overflow: 'hidden', height: '440px', position: 'relative' }}>
+          <div className="grid-2col exp-capability-grid" style={{ gap: '60px', alignItems: 'center' }}>
+            <div className="exp-facility-img-wrap" style={{ borderRadius: '18px', overflow: 'hidden', position: 'relative' }}>
               <img src={factoryViewImg} alt="Jay Ambe Manufacturing Facility" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               <div style={{ position: 'absolute', bottom: '20px', left: '20px', background: 'rgba(0,0,0,0.85)', backdropFilter: 'blur(12px)', padding: '12px 20px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)' }}>
                 <span style={{ fontFamily: 'var(--font-tech)', fontSize: '11px', color: 'var(--color-red)', fontWeight: 700 }}>8,400 SQ. MTR FACILITY</span>
@@ -296,15 +296,15 @@ function ExportsPage() {
 
             <div>
               <span className="text-label-caps accent-red" style={{ fontSize: '11px', letterSpacing: '0.12em', fontWeight: 700 }}>EXPORT CAPABILITY</span>
-              <h2 style={{ fontFamily: 'var(--font-headline)', fontSize: '34px', fontWeight: 700, marginTop: '10px', lineHeight: 1.2 }}>
+              <h2 className="exp-section-title" style={{ fontFamily: 'var(--font-headline)', fontWeight: 700, marginTop: '10px', lineHeight: 1.2 }}>
                 A Manufacturing Partner for International Equipment Requirements
               </h2>
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.7, color: 'var(--color-text-secondary)', marginTop: '18px' }}>
+              <p className="exp-section-desc" style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.7, color: 'var(--color-text-secondary)', marginTop: '18px' }}>
                 Jay AMBE Industries supplies standard and custom stainless-steel equipment to international buyers 
                 with complete technical, commercial, and logistics support from enquiry through dispatch.
               </p>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginTop: '28px' }}>
+              <div className="exp-capabilities-checklist" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginTop: '28px' }}>
                 {[
                   'Dairy Collection & Processing',
                   'Institutional Kitchen Systems',
@@ -320,7 +320,7 @@ function ExportsPage() {
                 ))}
               </div>
 
-              <div style={{ display: 'flex', gap: '14px', marginTop: '32px', flexWrap: 'wrap' }}>
+              <div className="exp-section-actions" style={{ display: 'flex', gap: '14px', marginTop: '32px', flexWrap: 'wrap' }}>
                 <Link to="/" className="vort-btn-primary" style={{ textDecoration: 'none', fontSize: '13px' }}>
                   Explore Product Solutions →
                 </Link>
@@ -337,14 +337,14 @@ function ExportsPage() {
       {/* ═══════════════════════════════════════════
           SECTION 4: INTERNATIONAL BUYER JOURNEY
       ═══════════════════════════════════════════ */}
-      <section className="exp-reveal" style={{ padding: '100px 0', background: '#090909', color: '#ffffff', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+      <section className="exp-journey-section exp-reveal">
         <div className="container-centered">
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+          <div className="exp-section-header-center">
             <span className="text-label-caps accent-red" style={{ fontSize: '11px', letterSpacing: '0.12em', fontWeight: 700 }}>HOW WE WORK</span>
-            <h2 style={{ fontFamily: 'var(--font-headline)', fontSize: '34px', fontWeight: 800, color: '#ffffff', margin: '10px 0 14px 0', lineHeight: 1.2 }}>
+            <h2 className="exp-section-title-white">
               From Requirement to International Dispatch
             </h2>
-            <p style={{ fontSize: '15px', color: '#aaaaaa', maxWidth: '600px', margin: '0 auto', lineHeight: 1.6 }}>
+            <p className="exp-section-desc-light">
               A transparent 9-step process that takes your equipment requirement from initial enquiry to containerised dispatch.
             </p>
           </div>
@@ -362,7 +362,7 @@ function ExportsPage() {
             ))}
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: '50px' }}>
+          <div className="exp-journey-cta-wrap" style={{ textAlign: 'center', marginTop: '50px' }}>
             <a href="#export-enquiry" className="vort-btn-primary" style={{ textDecoration: 'none' }}>
               Start an Export Enquiry →
             </a>
@@ -374,16 +374,16 @@ function ExportsPage() {
       {/* ═══════════════════════════════════════════
           SECTION 5: DOCUMENTATION & COMMERCIAL SUPPORT
       ═══════════════════════════════════════════ */}
-      <section className="exp-reveal" style={{ padding: '100px 0', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
+      <section className="exp-documentation-section exp-reveal">
         <div className="container-centered">
-          <div style={{ marginBottom: '50px' }}>
+          <div className="exp-section-header">
             <span className="text-label-caps accent-red" style={{ fontSize: '11px', letterSpacing: '0.12em', fontWeight: 700 }}>EXPORT DOCUMENTATION</span>
-            <h2 style={{ fontFamily: 'var(--font-headline)', fontSize: '34px', fontWeight: 700, marginTop: '10px', lineHeight: 1.2 }}>
+            <h2 className="exp-section-title">
               Documentation Support for Smoother International Transactions
             </h2>
           </div>
 
-          <div className="grid-2col" style={{ gap: '40px' }}>
+          <div className="grid-2col exp-doc-grid" style={{ gap: '40px' }}>
             {/* Documentation List */}
             <div className="exp-doc-panel">
               <h3 style={{ fontFamily: 'var(--font-headline)', fontSize: '18px', fontWeight: 700, marginBottom: '24px', color: '#111' }}>
@@ -417,7 +417,7 @@ function ExportsPage() {
                 ))}
               </div>
 
-              <div style={{ marginTop: '28px', padding: '18px 20px', background: 'rgba(201,28,28,0.04)', border: '1px solid rgba(201,28,28,0.12)', borderRadius: '12px' }}>
+              <div className="exp-doc-note" style={{ marginTop: '28px', padding: '18px 20px', background: 'rgba(201,28,28,0.04)', border: '1px solid rgba(201,28,28,0.12)', borderRadius: '12px' }}>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '13px', color: '#666', lineHeight: 1.6, margin: 0 }}>
                   <strong style={{ color: '#333' }}>Note:</strong> Document availability varies by destination. 
                   Certificate of Origin, insurance, and inspection documents are provided where applicable.
@@ -432,18 +432,18 @@ function ExportsPage() {
       {/* ═══════════════════════════════════════════
           SECTION 6: EXPORT PACKAGING & CONTAINER LOADING
       ═══════════════════════════════════════════ */}
-      <section className="exp-reveal" style={{ padding: '100px 0', background: '#090909', color: '#ffffff', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+      <section className="exp-packaging-section exp-reveal">
         <div className="container-centered">
-          <div style={{ marginBottom: '50px' }}>
+          <div className="exp-section-header">
             <span className="text-label-caps accent-red" style={{ fontSize: '11px', letterSpacing: '0.12em', fontWeight: 700 }}>PACKAGING & DISPATCH</span>
-            <h2 style={{ fontFamily: 'var(--font-headline)', fontSize: '34px', fontWeight: 800, color: '#ffffff', marginTop: '10px', lineHeight: 1.2 }}>
+            <h2 className="exp-section-title-white">
               Packed to Protect Equipment Across Long-Distance Shipping
             </h2>
           </div>
 
-          <div className="grid-2col" style={{ gap: '50px', alignItems: 'start' }}>
+          <div className="grid-2col exp-pkg-grid" style={{ gap: '50px', alignItems: 'start' }}>
             {/* Main packaging image */}
-            <div style={{ position: 'relative', borderRadius: '18px', overflow: 'hidden', height: '480px', border: '1px solid rgba(255,255,255,0.08)' }}>
+            <div className="exp-pkg-img-wrap" style={{ position: 'relative', borderRadius: '18px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)' }}>
               <img src={dispatchImg} alt="Export packaging and container loading" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '120px', background: 'linear-gradient(transparent, rgba(0,0,0,0.8))' }}></div>
               <div style={{ position: 'absolute', bottom: '24px', left: '24px' }}>
@@ -478,20 +478,20 @@ function ExportsPage() {
       {/* ═══════════════════════════════════════════
           SECTION 7: OEM & DISTRIBUTOR PARTNERSHIPS
       ═══════════════════════════════════════════ */}
-      <section className="exp-reveal" style={{ padding: '100px 0', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
+      <section className="exp-partnerships-section exp-reveal">
         <div className="container-centered">
-          <div style={{ marginBottom: '50px' }}>
+          <div className="exp-section-header">
             <span className="text-label-caps accent-red" style={{ fontSize: '11px', letterSpacing: '0.12em', fontWeight: 700 }}>PARTNERSHIP MODELS</span>
-            <h2 style={{ fontFamily: 'var(--font-headline)', fontSize: '34px', fontWeight: 700, marginTop: '10px', lineHeight: 1.2 }}>
+            <h2 className="exp-section-title">
               Manufacturing Partnerships Beyond a Single Order
             </h2>
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--color-text-secondary)', marginTop: '14px', maxWidth: '640px', lineHeight: 1.65 }}>
+            <p className="exp-section-desc">
               We work with international buyers on long-term OEM, private-label, and distribution arrangements 
               tailored to market-specific requirements.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '28px' }}>
+          <div className="exp-partners-grid">
             {/* OEM */}
             <div className="exp-partner-card">
               <div className="exp-partner-icon">
@@ -538,14 +538,14 @@ function ExportsPage() {
       {/* ═══════════════════════════════════════════
           SECTION 8: GLOBAL PRESENCE & EXPORT MARKETS
       ═══════════════════════════════════════════ */}
-      <section className="exp-reveal" style={{ padding: '100px 0', background: '#0a0a0a', color: '#ffffff', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+      <section className="exp-markets-section exp-reveal">
         <div className="container-centered">
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+          <div className="exp-section-header-center">
             <span className="text-label-caps accent-red" style={{ fontSize: '11px', letterSpacing: '0.12em', fontWeight: 700 }}>INTERNATIONAL REACH</span>
-            <h2 style={{ fontFamily: 'var(--font-headline)', fontSize: '34px', fontWeight: 800, color: '#ffffff', margin: '10px 0 14px 0', lineHeight: 1.2 }}>
+            <h2 className="exp-section-title-white">
               Supporting Buyers Across International Markets
             </h2>
-            <p style={{ fontSize: '15px', color: '#aaaaaa', maxWidth: '600px', margin: '0 auto', lineHeight: 1.6 }}>
+            <p className="exp-section-desc-light">
               Confirmed export markets and growing opportunities across multiple continents.
             </p>
           </div>
@@ -563,7 +563,7 @@ function ExportsPage() {
             ))}
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: '50px' }}>
+          <div className="exp-markets-cta-wrap" style={{ textAlign: 'center', marginTop: '50px' }}>
             <a href="#export-enquiry" className="vort-btn-primary" style={{ textDecoration: 'none' }}>
               Contact Export Team →
             </a>
@@ -575,11 +575,11 @@ function ExportsPage() {
       {/* ═══════════════════════════════════════════
           SECTION 9: EXPORT CASE STUDIES
       ═══════════════════════════════════════════ */}
-      <section className="exp-reveal" style={{ padding: '100px 0', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
+      <section className="exp-cases-section exp-reveal">
         <div className="container-centered">
-          <div style={{ marginBottom: '50px' }}>
+          <div className="exp-section-header">
             <span className="text-label-caps accent-red" style={{ fontSize: '11px', letterSpacing: '0.12em', fontWeight: 700 }}>PROJECT EVIDENCE</span>
-            <h2 style={{ fontFamily: 'var(--font-headline)', fontSize: '34px', fontWeight: 700, marginTop: '10px', lineHeight: 1.2 }}>
+            <h2 className="exp-section-title">
               International Work That Demonstrates Capability
             </h2>
           </div>
@@ -630,7 +630,7 @@ function ExportsPage() {
             ))}
           </div>
 
-          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', marginTop: '50px', flexWrap: 'wrap' }}>
+          <div className="exp-cases-cta-wrap" style={{ display: 'flex', gap: '16px', justifyContent: 'center', marginTop: '50px', flexWrap: 'wrap' }}>
             <a href="#export-enquiry" className="vort-btn-primary" style={{ textDecoration: 'none' }}>
               Discuss a Similar Requirement →
             </a>
@@ -642,22 +642,22 @@ function ExportsPage() {
       {/* ═══════════════════════════════════════════
           SECTION 10: EXPORT ENQUIRY & FINAL CTA
       ═══════════════════════════════════════════ */}
-      <section className="exp-reveal" id="export-enquiry" style={{ padding: '100px 0', background: '#090909', color: '#ffffff' }}>
+      <section className="exp-enquiry-section exp-reveal" id="export-enquiry">
         <div className="container-centered">
-          <div className="grid-2col" style={{ gap: '60px', alignItems: 'start' }}>
+          <div className="grid-2col exp-enquiry-grid" style={{ gap: '60px', alignItems: 'start' }}>
             {/* Left: Heading and context */}
-            <div>
+            <div className="exp-enquiry-left">
               <span className="text-label-caps accent-red" style={{ fontSize: '11px', letterSpacing: '0.12em', fontWeight: 700 }}>EXPORT ENQUIRY</span>
-              <h2 style={{ fontFamily: 'var(--font-headline)', fontSize: '36px', fontWeight: 800, color: '#ffffff', margin: '12px 0 18px 0', lineHeight: 1.2 }}>
+              <h2 className="exp-section-title-white" style={{ marginTop: '12px', marginBottom: '18px' }}>
                 Planning an International Equipment Requirement?
               </h2>
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: '#aaaaaa', lineHeight: 1.7 }}>
+              <p className="exp-section-desc-light">
                 Submit your equipment enquiry with technical details. Our export team will respond 
                 within 24 hours with a detailed proposal, pricing, and shipping estimate.
               </p>
 
-              <div style={{ marginTop: '36px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+              <div className="exp-contact-pills" style={{ marginTop: '36px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                <div className="exp-contact-pill" style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
                   <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: 'rgba(201,28,28,0.1)', border: '1px solid rgba(201,28,28,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                     <span style={{ color: 'var(--color-red)', fontSize: '16px' }}>✉</span>
                   </div>
@@ -667,7 +667,7 @@ function ExportsPage() {
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                <div className="exp-contact-pill" style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
                   <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: 'rgba(201,28,28,0.1)', border: '1px solid rgba(201,28,28,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                     <span style={{ color: 'var(--color-red)', fontSize: '16px' }}>☎</span>
                   </div>
@@ -730,7 +730,7 @@ function ExportsPage() {
                 </div>
                 <textarea name="details" placeholder="Project Details / Additional Requirements" value={formData.details} onChange={handleFormChange} className="exp-input exp-textarea" rows="4"></textarea>
 
-                <button type="submit" className="vort-btn-primary" style={{ width: '100%', marginTop: '20px', padding: '16px', fontSize: '14px', cursor: 'pointer' }}>
+                <button type="submit" className="vort-btn-primary exp-submit-btn">
                   Request an Export Quote →
                 </button>
               </form>

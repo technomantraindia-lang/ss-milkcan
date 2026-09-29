@@ -90,7 +90,7 @@ function ProjectsPage() {
             Explore our track record of completed stainless-steel dairy processing installations, institutional mega-kitchen cauldrons, regional milk chilling hubs, and OEM container dispatches across India, South Asia, Middle East, and East Africa.
           </p>
 
-          <div className="hero-cta-group" style={{ display: 'flex', gap: '16px', marginTop: '32px', flexWrap: 'wrap' }}>
+          <div className="hero-cta-group">
             <a href="#projects-grid-section" className="vort-btn-primary" style={{ cursor: 'pointer', textDecoration: 'none' }}>
               Explore Case Studies &rarr;
             </a>
@@ -383,7 +383,7 @@ function ProjectsPage() {
                     ></textarea>
                   </div>
 
-                  <button type="submit" className="vort-btn-primary" style={{ width: '100%', padding: '14px' }}>
+                  <button type="submit" className="vort-btn-primary">
                     Ask Engineering Desk to Review Project &rarr;
                   </button>
                 </form>

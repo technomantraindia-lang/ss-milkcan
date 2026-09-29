@@ -106,7 +106,7 @@ function ProductsPage() {
     setActiveCategory(categoryId);
     const el = document.getElementById(categoryId);
     if (el) {
-      const yOffset = -90;
+      const yOffset = -55;
       const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
