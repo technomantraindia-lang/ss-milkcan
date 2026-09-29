@@ -13,6 +13,8 @@ gsap.registerPlugin(ScrollTrigger)
 import milkCoolerImg from '../assets/milk_cooler.png'
 import steamVesselImg from '../assets/steam_vessel.png'
 import factoryViewImg from '../assets/factory_view.png'
+import bulkCoolerBentoImg from '../assets/bulk-cooler.png'
+// Process and manufacturing assets
 import milkCanImg from '../assets/milk_can.png'
 import milkTankImg from '../assets/milk_tank.png'
 import butterChurnerImg from '../assets/butter_churner.png'
@@ -25,9 +27,25 @@ import polishingImg from '../assets/polishing_close_up.png'
 import inspectionImg from '../assets/inspection_close_up.png'
 import dispatchImg from '../assets/dispatch_loading.png'
 
-import heroBg1 from '../assets/herosection/hero3.png'
-import heroBg2 from '../assets/herosection/hero2.png'
-import heroBg3 from '../assets/herosection/hero1.png'
+// Original Product Images from Jay Ambe Industries
+import insulatedMilkCan40LImg from '../assets/insulated-milk-can-40-litre-jay-ambe.png'
+import lockableMilkCan20LImg from '../assets/Lockable-Milk-Can-20-Ltr-jay-ambe.png'
+import milkCan40LRealImg from '../assets/stainless-steel-milk-can-40-litre-jay-ambe.png'
+import bulkMilkCoolerRealImg from '../assets/bulk-cooler.png'
+import liquidStorageTankRealImg from '../assets/stainless-steel-liquid-storage-tank-17000-litre-jay-ambe.png'
+import batchPasteurizerRealImg from '../assets/batch-milk-pasteurizer-dairy-jay-ambe.png'
+import electricButterChurnerRealImg from '../assets/electric-butter-churner-jay-ambe.png'
+import paneerPressRealImg from '../assets/Paneer-Press-Machine-jay-ambe.png'
+import khoyaMachineRealImg from '../assets/Khoya-Making-Machine-200-Ltr-jay-ambe.png'
+import steamCookingVesselRealImg from '../assets/steam-cooking-vessel-jay-ambe.png'
+import brewingKettleRealImg from '../assets/SS-Brewing-Kettle-jay-ambe.png'
+import milkProcessingPlantRealImg from '../assets/milk-processing-plant-jay-ambe.png'
+import curdTankRealImg from '../assets/stainless-steel-curd-tank-jay-ambe.png'
+import gheeBoilerRealImg from '../assets/ghee-boiler.png'
+
+import heroBg1 from '../assets/herosection/hero-1.png'
+import heroBg2 from '../assets/herosection/hero-2.png'
+import heroBg3 from '../assets/herosection/hero-3.png'
 import worldMapSvg from '../assets/world.svg'
 
 const heroSlides = [
@@ -121,32 +139,41 @@ function HomePage() {
     document.body.scrollTop = 0;
   }, [])
 
-  // Equipment Divisions details (Solution groups)
+  // Equipment Divisions details (Solution groups - using clean original product images)
   const divisions = [
-    { num: '01', title: 'Milk Collection & Handling', desc: 'Sanitary milk cans, transport tanks, weighing bowls, and raw milk reception systems engineered for hygiene and temperature maintenance.', img: milkCanImg },
-    { num: '02', title: 'Dairy Processing Equipment', desc: 'Pasteurisers, cream separators, butter churners, and paneer presses that streamline dairy production with easy-to-clean sanitary components.', img: milkCoolerImg },
-    { num: '03', title: 'Process Equipment', desc: 'High-efficiency heating, cooling, mixing, and reaction vessels designed for precise thermal control and sanitary processing.', img: gheeBoilerImg },
-    { num: '04', title: 'Institutional Kitchen Equipment', desc: 'High-capacity steam jacketed cooking vessels, boiling pans, and custom food preparation equipment optimized for energy efficiency and hygiene.', img: steamVesselImg },
-    { num: '05', title: 'Storage & Hygienic Vessels', desc: 'Single-skin, insulated, and jacketed vertical or horizontal storage silos, process tanks, and sanitary vessels.', img: milkTankImg },
-    { num: '06', title: 'Custom Stainless Steel Fabrication', desc: 'Tailor-made stainless-steel machinery configured to match specific factory layout dimensions, chemical resistance requirements, and flow-rates.', img: factoryViewImg }
+    { num: '01', title: 'Milk Collection & Handling', desc: 'Sanitary milk cans, transport tanks, weighing bowls, and raw milk reception systems engineered for hygiene and temperature maintenance.', img: milkCan40LRealImg, imgPosition: 'center top' },
+    { num: '02', title: 'Dairy Processing Equipment', desc: 'Pasteurisers, cream separators, butter churners, and paneer presses that streamline dairy production with easy-to-clean sanitary components.', img: batchPasteurizerRealImg, imgPosition: 'center center' },
+    { num: '03', title: 'Process Equipment', desc: 'High-efficiency heating, cooling, mixing, and reaction vessels designed for precise thermal control and sanitary processing.', img: khoyaMachineRealImg, imgPosition: 'center center' },
+    { num: '04', title: 'Institutional Kitchen Equipment', desc: 'High-capacity steam jacketed cooking vessels, boiling pans, and custom food preparation equipment optimized for energy efficiency and hygiene.', img: steamCookingVesselRealImg, imgPosition: 'center center' },
+    { num: '05', title: 'Storage & Hygienic Vessels', desc: 'Single-skin, insulated, and jacketed vertical or horizontal storage silos, process tanks, and sanitary vessels.', img: liquidStorageTankRealImg, imgPosition: 'center top' },
+    { num: '06', title: 'Custom Stainless Steel Fabrication', desc: 'Tailor-made stainless-steel machinery configured to match specific factory layout dimensions, chemical resistance requirements, and flow-rates.', img: milkProcessingPlantRealImg, imgPosition: 'center center' }
   ]
 
-  // Expanded Featured Products (8 Items)
+  // Expanded Featured Products (8 Items - using original product images)
   const products = [
-    { title: 'Stainless-Steel Milk Can', desc: 'Hygienic storage cans with air-tight shrink covers and reinforced bottom bands for heavy-duty daily handling.', img: milkCanImg, specs: ['20L - 100L', 'Mirror Polished', 'Heavy-Duty Bands'] },
-    { title: 'Bulk Milk Cooler', desc: 'Direct expansion cooling systems with digital temperature control and laser-welded evaporator plates.', img: milkCoolerImg, specs: ['500L - 5000L', 'Direct Expansion', 'Digital Controller'] },
-    { title: 'Milk Storage Tank', desc: 'Insulated vertical silos with sanitary surface finishes, agitator assemblies, and CIP cleaning nozzles.', img: milkTankImg, specs: ['1000L - 10,000L', 'PUF Insulated', 'CIP Spray Ball'] },
-    { title: 'Butter Churner', desc: 'Commercial-grade horizontal butter extraction barrels with dynamic balance shafts and drainage valves.', img: butterChurnerImg, specs: ['20kg - 500kg/batch', 'Gearbox Driven', 'Dual Drainage Valves'] },
-    { title: 'Paneer Press', desc: 'Pneumatic or mechanical compression systems for uniform curd whey extraction and square block forming.', img: paneerPressImg, specs: ['Pneumatic Press', 'Custom Curd Molds', 'Drainage Trays'] },
-    { title: 'Khoya Machine', desc: 'Automated condensing and roasting pans with gear-motor scraper blades for consistent milk solids preparation.', img: khoyaMachineImg, specs: ['100L - 500L', 'Teflon Scrapers', 'LPG / Steam Heated'] },
-    { title: 'Ghee Boiler', desc: 'Steam-jacketed boilers with temperature dial gauges and bottom outlets for clarifying butter fats.', img: gheeBoilerImg, specs: ['Double Jacketed', 'Dial Temp Gauges', 'Bottom Discharging'] },
-    { title: 'Steam Cooking Vessel', desc: 'High-capacity double-walled tilting vessels designed for industrial kitchens and bulk food processing.', img: steamVesselImg, specs: ['Tilting Design', 'Double-Walled Steam', 'Hygienic SS 304'] }
+    { title: 'Stainless-Steel Milk Can', desc: 'Hygienic storage cans with air-tight shrink covers and reinforced bottom bands for heavy-duty daily handling.', img: lockableMilkCan20LImg, specs: ['20L - 100L', 'Mirror Polished', 'Heavy-Duty Bands'] },
+    { title: 'Bulk Milk Cooler', desc: 'Direct expansion cooling systems with digital temperature control and laser-welded evaporator plates.', img: bulkMilkCoolerRealImg, specs: ['500L - 5000L', 'Direct Expansion', 'Digital Controller'] },
+    { title: 'Milk Storage Tank', desc: 'Insulated vertical silos with sanitary surface finishes, agitator assemblies, and CIP cleaning nozzles.', img: liquidStorageTankRealImg, specs: ['1000L - 17,000L', 'PUF Insulated', 'CIP Spray Ball'] },
+    { title: 'Butter Churner', desc: 'Commercial-grade horizontal butter extraction barrels with dynamic balance shafts and drainage valves.', img: electricButterChurnerRealImg, specs: ['20kg - 500kg/batch', 'Gearbox Driven', 'Dual Drainage Valves'] },
+    { title: 'Paneer Press', desc: 'Pneumatic or mechanical compression systems for uniform curd whey extraction and square block forming.', img: paneerPressRealImg, specs: ['Pneumatic Press', 'Custom Curd Molds', 'Drainage Trays'] },
+    { title: 'Khoya Machine', desc: 'Automated condensing and roasting pans with gear-motor scraper blades for consistent milk solids preparation.', img: khoyaMachineRealImg, specs: ['100L - 500L', 'Teflon Scrapers', 'LPG / Steam Heated'] },
+    { title: 'Ghee Boiler', desc: 'Steam-jacketed boilers with temperature dial gauges and bottom outlets for clarifying butter fats.', img: brewingKettleRealImg, specs: ['Double Jacketed', 'Dial Temp Gauges', 'Bottom Discharging'] },
+    { title: 'Steam Cooking Vessel', desc: 'High-capacity double-walled tilting vessels designed for industrial kitchens and bulk food processing.', img: steamCookingVesselRealImg, specs: ['Tilting Design', 'Double-Walled Steam', 'Hygienic SS 304'] }
   ]
 
   // stages details (In-House Manufacturing Journey)
   const stages = [
     { num: '01', title: 'Requirement Analysis', desc: 'Detailed engineering consultations to document operating conditions, temperature dynamics, capacity targets, and space constraints.', img: blueprintImg },
-    { num: '02', title: 'Engineering & CAD', desc: 'Designing custom 2D layouts and 3D CAD models to simulate agitator flow patterns, thermal transfer rates, and structural load distributions.', img: blueprintImg },
+    { 
+      num: '02', 
+      title: 'Engineering & CAD', 
+      desc: 'Designing custom 2D layouts and 3D CAD models to simulate agitator flow patterns, thermal transfer rates, and structural load distributions.', 
+      img: insulatedMilkCan40LImg,
+      imgFit: 'contain',
+      imgPosition: 'center center',
+      imgPadding: '18px 24px',
+      containerBg: '#ffffff'
+    },
     { num: '03', title: 'Material Selection', desc: 'Sourcing certified, traceable food-grade SS 304, SS 316, or SS 316L. Every sheet is verified for thickness tolerances and surface flaws.', img: factoryViewImg },
     { num: '04', title: 'In-House Fabrication', desc: 'Precision shell rolling, plasma cutting, and argon-shielded TIG welding by our certified fabricators to form pressure-stable equipment.', img: weldingImg },
     { num: '05', title: 'Finishing & Polishing', desc: 'Mechanical grinding and multi-stage polishing to achieve a sanitary mirror finish (Ra < 0.4 µm) that prevents bacterial build-up.', img: polishingImg },
@@ -155,13 +182,13 @@ function HomePage() {
     { num: '08', title: 'Secure Dispatch', desc: 'Direct loading and logistics coordination for safe transport to client sites across domestic and export markets.', img: dispatchImg }
   ]
 
-  // processes details
+  // processes details (Explore by Process - using original product images)
   const processes = [
-    { num: '01', title: 'Collection & Reception', desc: 'Direct dumping into hygienic stainless steel receiving tanks with integrated weighing scales and coarse filtration screens.', img: milkCanImg },
-    { num: '02', title: 'Chilling & Thermal Storage', desc: 'Rapid direct-expansion cooling down to 4°C to arrest bacterial growth, stored inside polyurethane insulated vertical silos.', img: milkCoolerImg },
-    { num: '03', title: 'Thermal Pasteurisation', desc: 'Automated plate or tubular heat exchange keeping precise holding temperatures before separation or packaging.', img: steamVesselImg },
-    { num: '04', title: 'Standardisation & Separation', desc: 'Centrifugal fat separation yielding controlled skim milk and cream streams for downstream value-added products.', img: milkTankImg },
-    { num: '05', title: 'Value-Addition Processing', desc: 'Controlled agitation cooking and mechanical compression for khoya, paneer, butter, and clarified ghee production.', img: paneerPressImg },
+    { num: '01', title: 'Collection & Reception', desc: 'Direct dumping into hygienic stainless steel receiving tanks with integrated weighing scales and coarse filtration screens.', img: milkCan40LRealImg },
+    { num: '02', title: 'Chilling & Thermal Storage', desc: 'Rapid direct-expansion cooling down to 4°C to arrest bacterial growth, stored inside polyurethane insulated vertical silos.', img: bulkMilkCoolerRealImg },
+    { num: '03', title: 'Thermal Pasteurisation', desc: 'Automated plate or tubular heat exchange keeping precise holding temperatures before separation or packaging.', img: batchPasteurizerRealImg },
+    { num: '04', title: 'Standardisation & Separation', desc: 'Centrifugal fat separation yielding controlled skim milk and cream streams for downstream value-added products.', img: curdTankRealImg },
+    { num: '05', title: 'Value-Addition Processing', desc: 'Controlled agitation cooking and mechanical compression for khoya, paneer, butter, and clarified ghee production.', img: paneerPressRealImg },
     { num: '06', title: 'Sanitary Packaging & Cold Chain', desc: 'Aseptic pouch filling, thermal sealing, and crate dispatching under controlled temperature logistics.', img: dispatchImg }
   ]
 
@@ -681,7 +708,7 @@ function HomePage() {
                   }}
                 >
                   <span className="hero-eyebrow-mask">
-                    <span className="hero-eyebrow text-label-caps" style={{ color: 'var(--color-red)', marginBottom: '16px', display: 'block' }}>
+                    <span className="hero-eyebrow text-label-caps">
                       {slide.label}
                     </span>
                   </span>
@@ -863,7 +890,7 @@ function HomePage() {
 
           <div className="about-bento-grid">
             <div className="about-bento-card about-bento-card-image">
-              <img src={factoryViewImg} alt="Jay Ambe Industries factory floor" className="about-bento-img" />
+              <img src={bulkCoolerBentoImg} alt="Jay Ambe Industries Bulk Milk Cooler" className="about-bento-img" />
               <div className="about-bento-img-tint"></div>
               <div className="about-bento-img-overlay">
                 <span className="about-bento-img-label">Our Capacity Over Time</span>
@@ -951,7 +978,12 @@ function HomePage() {
                 }}
               >
                 <div className="division-card-bg-wrapper">
-                  <img src={div.img} alt={div.title} className="division-card-bg" />
+                  <img 
+                    src={div.img} 
+                    alt={div.title} 
+                    className="division-card-bg" 
+                    style={{ objectPosition: div.imgPosition || 'center center' }}
+                  />
                   <div className="division-card-gradient"></div>
                 </div>
                 
@@ -1050,11 +1082,19 @@ function HomePage() {
                   <div 
                     className={`workflow-image-container img-container-${index} ${activeStage === index ? 'active' : activeStage + 1 === index ? 'preview' : activeStage > index ? 'past' : 'upcoming'}`}
                     ref={el => workflowImagesRef.current[index] = el}
+                    style={stage.containerBg ? { backgroundColor: stage.containerBg } : undefined}
                   >
                     <img 
                       src={stage.img} 
                       alt={stage.title} 
                       className="workflow-image"
+                      style={{
+                        objectFit: stage.imgFit || 'cover',
+                        objectPosition: stage.imgPosition || 'center center',
+                        padding: stage.imgPadding || undefined,
+                        backgroundColor: stage.imgBg || undefined,
+                        boxSizing: 'border-box'
+                      }}
                     />
                   </div>
                 </React.Fragment>

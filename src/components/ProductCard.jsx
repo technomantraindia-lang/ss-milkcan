@@ -11,10 +11,6 @@ function ProductCard({ product }) {
     ? product.images[0] 
     : '/images/products/placeholder-main.jpg';
 
-  const primaryApp = (product.primaryApplications && product.primaryApplications.length > 0)
-    ? product.primaryApplications[0]
-    : 'Industrial Processing';
-
   return (
     <div className="product-card">
       <div className="product-card-image-wrapper">
@@ -26,7 +22,6 @@ function ProductCard({ product }) {
             loading="lazy" 
           />
         </Link>
-        <span className="product-card-app-badge">{primaryApp}</span>
       </div>
 
       <div className="product-card-body">

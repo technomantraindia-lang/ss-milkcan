@@ -1,9 +1,12 @@
 import dispatchImg from '../assets/dispatch_loading.png';
-import milkCoolerImg from '../assets/milk_cooler.png';
-import milkTankImg from '../assets/milk_tank.png';
-import steamVesselImg from '../assets/steam_vessel.png';
-import gheeBoilerImg from '../assets/ghee_boiler.png';
-import milkCanImg from '../assets/milk_can.png';
+import bulkMilkCoolerRealImg from '../assets/bulk-cooler.png';
+import liquidStorageTankRealImg from '../assets/stainless-steel-liquid-storage-tank-17000-litre-jay-ambe.png';
+import steamCookingVesselRealImg from '../assets/steam-cooking-vessel-jay-ambe.png';
+import gheeBoilerRealImg from '../assets/ghee-boiler.png';
+import milkCan40LRealImg from '../assets/stainless-steel-milk-can-40-litre-jay-ambe.png';
+import lockableMilkCan20LImg from '../assets/Lockable-Milk-Can-20-Ltr-jay-ambe.png';
+import insulatedMilkCan40LImg from '../assets/insulated-milk-can-40-litre-jay-ambe.png';
+import khoyaMachineRealImg from '../assets/Khoya-Making-Machine-200-Ltr-jay-ambe.png';
 import blueprintImg from '../assets/vessel_blueprint.png';
 import factoryViewImg from '../assets/factory_view.png';
 
@@ -29,7 +32,7 @@ export const projectsData = [
     challenge: 'High ambient rural temperatures caused raw milk spoilage during long-distance transit from rural collection points to central chilling plants.',
     solution: 'Engineered double-walled polyurethane foam (PUF) insulated stainless steel cans capable of preserving milk temperature below 8°C for over 6 hours without active refrigeration.',
     result: 'Reduced raw milk spoilage rate by 94% across 12 collection routes and established a long-term annual supply contract with the cooperative.',
-    image: dispatchImg
+    image: insulatedMilkCan40LImg
   },
   {
     id: 'sri-lanka-chilling-facility',
@@ -52,7 +55,7 @@ export const projectsData = [
     challenge: 'The processor required rapid chilling from 35°C to 4°C within 3 hours to meet export dairy quality standards.',
     solution: 'Fabricated DX bulk milk coolers featuring high-efficiency laser-welded dimple cooling jackets and slow-speed 32 RPM agitators to prevent fat separation.',
     result: 'Achieved 4°C cooling within 2.5 hours, improving butterfat retention and meeting Sri Lankan national dairy standards.',
-    image: milkCoolerImg
+    image: bulkMilkCoolerRealImg
   },
   {
     id: 'tirupati-mega-kitchen',
@@ -75,7 +78,7 @@ export const projectsData = [
     challenge: 'Preparing hot meals for 50,000 devotees daily required high thermal efficiency, easy tilting, and rapid cleaning between batches.',
     solution: 'Designed steam-jacketed cauldrons with heavy-duty worm-gear tilting mechanisms and polished internal surfaces for effortless meal discharge.',
     result: 'Reduced meal preparation time by 40% while lowering steam energy consumption by 22%.',
-    image: steamVesselImg
+    image: steamCookingVesselRealImg
   },
   {
     id: 'uae-process-plant-oem',
@@ -98,7 +101,7 @@ export const projectsData = [
     challenge: 'Strict dimensional tolerances, ASME weld purging requirements, and high corrosion resistance for specialized liquid processing.',
     solution: 'Executed full CAD drawing-based fabrication using certified SS316L prime sheets with purged argon TIG welding and Ra < 0.3 µm surface polish.',
     result: 'Passed all third-party NDT weld radiographs and hydrostatic pressure tests on first inspection, leading to repeat OEM orders.',
-    image: milkTankImg
+    image: liquidStorageTankRealImg
   },
   {
     id: 'delhi-halwai-sweet-plant',
@@ -121,7 +124,7 @@ export const projectsData = [
     challenge: 'Manual khoya production caused milk scorching, inconsistent moisture retention, and high labor dependency.',
     solution: 'Supplied motorized khoya machines with Teflon/brass scraper blades that continuously scrape bottom surfaces during heating, preventing scorching.',
     result: 'Standardized khoya texture, eliminated product scorching, and boosted daily batch output by 150%.',
-    image: gheeBoilerImg
+    image: khoyaMachineRealImg
   },
   {
     id: 'kenya-milk-collection-dispatch',
@@ -144,7 +147,7 @@ export const projectsData = [
     challenge: 'Rough unpaved rural roads caused traditional plastic/aluminum milk cans to dent, leak, or harbor bacteria in scratched surfaces.',
     solution: 'Manufactured heavy-gauge seamless SS304 cans with drop-forged handles, reinforced bottom rings, and airtight hermetic sealing lids.',
     result: 'Delivered a full 20ft container to Nairobi with zero shipping damage; cans are now used daily across 40 East African collection centers.',
-    image: milkCanImg
+    image: lockableMilkCan20LImg
   }
 ];
 

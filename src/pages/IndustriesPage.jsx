@@ -138,12 +138,6 @@ function IndustriesPage() {
             Jay AMBE Industries manufactures food-grade stainless-steel process machinery, sanitary storage vessels, mega-kitchen cauldrons, and custom equipment built around the operational hygiene and capacity demands of key sectors.
           </p>
 
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginTop: '16px', background: 'rgba(201, 28, 28, 0.15)', border: '1px solid rgba(201, 28, 28, 0.4)', padding: '6px 14px', borderRadius: '20px' }}>
-            <span style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#ff4d4d', fontWeight: 700 }}>
-              8 Core Processing Sectors Supported • Application-Engineered
-            </span>
-          </div>
-
           <div className="hero-cta-group" style={{ display: 'flex', gap: '16px', marginTop: '32px', flexWrap: 'wrap' }}>
             <a href="#dairy-farms" onClick={(e) => handleNavClick(e, 'dairy-farms')} className="vort-btn-primary" style={{ cursor: 'pointer', textDecoration: 'none' }}>
               Explore Industries Served &rarr;

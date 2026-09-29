@@ -22,7 +22,7 @@ import insulatedMilkCan40LImg from '../assets/insulated-milk-can-40-litre-jay-am
 import milkingBucket20LImg from '../assets/stainless-steel-milking-bucket-20-litre-jay-ambe.png';
 import milkingBucketPremiumImg from '../assets/Stainless-Steel-Premium-Milking-Bucket.png';
 import teatShellImg from '../assets/milking-machine-teat-shell-jay-ambe.png';
-import bulkMilkCoolerImgNew from '../assets/bulk-milk-cooler-dairy-jay-ambe.png';
+import bulkMilkCoolerImgNew from '../assets/bulk-cooler.png';
 import milkTankImgNew from '../assets/stainless-steel-milk-tank-jay-ambe.png';
 import liquidStorageTankImg from '../assets/stainless-steel-liquid-storage-tank-17000-litre-jay-ambe.png';
 import batchPasteurizerImg from '../assets/batch-milk-pasteurizer-dairy-jay-ambe.png';

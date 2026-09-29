@@ -11,10 +11,15 @@ import weldingImg from '../assets/welding_close_up.png';
 import blueprintImg from '../assets/vessel_blueprint.png';
 import inspectionImg from '../assets/inspection_close_up.png';
 import polishingImg from '../assets/polishing_close_up.png';
-import milkTankImg from '../assets/milk_tank.png';
-import steamVesselImg from '../assets/steam_vessel.png';
-import gheeBoilerImg from '../assets/ghee_boiler.png';
-import milkCoolerImg from '../assets/milk_cooler.png';
+
+// Real Jay Ambe product assets
+import bulkMilkCoolerRealImg from '../assets/bulk-cooler.png';
+import steamCookingVesselRealImg from '../assets/steam-cooking-vessel-jay-ambe.png';
+import liquidStorageTankRealImg from '../assets/stainless-steel-liquid-storage-tank-17000-litre-jay-ambe.png';
+import riceCauldronRealImg from '../assets/Rice-Cauldron-jay-ambe.png';
+import gheeBoilerRealImg from '../assets/ghee-boiler.png';
+import batchPasteurizerRealImg from '../assets/batch-milk-pasteurizer-dairy-jay-ambe.png';
+import milkCan40LRealImg from '../assets/stainless-steel-milk-can-40-litre-jay-ambe.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,7 +84,10 @@ const caseStudies = [
     material: 'SS304 Food Grade',
     requirement: 'Complete dairy collection and chilling equipment for rural cooperative expansion.',
     solution: 'Manufactured and supplied 12 BMC units with custom capacity specifications, export-packed in wooden crates.',
-    image: milkCoolerImg
+    image: bulkMilkCoolerRealImg,
+    imgFit: 'contain',
+    imgPadding: '14px',
+    bg: '#ffffff'
   },
   {
     country: 'Sri Lanka',
@@ -89,7 +97,10 @@ const caseStudies = [
     material: 'SS316 Process Grade',
     requirement: 'Hygienic processing vessels for commercial dairy and ghee manufacturing facility.',
     solution: 'Custom-fabricated vessels with automated temperature control fittings, containerised for Colombo port.',
-    image: steamVesselImg
+    image: gheeBoilerRealImg,
+    imgFit: 'contain',
+    imgPadding: '14px',
+    bg: '#ffffff'
   },
   {
     country: 'Kenya',
@@ -99,7 +110,10 @@ const caseStudies = [
     material: 'SS304 / SS316',
     requirement: 'Large-capacity storage and processing equipment for commercial dairy plant.',
     solution: 'Designed oversized tanks with CIP fittings, delivered via 40ft container with full export documentation.',
-    image: milkTankImg
+    image: liquidStorageTankRealImg,
+    imgFit: 'contain',
+    imgPadding: '14px',
+    bg: '#ffffff'
   },
   {
     country: 'UAE',
@@ -109,7 +123,10 @@ const caseStudies = [
     material: 'SS304 Commercial Grade',
     requirement: 'Commercial kitchen and food preparation equipment for hospitality sector.',
     solution: 'Fabricated and supplied complete kitchen equipment line, palletised for Dubai port delivery.',
-    image: gheeBoilerImg
+    image: riceCauldronRealImg,
+    imgFit: 'contain',
+    imgPadding: '14px',
+    bg: '#ffffff'
   }
 ];
 
@@ -570,8 +587,17 @@ function ExportsPage() {
           <div className="exp-cases-grid">
             {caseStudies.map((cs, i) => (
               <div key={i} className="exp-case-card">
-                <div className="exp-case-img-wrap">
-                  <img src={cs.image} alt={`${cs.country} - ${cs.equipment}`} className="exp-case-img" />
+                <div className="exp-case-img-wrap" style={{ backgroundColor: cs.bg || '#ffffff' }}>
+                  <img 
+                    src={cs.image} 
+                    alt={`${cs.country} - ${cs.equipment}`} 
+                    className="exp-case-img" 
+                    style={{
+                      objectFit: cs.imgFit || 'contain',
+                      padding: cs.imgPadding || '14px',
+                      boxSizing: 'border-box'
+                    }}
+                  />
                   <div className="exp-case-country-badge">
                     <span>{cs.country}</span>
                     <span className="exp-case-year">{cs.year}</span>

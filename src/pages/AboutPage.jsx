@@ -6,19 +6,22 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 // Import assets
-import factoryViewImg from '../assets/factory_view.png';
+import aboutHeroBg from '../assets/herosection/hero-3.png';
 import weldingImg from '../assets/welding_close_up.png';
 import polishingImg from '../assets/polishing_close_up.png';
 import inspectionImg from '../assets/inspection_close_up.png';
 import dispatchImg from '../assets/dispatch_loading.png';
 import blueprintImg from '../assets/vessel_blueprint.png';
 
-// Product images
-import milkCanImg from '../assets/milk_can.png';
-import milkCoolerImg from '../assets/milk_cooler.png';
-import steamVesselImg from '../assets/steam_vessel.png';
-import milkTankImg from '../assets/milk_tank.png';
-import gheeBoilerImg from '../assets/ghee_boiler.png';
+// Original Jay Ambe Product & Facility Images
+import milkCan40LRealImg from '../assets/stainless-steel-milk-can-40-litre-jay-ambe.png';
+import bulkMilkCoolerRealImg from '../assets/bulk-cooler.png';
+import steamCookingVesselRealImg from '../assets/steam-cooking-vessel-jay-ambe.png';
+import liquidStorageTankRealImg from '../assets/stainless-steel-liquid-storage-tank-17000-litre-jay-ambe.png';
+import brewingKettleRealImg from '../assets/SS-Brewing-Kettle-jay-ambe.png';
+import batchPasteurizerRealImg from '../assets/batch-milk-pasteurizer-dairy-jay-ambe.png';
+import khoyaMachineRealImg from '../assets/Khoya-Making-Machine-200-Ltr-jay-ambe.png';
+import milkProcessingPlantRealImg from '../assets/milk-processing-plant-jay-ambe.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,7 +34,8 @@ function AboutPage() {
       title: 'Manufacturing Operations Began',
       subtitle: 'Foundation & SS Milk Cans',
       desc: 'Inaugurated manufacturing operations in Gujarat dedicated to sanitary stainless-steel milk collection cans, milking buckets, and transport vessels.',
-      image: milkCanImg,
+      image: milkCan40LRealImg,
+      imgPosition: 'center 20%',
       stat: '1st Production Unit',
       tag: 'FOUNDATION ERA'
     },
@@ -40,7 +44,8 @@ function AboutPage() {
       title: 'Dairy Machinery Expansion',
       subtitle: 'BMCs & Pasteurizers',
       desc: 'Expanded production line to direct expansion bulk milk cooling systems (DX models), automated pasteurizers, paneer presses, and motorized butter churners.',
-      image: milkCoolerImg,
+      image: bulkMilkCoolerRealImg,
+      imgPosition: 'center center',
       stat: '1,000L+ BMC Range',
       tag: 'PROCESSING ERA'
     },
@@ -49,7 +54,8 @@ function AboutPage() {
       title: 'Institutional Kitchen Range',
       subtitle: 'Steam Cauldrons & Mass Cooking',
       desc: 'Engineered high-capacity steam-jacketed tilting rice cauldrons, dal cookers, and insulated distribution vessels for institutional mega kitchens.',
-      image: steamVesselImg,
+      image: steamCookingVesselRealImg,
+      imgPosition: 'center 20%',
       stat: '500L Steam Cauldrons',
       tag: 'INSTITUTIONAL ERA'
     },
@@ -59,6 +65,7 @@ function AboutPage() {
       subtitle: 'Containerized Sea Freight',
       desc: 'Formed dedicated Export Division. Initiated containerized sea-freight shipments and drawing-based OEM private label contract manufacturing for international buyers.',
       image: dispatchImg,
+      imgPosition: 'center center',
       stat: '15+ Nations Reached',
       tag: 'GLOBAL EXPORT ERA'
     },
@@ -67,7 +74,8 @@ function AboutPage() {
       title: 'Full Scale & Automation',
       subtitle: '8,400 Sq. Mtr GIDC Complex',
       desc: 'Operating from an 8,400 sq. metre modern manufacturing facility with CAD drafting automation, argon TIG welding bays, and Ra < 0.4 µm mirror finishing.',
-      image: factoryViewImg,
+      image: milkProcessingPlantRealImg,
+      imgPosition: 'center center',
       stat: '8,400 Sq. Mtr Base',
       tag: 'MODERN POWERHOUSE'
     }
@@ -207,7 +215,7 @@ function AboutPage() {
       {/* 1. About Page Hero */}
       <header className="about-hero-section" style={{ minHeight: '520px', backgroundColor: '#0a0a0a', display: 'flex', alignItems: 'center' }}>
         <div className="about-hero-bg">
-          <img src={factoryViewImg} alt="Jay Ambe Manufacturing Plant" className="about-hero-bg-img" style={{ opacity: 0.35 }} />
+          <img src={aboutHeroBg} alt="Jay Ambe Manufacturing Plant" className="about-hero-bg-img" style={{ opacity: 0.45 }} />
           <div className="about-hero-overlay"></div>
         </div>
         
@@ -226,12 +234,6 @@ function AboutPage() {
             Jay AMBE Industries manufactures food-grade stainless-steel equipment for dairy, food-processing, institutional kitchen and hygienic process applications.
           </p>
 
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginTop: '14px', background: 'rgba(201, 28, 28, 0.15)', border: '1px solid rgba(201, 28, 28, 0.4)', padding: '6px 14px', borderRadius: '20px' }}>
-            <span style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#ff4d4d', fontWeight: 700 }}>
-              Manufactured in India. Engineered for global markets.
-            </span>
-          </div>
-
           <div className="hero-cta-group" style={{ display: 'flex', gap: '16px', marginTop: '32px', flexWrap: 'wrap' }}>
             <button onClick={handleManufacturingClick} className="vort-btn-primary" style={{ cursor: 'pointer' }}>
               Explore Our Manufacturing &rarr;
@@ -249,7 +251,7 @@ function AboutPage() {
       <section className="about-reveal-section intro-section" style={{ padding: '100px 0', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
         <div className="container-centered grid-2col" style={{ alignItems: 'center', gap: '60px' }}>
           <div className="intro-left-img-wrapper" style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(0,0,0,0.08)', boxShadow: '0 12px 36px rgba(0,0,0,0.06)' }}>
-            <img src={factoryViewImg} alt="Jay AMBE Manufacturing Floor" style={{ width: '100%', height: '440px', objectFit: 'cover', display: 'block' }} />
+            <img src={milkProcessingPlantRealImg} alt="Jay AMBE Manufacturing Floor" style={{ width: '100%', height: '440px', objectFit: 'cover', display: 'block' }} />
           </div>
 
           <div className="intro-right-content">
@@ -338,7 +340,12 @@ function AboutPage() {
                       </div>
 
                       <div className="v-card-img-box">
-                        <img src={m.image} alt={m.title} className="v-card-img" />
+                        <img 
+                          src={m.image} 
+                          alt={m.title} 
+                          className="v-card-img" 
+                          style={m.imgPosition ? { objectPosition: m.imgPosition } : {}}
+                        />
                         <div className="v-card-stat">
                           <span className="v-stat-label">MILESTONE HIGHLIGHT</span>
                           <span className="v-stat-val">{m.stat}</span>
@@ -371,7 +378,7 @@ function AboutPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '16px', overflow: 'hidden', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <img src={milkCanImg} alt="Milk Collection & Handling" style={{ width: '100%', height: '180px', objectFit: 'contain', marginBottom: '16px' }} />
+                <img src={milkCan40LRealImg} alt="Milk Collection & Handling" style={{ width: '100%', height: '180px', objectFit: 'contain', marginBottom: '16px' }} />
                 <h3 style={{ fontFamily: 'var(--font-headline)', fontSize: '19px', fontWeight: 700, color: '#111111', marginBottom: '8px' }}>Milk Collection & Handling</h3>
                 <p style={{ fontSize: '13px', lineHeight: 1.6, color: '#555555', marginBottom: '16px' }}>
                   Flagship food-grade SS milk cans, insulated transport cans, milking buckets, receiver tanks, and teat shells.
@@ -384,7 +391,7 @@ function AboutPage() {
 
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '16px', overflow: 'hidden', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <img src={milkCoolerImg} alt="Dairy Processing Equipment" style={{ width: '100%', height: '180px', objectFit: 'contain', marginBottom: '16px' }} />
+                <img src={bulkMilkCoolerRealImg} alt="Dairy Processing Equipment" style={{ width: '100%', height: '180px', objectFit: 'contain', marginBottom: '16px' }} />
                 <h3 style={{ fontFamily: 'var(--font-headline)', fontSize: '19px', fontWeight: 700, color: '#111111', marginBottom: '8px' }}>Dairy Processing Equipment</h3>
                 <p style={{ fontSize: '13px', lineHeight: 1.6, color: '#555555', marginBottom: '16px' }}>
                   Direct expansion bulk milk coolers (BMCs), batch pasteurizers, butter churners, paneer press, and khoya machines.
@@ -397,7 +404,7 @@ function AboutPage() {
 
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '16px', overflow: 'hidden', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <img src={gheeBoilerImg} alt="Process Equipment" style={{ width: '100%', height: '180px', objectFit: 'contain', marginBottom: '16px' }} />
+                <img src={brewingKettleRealImg} alt="Process Equipment" style={{ width: '100%', height: '180px', objectFit: 'contain', marginBottom: '16px' }} />
                 <h3 style={{ fontFamily: 'var(--font-headline)', fontSize: '19px', fontWeight: 700, color: '#111111', marginBottom: '8px' }}>Process Equipment</h3>
                 <p style={{ fontSize: '13px', lineHeight: 1.6, color: '#555555', marginBottom: '16px' }}>
                   Steam-jacketed ghee boilers, thermal heat exchange tanks, motorized blending kettles, and sweet-making machinery.
@@ -410,7 +417,7 @@ function AboutPage() {
 
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '16px', overflow: 'hidden', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <img src={steamVesselImg} alt="Institutional Kitchen Equipment" style={{ width: '100%', height: '180px', objectFit: 'contain', marginBottom: '16px' }} />
+                <img src={steamCookingVesselRealImg} alt="Institutional Kitchen Equipment" style={{ width: '100%', height: '180px', objectFit: 'contain', marginBottom: '16px' }} />
                 <h3 style={{ fontFamily: 'var(--font-headline)', fontSize: '19px', fontWeight: 700, color: '#111111', marginBottom: '8px' }}>Institutional Kitchen Equipment</h3>
                 <p style={{ fontSize: '13px', lineHeight: 1.6, color: '#555555', marginBottom: '16px' }}>
                   Steam cauldrons, rice cookers, dal boilers, rice chutes, and insulated food-distribution vessels for commercial kitchens.
@@ -423,7 +430,7 @@ function AboutPage() {
 
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '16px', overflow: 'hidden', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <img src={milkTankImg} alt="Storage & Hygienic Vessels" style={{ width: '100%', height: '180px', objectFit: 'contain', marginBottom: '16px' }} />
+                <img src={liquidStorageTankRealImg} alt="Storage & Hygienic Vessels" style={{ width: '100%', height: '180px', objectFit: 'contain', marginBottom: '16px' }} />
                 <h3 style={{ fontFamily: 'var(--font-headline)', fontSize: '19px', fontWeight: 700, color: '#111111', marginBottom: '8px' }}>Storage & Hygienic Vessels</h3>
                 <p style={{ fontSize: '13px', lineHeight: 1.6, color: '#555555', marginBottom: '16px' }}>
                   SS storage tanks, drums, barrels, topes, vertical insulated silos, and chemically resistant process vessels.
@@ -436,7 +443,7 @@ function AboutPage() {
 
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '16px', overflow: 'hidden', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <img src={weldingImg} alt="Custom Stainless-Steel Fabrication" style={{ width: '100%', height: '180px', objectFit: 'cover', borderRadius: '8px', marginBottom: '16px' }} />
+                <img src={khoyaMachineRealImg} alt="Custom Stainless-Steel Fabrication" style={{ width: '100%', height: '180px', objectFit: 'contain', marginBottom: '16px' }} />
                 <h3 style={{ fontFamily: 'var(--font-headline)', fontSize: '19px', fontWeight: 700, color: '#111111', marginBottom: '8px' }}>Custom Stainless-Steel Fabrication</h3>
                 <p style={{ fontSize: '13px', lineHeight: 1.6, color: '#555555', marginBottom: '16px' }}>
                   Drawing-based contract manufacturing, custom capacities (50L–15,000L), SS304/SS316, agitators, and OEM private labeling.
@@ -553,7 +560,7 @@ function AboutPage() {
             </div>
 
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '16px', overflow: 'hidden' }}>
-              <img src={factoryViewImg} alt="8,400 Sq. Mtr Assembly Premises" style={{ width: '100%', height: '220px', objectFit: 'cover' }} />
+              <img src={milkProcessingPlantRealImg} alt="8,400 Sq. Mtr Assembly Premises" style={{ width: '100%', height: '220px', objectFit: 'cover' }} />
               <div style={{ padding: '24px' }}>
                 <h4 style={{ fontFamily: 'var(--font-headline)', fontSize: '18px', fontWeight: 700, color: '#111111', marginBottom: '6px' }}>8,400 Sq. Mtr Heavy Floor</h4>
                 <p style={{ fontSize: '13px', lineHeight: 1.6, color: '#555555' }}>
@@ -689,7 +696,7 @@ function AboutPage() {
             </div>
 
             <div style={{ background: '#161616', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '14px', overflow: 'hidden' }}>
-              <img src={factoryViewImg} alt="Container Load Lashings" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
+              <img src={dispatchImg} alt="Container Load Lashings" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
               <div style={{ padding: '20px' }}>
                 <h4 style={{ color: '#ffffff', fontSize: '16px', fontWeight: 700, marginBottom: '6px' }}>Container Load & Lashings</h4>
                 <p style={{ fontSize: '12.5px', opacity: 0.7, margin: 0 }}>

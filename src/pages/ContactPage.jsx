@@ -146,15 +146,6 @@ function ContactPage() {
 
           <div className="grid-2col" style={{ gap: '60px', alignItems: 'center' }}>
             <div className="contact-hero-content">
-              
-              {/* Supporting Trust Line Badge */}
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(201, 28, 28, 0.12)', border: '1px solid rgba(201, 28, 28, 0.3)', padding: '6px 14px', borderRadius: '20px', marginBottom: '20px' }}>
-                <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: 'var(--color-red)', boxShadow: '0 0 8px var(--color-red)' }}></span>
-                <span style={{ fontFamily: 'var(--font-tech)', fontSize: '11px', fontWeight: 800, color: '#ffffff', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-                  Manufactured in India. Engineered for Global Markets.
-                </span>
-              </div>
-
               <h1 style={{ fontFamily: 'var(--font-headline)', fontSize: '42px', fontWeight: 800, color: '#ffffff', margin: '0 0 18px 0', lineHeight: 1.2 }}>
                 Global B2B Procurement, OEM & Custom Engineering
               </h1>

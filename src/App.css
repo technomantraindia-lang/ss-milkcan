@@ -363,8 +363,9 @@ html.lenis body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(20, 5, 5, 0.35);
-  /* Subtle dark red/black tint */
+  background: 
+    linear-gradient(90deg, rgba(10, 14, 20, 0.52) 0%, rgba(10, 14, 20, 0.35) 45%, rgba(10, 14, 20, 0.1) 75%, rgba(10, 14, 20, 0.05) 100%),
+    linear-gradient(180deg, rgba(6, 8, 12, 0.35) 0%, rgba(6, 8, 12, 0.05) 30%, rgba(6, 8, 12, 0.08) 65%, rgba(6, 8, 12, 0.45) 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -536,6 +537,32 @@ html.lenis body {
   pointer-events: auto;
 }
 
+.hero-eyebrow-mask {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.hero-eyebrow {
+  display: block;
+  color: var(--color-red);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-line-mask {
+  display: block;
+  overflow: hidden;
+}
+
+.hero-line {
+  display: block;
+}
+
 .vort-hero-title {
   font-family: var(--font-headline);
   font-size: 72px;
@@ -544,15 +571,17 @@ html.lenis body {
   line-height: 1.1;
   color: #ffffff;
   margin-bottom: 24px;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.75), 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .vort-hero-desc {
   font-family: var(--font-body);
   font-size: 18px;
-  color: #eeeeee;
+  color: #f1f3f5;
   line-height: 1.6;
   margin-bottom: 40px;
   max-width: 600px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
 }
 
 .vort-hero-actions {
@@ -1118,16 +1147,17 @@ html.lenis body {
   height: 420px;
   border-radius: 20px;
   overflow: hidden;
-  background-color: #111111;
+  background-color: #f8f9fa;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   cursor: pointer;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
-  transition: transform 0.1s ease, box-shadow 0.4s ease;
+  transition: transform 0.1s ease, box-shadow 0.4s ease, border-color 0.4s ease;
   transform-style: preserve-3d;
 }
 
 .division-card-redesign:not(:hover) {
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
 }
 
 .division-card-redesign::after {
@@ -1136,7 +1166,7 @@ html.lenis body {
   inset: 0;
   z-index: 3;
   pointer-events: none;
-  background: radial-gradient(circle 240px at var(--mx, -999px) var(--my, -999px), rgba(255, 255, 255, 0.12), transparent 80%);
+  background: radial-gradient(circle 240px at var(--mx, -999px) var(--my, -999px), rgba(255, 255, 255, 0.15), transparent 80%);
 }
 
 .division-card-bg-wrapper {
@@ -1144,27 +1174,29 @@ html.lenis body {
   inset: 0;
   z-index: 1;
   overflow: hidden;
+  background-color: #f3f4f6;
 }
 
 .division-card-bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(100%) contrast(1.1) brightness(0.6);
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.6s ease;
+  filter: grayscale(0%) contrast(1) brightness(1);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
 }
 
 .division-card-gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.1) 100%);
-  transition: background 0.4s ease;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.25) 35%, transparent 65%);
+  opacity: 0.6;
+  transition: opacity 0.5s ease, background 0.5s ease;
 }
 
 .division-card-content {
   position: absolute;
   inset: 0;
-  padding: 36px;
+  padding: 32px;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -1176,24 +1208,26 @@ html.lenis body {
   font-size: 13px;
   color: var(--color-red);
   font-weight: 700;
-  letter-spacing: 0.1em;
-  margin-bottom: 12px;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
   display: block;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .division-card-title {
   font-family: var(--font-headline);
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
   color: #ffffff;
   margin: 0;
   line-height: 1.25;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
 }
 
 .division-card-desc {
   font-family: var(--font-body);
-  font-size: 13px;
-  color: #cccccc;
+  font-size: 13.5px;
+  color: #f0f2f5;
   line-height: 1.6;
   opacity: 0;
   max-height: 0;
@@ -1204,19 +1238,25 @@ html.lenis body {
 
 /* Redesign Hover States */
 .division-card-redesign:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.24);
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 .division-card-redesign:hover .division-card-bg {
-  transform: scale(1.06);
-  filter: grayscale(0%) contrast(1.0) brightness(0.55);
+  transform: scale(1.08);
+  filter: brightness(0.42) contrast(1.1);
+}
+
+.division-card-redesign:hover .division-card-gradient {
+  opacity: 1;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.72) 55%, rgba(0, 0, 0, 0.35) 100%);
 }
 
 .division-card-redesign:hover .division-card-desc {
   opacity: 1;
-  max-height: 120px;
-  margin-top: 16px;
+  max-height: 130px;
+  margin-top: 14px;
 }
 
 /* Products Section */
@@ -1283,22 +1323,28 @@ html.lenis body {
 
 .product-img-container {
   overflow: hidden;
-  background: linear-gradient(135deg, #f5f6f8 0%, #ebedf0 100%);
+  background: #fbfbfc;
   border-bottom: 1px solid rgba(0, 0, 0, 0.04);
   position: relative;
   height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .product-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
   display: block;
 }
 
 .product-card-sm:hover .product-img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .product-info-sm {
@@ -1839,18 +1885,24 @@ html.lenis body {
   height: 180px;
   overflow: hidden;
   border-radius: 12px;
-  background-color: #f4f4f4;
+  background-color: #fbfbfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
 }
 
 .process-panel-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .process-panel:hover .process-panel-img {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 .process-panel-num {
@@ -4434,9 +4486,10 @@ textarea.form-input {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
     filter 0.6s ease;
-  filter: brightness(0.85) saturate(1.1);
+  filter: brightness(0.9) saturate(1.1);
 }
 
 .v-card-container:hover .v-card-img {
@@ -6231,42 +6284,42 @@ textarea.form-input {
 
 .product-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
-  border-color: rgba(211, 47, 47, 0.2);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.14);
 }
 
 .product-card-image-wrapper {
   position: relative;
-  height: 220px;
-  background-color: #f4f4f4;
+  height: 230px;
+  background-color: #fcfcfc;
   overflow: hidden;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.product-card-image-wrapper a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-card-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 195px;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .product-card:hover .product-card-img {
   transform: scale(1.05);
-}
-
-.product-card-app-badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 4px;
-  padding: 4px 8px;
-  font-family: var(--font-tech);
-  font-size: 10px;
-  font-weight: 600;
-  color: #333333;
 }
 
 .product-card-body {
@@ -6366,13 +6419,19 @@ textarea.form-input {
   height: 280px;
   border-radius: 12px;
   overflow: hidden;
-  background-color: #f4f4f4;
+  background-color: #fcfcfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
 .banner-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
 }
 
 .banner-title {
@@ -6836,17 +6895,23 @@ textarea.form-input {
 .main-gallery-view {
   position: relative;
   height: 400px;
-  background-color: #f4f4f4;
+  background-color: #fcfcfc;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.08);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
 }
 
 .gallery-main-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   transition: transform 0.4s ease;
 }
 
@@ -6905,11 +6970,16 @@ textarea.form-input {
   border-radius: 8px;
   overflow: hidden;
   border: 2px solid transparent;
-  background: #f4f4f4;
+  background: #fcfcfc;
   cursor: pointer;
   opacity: 0.6;
   transition: all 0.2s ease;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  box-sizing: border-box;
 }
 
 .thumb-btn.active {
@@ -6920,7 +6990,7 @@ textarea.form-input {
 .thumb-btn img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Detail Info */
@@ -8804,14 +8874,16 @@ textarea.form-input {
 .proj-card-img-wrapper {
   position: relative;
   height: 220px;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   overflow: hidden;
 }
 
 .proj-card-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 14px;
+  box-sizing: border-box;
   transition: transform 0.5s ease;
 }
 
@@ -8966,12 +9038,15 @@ textarea.form-input {
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.08);
   margin-bottom: 16px;
+  background-color: #ffffff;
 }
 
 .modal-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
 .modal-specs-box {

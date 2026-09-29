@@ -1,8 +1,12 @@
-import milkCanImg from '../assets/milk_can.png';
-import milkCoolerImg from '../assets/milk_cooler.png';
-import milkTankImg from '../assets/milk_tank.png';
-import gheeBoilerImg from '../assets/ghee_boiler.png';
-import steamVesselImg from '../assets/steam_vessel.png';
+import milkCan40LRealImg from '../assets/stainless-steel-milk-can-40-litre-jay-ambe.png';
+import bulkMilkCoolerRealImg from '../assets/bulk-cooler.png';
+import liquidStorageTankRealImg from '../assets/stainless-steel-liquid-storage-tank-17000-litre-jay-ambe.png';
+import gheeBoilerRealImg from '../assets/ghee-boiler.png';
+import steamCookingVesselRealImg from '../assets/steam-cooking-vessel-jay-ambe.png';
+import khoyaMachineRealImg from '../assets/Khoya-Making-Machine-200-Ltr-jay-ambe.png';
+import riceCauldronRealImg from '../assets/Rice-Cauldron-jay-ambe.png';
+import brewingKettleRealImg from '../assets/SS-Brewing-Kettle-jay-ambe.png';
+import milkProcessingPlantRealImg from '../assets/milk-processing-plant-jay-ambe.png';
 import factoryViewImg from '../assets/factory_view.png';
 import polishingImg from '../assets/polishing_close_up.png';
 import inspectionImg from '../assets/inspection_close_up.png';
@@ -26,7 +30,7 @@ export const industriesData = [
     ctaText: 'Explore Milk Collection Equipment',
     ctaPath: '/products#milk-collection-handling',
     secondaryCtaText: 'Request Farm Equipment Quote',
-    image: milkCanImg,
+    image: milkCan40LRealImg,
     badgeText: 'Food-Grade SS304 / SS316L'
   },
   {
@@ -47,7 +51,7 @@ export const industriesData = [
     ctaText: 'Explore Dairy Processing Machinery',
     ctaPath: '/products#dairy-processing-equipment',
     secondaryCtaText: 'Discuss a Dairy Plant Project',
-    image: milkCoolerImg,
+    image: bulkMilkCoolerRealImg,
     badgeText: 'Laser-Welded Dimple Jackets'
   },
   {
@@ -68,7 +72,7 @@ export const industriesData = [
     ctaText: 'Explore Process & Storage Tanks',
     ctaPath: '/products#process-storage-equipment',
     secondaryCtaText: 'Discuss Process Requirement',
-    image: milkTankImg,
+    image: liquidStorageTankRealImg,
     badgeText: 'Mirror Polish Ra < 0.4 µm'
   },
   {
@@ -89,7 +93,7 @@ export const industriesData = [
     ctaText: 'Explore Sweet & Dairy Machinery',
     ctaPath: '/products#dairy-processing-equipment',
     secondaryCtaText: 'Request Machinery Recommendation',
-    image: gheeBoilerImg,
+    image: khoyaMachineRealImg,
     badgeText: 'High-Torque Gearmotor Stirring'
   },
   {
@@ -110,7 +114,7 @@ export const industriesData = [
     ctaText: 'Explore Institutional Kitchen Range',
     ctaPath: '/products#institutional-mega-kitchen-equipment',
     secondaryCtaText: 'Discuss Large Kitchen Requirement',
-    image: steamVesselImg,
+    image: steamCookingVesselRealImg,
     badgeText: 'Heavy-Gauge Food-Grade Construction'
   },
   {
@@ -131,7 +135,7 @@ export const industriesData = [
     ctaText: 'Explore Commercial Kitchen Solutions',
     ctaPath: '/products#institutional-mega-kitchen-equipment',
     secondaryCtaText: 'Request Commercial Quote',
-    image: factoryViewImg,
+    image: riceCauldronRealImg,
     badgeText: 'Commercial-Grade Heavy Sheet'
   },
   {
@@ -152,7 +156,7 @@ export const industriesData = [
     ctaText: 'Explore Liquid Storage & Process Tanks',
     ctaPath: '/products#process-storage-equipment',
     secondaryCtaText: 'Send Technical Requirement',
-    image: polishingImg,
+    image: brewingKettleRealImg,
     badgeText: 'Sanitary Purged TIG Welded Seams'
   },
   {
@@ -173,7 +177,7 @@ export const industriesData = [
     ctaText: 'Discuss Custom OEM Manufacturing',
     ctaPath: '/products#custom-stainless-steel-fabrication',
     secondaryCtaText: 'Upload Your CAD Blueprint',
-    image: inspectionImg,
+    image: milkProcessingPlantRealImg,
     badgeText: 'Drawing-Based OEM Production'
   }
 ];

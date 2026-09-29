@@ -90,12 +90,6 @@ function ProjectsPage() {
             Explore our track record of completed stainless-steel dairy processing installations, institutional mega-kitchen cauldrons, regional milk chilling hubs, and OEM container dispatches across India, South Asia, Middle East, and East Africa.
           </p>
 
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginTop: '16px', background: 'rgba(201, 28, 28, 0.15)', border: '1px solid rgba(201, 28, 28, 0.4)', padding: '6px 14px', borderRadius: '20px' }}>
-            <span style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#ff4d4d', fontWeight: 700 }}>
-              45+ Commercial Projects • 14 Export Destinations
-            </span>
-          </div>
-
           <div className="hero-cta-group" style={{ display: 'flex', gap: '16px', marginTop: '32px', flexWrap: 'wrap' }}>
             <a href="#projects-grid-section" className="vort-btn-primary" style={{ cursor: 'pointer', textDecoration: 'none' }}>
               Explore Case Studies &rarr;

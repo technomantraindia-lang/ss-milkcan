@@ -163,12 +163,6 @@ function ProductsPage() {
             Jay AMBE Industries engineers standard and custom stainless-steel process machinery, sanitary storage vessels, bulk coolers, and mega-kitchen systems for milk collection, dairy processing, institutional canteens, and hygienic industrial facilities.
           </p>
 
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginTop: '16px', background: 'rgba(201, 28, 28, 0.15)', border: '1px solid rgba(201, 28, 28, 0.4)', padding: '6px 14px', borderRadius: '20px' }}>
-            <span style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#ff4d4d', fontWeight: 700 }}>
-              33+ Approved Process Equipment Models • Food-Grade SS304 / SS316
-            </span>
-          </div>
-
           <div className="hero-cta-group" style={{ display: 'flex', gap: '16px', marginTop: '32px', flexWrap: 'wrap' }}>
             <a href="#milk-collection-handling" onClick={(e) => handleNavClick(e, 'milk-collection-handling')} className="vort-btn-primary" style={{ cursor: 'pointer', textDecoration: 'none' }}>
               Explore Product Categories &rarr;
