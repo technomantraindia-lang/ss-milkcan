@@ -7030,6 +7030,10 @@ textarea.form-input {
   box-shadow: 0 2px 8px rgba(201, 28, 28, 0.25);
 }
 
+.cat-nav-mobile-dropdown-wrap {
+  display: none;
+}
+
 /* 3. Product Category Sections & Grids */
 .product-category-section {
   padding: 100px 0;
@@ -8155,20 +8159,67 @@ textarea.form-input {
   .fab-blueprint-visual-card {
     height: 300px;
   }
+
+  .products-cat-nav-links {
+    display: none;
+  }
+
+  .cat-nav-label {
+    display: none;
+  }
+
+  .cat-nav-mobile-dropdown-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .cat-nav-mobile-dropdown-label {
+    font-family: var(--font-tech);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-red);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .cat-nav-mobile-select {
+    width: 100%;
+    padding: 11px 38px 11px 14px;
+    border-radius: 10px;
+    border: 1.5px solid rgba(201, 28, 28, 0.3);
+    background-color: #ffffff;
+    font-family: var(--font-headline);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #111111;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23c91c1c' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    outline: none;
+    cursor: pointer;
+  }
+
+  .cat-nav-mobile-select:focus {
+    border-color: var(--color-red);
+    box-shadow: 0 0 0 3px rgba(201, 28, 28, 0.15);
+  }
 }
 
 @media (max-width: 768px) {
   .products-sticky-category-nav {
     top: 60px;
-    padding: 8px 0;
+    padding: 10px 0;
   }
 
   .products-cat-nav-inner {
     padding: 0 16px;
-  }
-
-  .cat-nav-label {
-    display: none;
   }
 
   .products-hero-heading {

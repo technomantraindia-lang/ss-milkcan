@@ -191,6 +191,22 @@ function ProductsPage() {
                 </a>
               ))}
             </div>
+
+            {/* Mobile Category Dropdown Selector */}
+            <div className="cat-nav-mobile-dropdown-wrap">
+              <label htmlFor="cat-mobile-select" className="cat-nav-mobile-dropdown-label">Category:</label>
+              <select
+                id="cat-mobile-select"
+                className="cat-nav-mobile-select"
+                value={activeCategory}
+                onChange={(e) => handleNavClick(e, e.target.value)}
+                aria-label="Select Product Category"
+              >
+                {categories.map((cat) => (
+                  <option key={cat.id} value={cat.id}>{cat.name}</option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
       </nav>
