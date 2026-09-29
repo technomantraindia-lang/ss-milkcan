@@ -178,7 +178,7 @@ function ProductsPage() {
       <nav className="products-sticky-category-nav" aria-label="Product Category Navigation">
         <div className="container-centered">
           <div className="products-cat-nav-inner">
-            <span className="cat-nav-label">JUMP TO CATEGORY:</span>
+            <span className="cat-nav-label">CATEGORIES:</span>
             <div className="products-cat-nav-links">
               {categories.map((cat) => (
                 <a
@@ -191,18 +191,6 @@ function ProductsPage() {
                 </a>
               ))}
             </div>
-
-            {/* Mobile Category Selector */}
-            <select
-              className="cat-nav-mobile-select"
-              value={activeCategory}
-              onChange={(e) => handleNavClick(e, e.target.value)}
-              aria-label="Select Product Category"
-            >
-              {categories.map((cat) => (
-                <option key={cat.id} value={cat.id}>{cat.name}</option>
-              ))}
-            </select>
           </div>
         </div>
       </nav>
