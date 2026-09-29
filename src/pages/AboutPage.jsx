@@ -458,19 +458,19 @@ function AboutPage() {
       </section>
 
       {/* 5. Engineering and Manufacturing Capability */}
-      <section className="about-reveal-section capability-section" id="capability-section" style={{ padding: '100px 0', background: '#fbfaf7', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
+      <section className="about-reveal-section capability-section" id="capability-section">
         <div className="container-centered">
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span className="text-label-caps accent-red" style={{ fontSize: '11px', letterSpacing: '0.12em', fontWeight: 700 }}>FABRICATION WORKFLOW</span>
-            <h2 className="section-headline-lg" style={{ fontFamily: 'var(--font-headline)', fontSize: '34px', fontWeight: 700, marginTop: '8px' }}>
+          <div className="capability-header-block">
+            <span className="text-label-caps accent-red">FABRICATION WORKFLOW</span>
+            <h2 className="section-headline-lg capability-main-title">
               From Raw Stainless Steel to Finished Equipment
             </h2>
-            <p style={{ fontSize: '15px', color: '#666666', marginTop: '10px' }}>
+            <p className="capability-sub-desc">
               Our in-house 7-stage manufacturing process guarantees dimensional tolerance and sanitary integrity.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: '10px', marginBottom: '50px' }}>
+          <div className="capability-steps-track">
             {[
               'Requirement Analysis',
               'Engineering CAD',
@@ -480,46 +480,47 @@ function AboutPage() {
               'Sanitary Finishing',
               'QA Inspection & Dispatch'
             ].map((step, idx) => (
-              <div key={idx} style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '10px', padding: '16px 10px', textAlign: 'center' }}>
-                <span style={{ fontFamily: 'var(--font-tech)', fontSize: '12px', fontWeight: 700, color: 'var(--color-red)', display: 'block', marginBottom: '6px' }}>0{idx + 1}</span>
-                <span style={{ fontSize: '12px', fontWeight: 600, color: '#222222', lineHeight: 1.3, display: 'block' }}>{step}</span>
+              <div key={idx} className="capability-step-card">
+                <span className="capability-step-num">0{idx + 1}</span>
+                <span className="capability-step-title">{step}</span>
               </div>
             ))}
           </div>
 
-          <div className="grid-2col" style={{ alignItems: 'center', gap: '50px' }}>
-            <div>
-              <h3 style={{ fontFamily: 'var(--font-headline)', fontSize: '24px', fontWeight: 700, marginBottom: '20px' }}>In-House Technical Capabilities</h3>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-                <div style={{ borderLeft: '2px solid var(--color-red)', paddingLeft: '14px' }}>
-                  <h4 style={{ fontSize: '15px', fontWeight: 700, color: '#111111' }}>SS Vessel Fabrication</h4>
-                  <p style={{ fontSize: '13px', color: '#666666', marginTop: '4px' }}>Pressurized & non-pressurized tanks</p>
+          <div className="capability-body-grid">
+            <div className="capability-tech-col">
+              <h3 className="capability-tech-title">In-House Technical Capabilities</h3>
+              <div className="capability-tech-cards-grid">
+                <div className="capability-tech-card">
+                  <h4>SS Vessel Fabrication</h4>
+                  <p>Pressurized & non-pressurized tanks</p>
                 </div>
-                <div style={{ borderLeft: '2px solid var(--color-red)', paddingLeft: '14px' }}>
-                  <h4 style={{ fontSize: '15px', fontWeight: 700, color: '#111111' }}>Food-Grade Welding</h4>
-                  <p style={{ fontSize: '13px', color: '#666666', marginTop: '4px' }}>Argon-shielded TIG joint smoothness</p>
+                <div className="capability-tech-card">
+                  <h4>Food-Grade Welding</h4>
+                  <p>Argon-shielded TIG joint smoothness</p>
                 </div>
-                <div style={{ borderLeft: '2px solid var(--color-red)', paddingLeft: '14px' }}>
-                  <h4 style={{ fontSize: '15px', fontWeight: 700, color: '#111111' }}>Custom Dimensions</h4>
-                  <p style={{ fontSize: '13px', color: '#666666', marginTop: '4px' }}>50L to 15,000L volumetric modeling</p>
+                <div className="capability-tech-card">
+                  <h4>Custom Dimensions</h4>
+                  <p>50L to 15,000L volumetric modeling</p>
                 </div>
-                <div style={{ borderLeft: '2px solid var(--color-red)', paddingLeft: '14px' }}>
-                  <h4 style={{ fontSize: '15px', fontWeight: 700, color: '#111111' }}>Jacketing & Insulation</h4>
-                  <p style={{ fontSize: '13px', color: '#666666', marginTop: '4px' }}>Steam, dimple & water jackets</p>
+                <div className="capability-tech-card">
+                  <h4>Jacketing & Insulation</h4>
+                  <p>Steam, dimple & water jackets</p>
                 </div>
-                <div style={{ borderLeft: '2px solid var(--color-red)', paddingLeft: '14px' }}>
-                  <h4 style={{ fontSize: '15px', fontWeight: 700, color: '#111111' }}>Agitator Integration</h4>
-                  <p style={{ fontSize: '13px', color: '#666666', marginTop: '4px' }}>Anchor, paddle & scraper blades</p>
+                <div className="capability-tech-card">
+                  <h4>Agitator Integration</h4>
+                  <p>Anchor, paddle & scraper blades</p>
                 </div>
-                <div style={{ borderLeft: '2px solid var(--color-red)', paddingLeft: '14px' }}>
-                  <h4 style={{ fontSize: '15px', fontWeight: 700, color: '#111111' }}>Export Packaging</h4>
-                  <p style={{ fontSize: '13px', color: '#666666', marginTop: '4px' }}>Seaworthy wooden crate protection</p>
+                <div className="capability-tech-card">
+                  <h4>Export Packaging</h4>
+                  <p>Seaworthy wooden crate protection</p>
                 </div>
               </div>
             </div>
 
-            <div style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(0,0,0,0.08)', boxShadow: '0 12px 32px rgba(0,0,0,0.06)' }}>
-              <img src={blueprintImg} alt="Vessel Technical Blueprint" style={{ width: '100%', height: '360px', objectFit: 'cover', display: 'block' }} />
+            <div className="capability-blueprint-frame">
+              <img src={blueprintImg} alt="Vessel Technical Blueprint" className="capability-blueprint-image" />
+              <div className="capability-blueprint-tag">CAD & Engineering Drafts</div>
             </div>
           </div>
         </div>
