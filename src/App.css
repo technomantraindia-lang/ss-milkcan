@@ -2918,41 +2918,7 @@ html.lenis body {
   }
 
   .custom-fab-progress-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 0;
-  }
-
-  .progress-marker-line {
     display: none;
-  }
-
-  .progress-marker-steps {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
-    width: 100%;
-    padding: 0;
-    min-width: auto;
-    font-size: 11px;
-  }
-
-  .marker-step-fab {
-    text-align: center;
-    padding: 8px 4px;
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.07);
-    border-radius: 8px;
-    color: #666666;
-    font-weight: 600;
-  }
-
-  .marker-step-fab.active {
-    background: rgba(201, 28, 28, 0.08);
-    color: var(--color-red);
-    border-color: rgba(201, 28, 28, 0.25);
-    font-weight: 700;
   }
 
   .custom-fab-specs-list {
@@ -3053,16 +3019,6 @@ html.lenis body {
   .custom-fab-visual-mobile .custom-fab-visual-frame {
     height: 220px;
     border-radius: 14px;
-  }
-
-  .progress-marker-steps {
-    gap: 4px;
-  }
-
-  .marker-step-fab {
-    font-size: 10px;
-    padding: 6px 2px;
-    border-radius: 6px;
   }
 
   .fab-spec-badge {
