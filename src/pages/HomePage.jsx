@@ -1243,9 +1243,22 @@ function HomePage() {
                 <h2 className="text-headline-md font-strong" style={{ marginTop: '10px', marginBottom: '12px', lineHeight: 1.15 }}>
                   Built Around<br/>Your Process
                 </h2>
-                <p className="text-body-md custom-fab-desc" style={{ marginBottom: '28px' }}>
+                <p className="text-body-md custom-fab-desc" style={{ marginBottom: '24px' }}>
                   Custom stainless-steel equipment manufactured around your required capacity, material grade, thermal process, insulation, agitation, outlet configuration and operating environment.
                 </p>
+
+                {/* Mobile visual vessel frame */}
+                <div className="custom-fab-visual-mobile">
+                  <div className="custom-fab-visual-frame">
+                    <img 
+                      src={steamVesselImg} 
+                      alt="Finished stainless steel steam tilting cooking vessel" 
+                      className="custom-fab-product-img" 
+                    />
+                    <div className="custom-fab-img-overlay"></div>
+                    <span className="custom-fab-mobile-badge">Custom SS Steam Cooking Vessel</span>
+                  </div>
+                </div>
 
                 <div className="custom-fab-nav-wrapper">
                   <div className="custom-fab-progress-container">
@@ -1274,8 +1287,8 @@ function HomePage() {
                   Designed to Your Capacity. Built for Your Process.
                 </div>
                 <div className="fab-cta-wrapper" style={{ marginTop: '20px' }}>
-                  <a href="#inquiry">
-                    <button className="btn-primary">Send Your Requirement</button>
+                  <a href="#inquiry" style={{ textDecoration: 'none', display: 'block' }}>
+                    <button className="btn-primary" style={{ cursor: 'pointer' }}>Send Your Requirement &rarr;</button>
                   </a>
                 </div>
               </div>
@@ -1289,25 +1302,9 @@ function HomePage() {
                   className="custom-fab-product-img" 
                 />
                 <div className="custom-fab-img-overlay"></div>
-              </div>
-            </div>
-
-            <div className="custom-fab-mobile-stages">
-              <div className="mobile-stage-card">
-                <span className="mobile-stage-label">STAGE 01 — BLUEPRINT DESIGN</span>
-                <div className="mobile-stage-visual dark-bg">
-                  <svg className="blueprint-svg-static" viewBox="0 0 600 500" fill="none">
-                    <rect width="100%" height="100%" fill="#111111" />
-                    <path d="M 230 130 L 230 350 A 20 20 0 0 0 250 370 L 450 370 A 20 20 0 0 0 470 350 L 470 130 Z" stroke="rgba(255,255,255,0.7)" strokeWidth="1.2" fill="none" />
-                    <path d="M 210 150 L 210 350 A 40 40 0 0 0 250 390 L 450 390 A 40 40 0 0 0 490 350 L 490 150" stroke="rgba(255,255,255,0.4)" strokeWidth="1" strokeDasharray="4,4" fill="none" />
-                    <path d="M 320 70 L 380 70 L 390 130 L 310 130 Z" stroke="rgba(255,255,255,0.7)" strokeWidth="1.2" fill="none" />
-                    <line x1="350" y1="130" x2="350" y2="330" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5" />
-                    <path d="M 270 320 L 350 340 L 430 320" stroke="rgba(255,255,255,0.7)" strokeWidth="2" fill="none" />
-                  </svg>
-                </div>
-                <div className="mobile-stage-text">
-                  <h3>01. Concept & Drafting</h3>
-                  <p>Translating specific process needs into standard-compliant CAD drafts.</p>
+                <div className="custom-fab-frame-caption">
+                  <span className="custom-fab-caption-title">Steam-Jacketed Tilting Cooking Vessel</span>
+                  <span className="custom-fab-caption-sub">SS 304 / 316 Food Grade • Custom Agitator</span>
                 </div>
               </div>
             </div>
