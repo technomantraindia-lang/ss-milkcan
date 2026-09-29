@@ -274,6 +274,33 @@ function HomePage() {
     }
   };
 
+  // Touch swipe support for mobile workflow
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
+  const handleTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 45;
+    const isRightSwipe = distance < -45;
+    if (isLeftSwipe && activeStage < 7) {
+      handleStageNav('next');
+    }
+    if (isRightSwipe && activeStage > 0) {
+      handleStageNav('prev');
+    }
+  };
+
+
   // Form input handlers
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -1050,7 +1077,12 @@ function HomePage() {
         id="process-section"
         ref={workflowSectionRef}
       >
-        <div className="workflow-inner-panel">
+        <div 
+          className="workflow-inner-panel"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           <div className="workflow-header-row">
             <div className="workflow-header-left">
               <span className="workflow-label-caps">IN-HOUSE MANUFACTURING</span>
@@ -1062,6 +1094,23 @@ function HomePage() {
               </p>
               <a href="#inquiry" className="workflow-link-action">View Full Process &rarr;</a>
             </div>
+          </div>
+
+          {/* Mobile stage selector pills */}
+          <div className="workflow-mobile-pills" role="tablist" aria-label="Stages selector">
+            {stages.map((stage, idx) => (
+              <button
+                key={idx}
+                type="button"
+                className={`workflow-mobile-pill ${activeStage === idx ? 'active' : ''}`}
+                onClick={() => setActiveStage(idx)}
+                aria-label={`Stage ${stage.num}: ${stage.title}`}
+                role="tab"
+                aria-selected={activeStage === idx}
+              >
+                {stage.num}
+              </button>
+            ))}
           </div>
 
           <div className="workflow-track-wrapper">
@@ -1104,16 +1153,22 @@ function HomePage() {
 
           <div className="workflow-bottom-bar">
             <div className="workflow-progress-container">
+              <div className="workflow-mobile-stage-meta">
+                <span className="workflow-stage-counter">STAGE {stages[activeStage]?.num} OF 08</span>
+                <span className="workflow-stage-title-small">• {stages[activeStage]?.title}</span>
+              </div>
               <div className="workflow-progress-line">
                 <div 
                   className="workflow-progress-fill" 
                   ref={workflowProgressFillRef}
+                  style={{ transform: `scaleX(${(activeStage + 1) / stages.length})`, transformOrigin: 'left' }}
                 ></div>
               </div>
             </div>
 
             <div className="workflow-nav-buttons">
               <button 
+                type="button"
                 className="workflow-nav-btn prev"
                 onClick={() => handleStageNav('prev')}
                 disabled={activeStage === 0}
@@ -1125,6 +1180,7 @@ function HomePage() {
                 </svg>
               </button>
               <button 
+                type="button"
                 className="workflow-nav-btn next"
                 onClick={() => handleStageNav('next')}
                 disabled={activeStage === 7}
