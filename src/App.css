@@ -11915,3 +11915,606 @@ textarea.form-input {
     gap: 14px;
   }
 }
+
+/* ═══════════════════════════════════════════════════════
+   ABOUT PAGE — MINIMAL TEAM & LEADERSHIP SECTION
+   ═══════════════════════════════════════════════════════ */
+
+.about-team-minimal-section {
+  padding: 100px 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.team-minimal-header {
+  text-align: center;
+  max-width: 740px;
+  margin: 0 auto 56px auto;
+}
+
+.team-minimal-title {
+  font-family: var(--font-headline);
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 800;
+  color: #111111;
+  line-height: 1.2;
+  margin: 10px 0 14px 0;
+}
+
+.team-minimal-desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Minimal Tab Switcher */
+.team-minimal-tab-bar {
+  display: inline-flex;
+  align-items: center;
+  background: #f4f3f0;
+  padding: 5px;
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  margin-top: 32px;
+  gap: 4px;
+}
+
+.team-minimal-tab-btn {
+  background: transparent;
+  border: none;
+  color: #555555;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 9px 20px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+.team-minimal-tab-btn:hover:not(.active) {
+  color: #111111;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.team-minimal-tab-btn.active {
+  background: #111111;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.team-minimal-tab-badge {
+  font-family: var(--font-tech);
+  font-size: 10.5px;
+  font-weight: 700;
+  background: rgba(201, 28, 28, 0.12);
+  color: var(--color-red);
+  padding: 2px 8px;
+  border-radius: 100px;
+  transition: all 0.2s ease;
+}
+
+.team-minimal-tab-btn.active .team-minimal-tab-badge {
+  background: var(--color-red);
+  color: #ffffff;
+}
+
+/* ═══════════════════════════════════════════════════════
+   WHOLE TEAM & PLANT WORKFORCE GALLERY
+   ═══════════════════════════════════════════════════════ */
+.team-workforce-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  animation: teamFadeIn 0.35s ease;
+}
+
+@keyframes teamFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.team-workforce-panorama-card {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.team-workforce-panorama-img-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  background: #111111;
+  display: flex;
+  align-items: flex-end;
+}
+
+.team-workforce-panorama-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.82;
+}
+
+.team-workforce-panorama-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(10, 10, 10, 0.88) 100%);
+}
+
+.team-workforce-panorama-content {
+  position: relative;
+  z-index: 2;
+  padding: 32px 36px;
+  max-width: 780px;
+}
+
+.team-workforce-panorama-tag {
+  font-family: var(--font-tech);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-red);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: inline-block;
+  background: rgba(201, 28, 28, 0.18);
+  padding: 4px 10px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.team-workforce-panorama-title {
+  font-family: var(--font-headline);
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  line-height: 1.25;
+}
+
+.team-workforce-panorama-desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.team-workforce-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.team-workforce-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.team-workforce-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  border-color: rgba(201, 28, 28, 0.3);
+}
+
+.team-workforce-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #111111;
+}
+
+.team-workforce-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.team-workforce-card:hover .team-workforce-img {
+  transform: scale(1.06);
+}
+
+.team-workforce-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(10, 10, 10, 0.75) 100%);
+}
+
+.team-workforce-headcount {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-family: var(--font-tech);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 5px 12px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+.team-workforce-content {
+  padding: 22px 22px 24px 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.team-workforce-badge {
+  font-family: var(--font-tech);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--color-red);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.team-workforce-title {
+  font-family: var(--font-headline);
+  font-size: 17px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.team-workforce-desc {
+  font-size: 13px;
+  color: #555555;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Whole Team Summary Strip */
+.team-workforce-summary-strip {
+  background: linear-gradient(135deg, #0e0e0e 0%, #1a1a1a 100%);
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 28px 36px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.team-workforce-stat-item {
+  text-align: center;
+  position: relative;
+}
+
+.team-workforce-stat-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -12px;
+  top: 15%;
+  bottom: 15%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.team-workforce-stat-num {
+  font-family: var(--font-tech);
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--color-red);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.team-workforce-stat-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.team-workforce-stat-sub {
+  font-size: 11px;
+  color: #888888;
+}
+
+/* 2-Column Minimal Showcase */
+.team-minimal-grid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 44px;
+  align-items: stretch;
+  animation: teamFadeIn 0.35s ease;
+}
+
+/* Founder Card */
+.team-minimal-founder-card {
+  background: #fbfaf8;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-minimal-founder-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
+}
+
+.team-minimal-founder-img-box {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+  background: #0f0f0f;
+}
+
+.team-minimal-founder-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.team-minimal-founder-card:hover .team-minimal-founder-img {
+  transform: scale(1.03);
+}
+
+.team-minimal-founder-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-family: var(--font-tech);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.team-minimal-founder-details {
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.team-minimal-founder-name {
+  font-family: var(--font-headline);
+  font-size: 22px;
+  font-weight: 800;
+  color: #111111;
+  margin: 0 0 4px 0;
+}
+
+.team-minimal-founder-tenure {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-red);
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+
+.team-minimal-founder-quote {
+  margin: 0 0 14px 0;
+  padding: 0 0 0 14px;
+  border-left: 2px solid var(--color-red);
+  font-style: italic;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.team-minimal-founder-bio {
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Right Column: Engineering Pillars */
+.team-minimal-pillars-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: space-between;
+}
+
+.team-minimal-pillar-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 20px 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  transition: all 0.25s ease;
+}
+
+.team-minimal-pillar-card:hover {
+  background: #fafaf9;
+  border-color: rgba(201, 28, 28, 0.3);
+  transform: translateX(4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.team-minimal-pillar-num {
+  font-family: var(--font-tech);
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--color-red);
+  background: rgba(201, 28, 28, 0.06);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.team-minimal-pillar-content {
+  flex-grow: 1;
+}
+
+.team-minimal-pillar-role {
+  font-family: var(--font-tech);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #888888;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.team-minimal-pillar-name {
+  font-family: var(--font-headline);
+  font-size: 17px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 5px 0;
+}
+
+.team-minimal-pillar-desc {
+  font-size: 13px;
+  color: #555555;
+  line-height: 1.55;
+  margin: 0 0 10px 0;
+}
+
+.team-minimal-pillar-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.team-minimal-tag {
+  font-size: 11px;
+  font-weight: 600;
+  color: #444444;
+  background: #f2f2f3;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* Bottom Strip */
+.team-minimal-footer-strip {
+  margin-top: 44px;
+  background: #f7f6f4;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team-minimal-footer-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444444;
+}
+
+.team-minimal-footer-cta {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--color-red);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.team-minimal-footer-cta:hover {
+  gap: 10px;
+  color: var(--color-red-dark);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .team-minimal-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .team-minimal-founder-img-box {
+    height: 340px;
+  }
+  .team-workforce-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team-workforce-summary-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-team-minimal-section {
+    padding: 70px 0;
+  }
+  .team-minimal-tab-bar {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 6px;
+  }
+  .team-minimal-tab-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .team-workforce-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-workforce-summary-strip {
+    grid-template-columns: 1fr;
+    padding: 24px 20px;
+  }
+  .team-workforce-stat-item:not(:last-child)::after {
+    display: none;
+  }
+  .team-workforce-panorama-content {
+    padding: 20px 18px;
+  }
+  .team-workforce-panorama-title {
+    font-size: 20px;
+  }
+  .team-minimal-pillar-card {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .team-minimal-footer-strip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -50,36 +50,36 @@
 }
 
 /* Outline Engraved Layer */
-.outline-layer polygon,
+.outline-layer path,
 .outline-layer circle {
   fill: none;
   stroke-dasharray: 4,4;
   opacity: 0.8;
 }
 
-/* Typography styles matching Hero Section specs */
+/* Typography styles matching original brand logo specs */
 .text-element-jay {
-  font-family: var(--font-headline);
-  font-size: 16px;
+  font-family: var(--font-headline, 'Poppins', 'Montserrat', sans-serif);
+  font-size: 20px;
   font-weight: 800;
-  fill: var(--color-black);
-  letter-spacing: 0.15em;
+  fill: var(--color-black, #111111);
+  letter-spacing: 0.02em;
 }
 
 .text-element-ambe {
-  font-family: var(--font-headline);
-  font-size: 38px;
+  font-family: var(--font-headline, 'Poppins', 'Montserrat', sans-serif);
+  font-size: 42px;
   font-weight: 900;
-  fill: var(--color-black);
-  letter-spacing: 0.08em;
+  fill: var(--color-black, #111111);
+  letter-spacing: 0.02em;
 }
 
 .text-element-ind {
-  font-family: var(--font-body);
-  font-size: 10px;
-  font-weight: 600;
-  fill: var(--color-silver);
-  letter-spacing: 0.25em;
+  font-family: var(--font-body, 'Inter', 'Montserrat', sans-serif);
+  font-size: 16px;
+  font-weight: 700;
+  fill: var(--color-black, #111111);
+  letter-spacing: 0.04em;
 }
 
 /* Polished metal reflection sweep */

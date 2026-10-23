@@ -22,11 +22,14 @@ import brewingKettleRealImg from '../assets/SS-Brewing-Kettle-jay-ambe.png';
 import batchPasteurizerRealImg from '../assets/batch-milk-pasteurizer-dairy-jay-ambe.png';
 import khoyaMachineRealImg from '../assets/Khoya-Making-Machine-200-Ltr-jay-ambe.png';
 import milkProcessingPlantRealImg from '../assets/milk-processing-plant-jay-ambe.png';
+import teamFounderImg from '../assets/team_founder_director.jpg';
+import factoryViewImg from '../assets/factory_view.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function AboutPage() {
   const navigate = useNavigate();
+  const [teamViewTab, setTeamViewTab] = useState('leadership');
 
   const milestones = [
     {
@@ -78,6 +81,97 @@ function AboutPage() {
       imgPosition: 'center center',
       stat: '8,400 Sq. Mtr Base',
       tag: 'MODERN POWERHOUSE'
+    }
+  ];
+
+  const founder = {
+    name: 'Amrutbhai Patel',
+    role: 'Founder & Managing Director',
+    tenure: 'Founded 2006 • 20+ Years Industry Experience',
+    image: teamFounderImg,
+    quote: "Precision in sanitary stainless manufacturing isn't merely about meeting specifications; it is about guaranteeing zero contamination, lasting operational peace of mind, and unwavering integrity for the food and dairy industries we serve.",
+    bio: "Under Amrutbhai's vision since 2006, Jay AMBE Industries has expanded from a regional can-making workshop into an 8,400 sq. metre modern engineering campus, trusted by leading dairy plants, food brands, and export partners worldwide."
+  };
+
+  const leadershipPillars = [
+    {
+      num: '01',
+      role: 'Chief Technical Officer & Head of CAD/R&D',
+      name: 'Rajesh Patel',
+      desc: 'Directs our 12-member engineering division specializing in SolidWorks 3D drafting, finite element analysis (FEA), dimple-jacket thermal dynamics, and custom ASME sanitary vessel blueprints.',
+      tags: ['SolidWorks 3D CAD', 'Thermal Engineering', 'ASME Vessels']
+    },
+    {
+      num: '02',
+      role: 'Chief Metallurgist & Head of Quality Assurance',
+      name: 'Dr. Hasmukh Shah',
+      desc: 'Oversees spectro-chemical alloy grade verification (SS304/SS316L), surface roughness profilometer audits (Ra < 0.4 µm), dye-penetrant testing, and hydrostatic pressure testing.',
+      tags: ['Spectro Alloy QA', 'Ra < 0.4µm Mirror Finish', 'Hydrostatic Testing']
+    },
+    {
+      num: '03',
+      role: 'Chief Works Manager & Head of Fabrication',
+      name: 'Vikramaditya Solanki',
+      desc: 'Manages factory floor fabrication across our 8,400 sq. m Kalol plant, supervising 18 certified argon TIG welders, hydraulic plate-bending rolls, and rotary seam polishing bays.',
+      tags: ['Argon TIG Purging', 'Hydraulic Plate Rolling', 'ASME Sec IX']
+    },
+    {
+      num: '04',
+      role: 'Director of International Trade & Logistics',
+      name: 'Sneha Trivedi',
+      desc: 'Coordinates fumigated seaworthy wooden crating, moisture-barrier lashing, and maritime container dispatches across Mundra and Nhava Sheva ports to 15+ countries.',
+      tags: ['Global Sea Freight', 'Seaworthy Crating', '15+ Export Nations']
+    }
+  ];
+
+  const workforceDivisions = [
+    {
+      id: 'engineering',
+      image: factoryViewImg,
+      badge: 'PLANT PROCESS ENGINEERING',
+      title: 'Process Piping & Automation Team',
+      desc: 'Specialized in sanitary CIP manifold systems, automated milk cooling circuits, and turnkey dairy plant commissioning.',
+      headcount: '12 Plant Engineers'
+    },
+    {
+      id: 'welding',
+      image: weldingImg,
+      badge: 'ASME SANITARY FABRICATION',
+      title: 'Argon TIG Purging Specialists',
+      desc: 'Executing full-penetration, crevice-free root weld seams and pressure-tested fusion for sanitary process vessels.',
+      headcount: '18 Certified Welders'
+    },
+    {
+      id: 'polishing',
+      image: polishingImg,
+      badge: 'SURFACE CRAFTSMANSHIP',
+      title: 'Mirror Finishing & Buffing Bay',
+      desc: 'Hand-buffing and mechanized rotary polishing ensuring mirror surface finishes down to Ra < 0.4 µm.',
+      headcount: '24 Finishing Artisans'
+    },
+    {
+      id: 'inspection',
+      image: inspectionImg,
+      badge: 'METALLURGY & ZERO-DEFECT QA',
+      title: 'QA Inspection Bureau',
+      desc: 'Conducting positive material identification (PMI spectro audits), digital profilometer checks, and hydrostatic pressure testing.',
+      headcount: '8 QA Inspectors'
+    },
+    {
+      id: 'dispatch',
+      image: dispatchImg,
+      badge: 'INTERNATIONAL LOGISTICS',
+      title: 'Export Packaging & Lashing Crew',
+      desc: 'Managing fumigated seaworthy wooden crating, desiccated moisture-barrier wrapping, and 20ft/40ft container dispatch.',
+      headcount: '16 Logistics Specialists'
+    },
+    {
+      id: 'machining',
+      image: aboutHeroBg,
+      badge: 'HEAVY DISH-END FORMING',
+      title: 'Sheet Rolling & CNC Machinists',
+      desc: 'Operating heavy hydraulic plate-bending rolls, automatic dish-end flanging machines, and CNC fiber laser cutting.',
+      headcount: '32 Machinists & Fitters'
     }
   ];
 
@@ -208,6 +302,8 @@ function AboutPage() {
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
+
+
   return (
     <div className="about-page-wrapper" style={{ backgroundColor: '#ffffff', color: '#111111' }}>
       <Navbar />
@@ -237,6 +333,16 @@ function AboutPage() {
           <div className="hero-cta-group" style={{ display: 'flex', gap: '16px', marginTop: '32px', flexWrap: 'wrap' }}>
             <button onClick={handleManufacturingClick} className="vort-btn-primary" style={{ cursor: 'pointer' }}>
               Explore Our Manufacturing &rarr;
+            </button>
+            <button 
+              onClick={() => {
+                const el = document.querySelector('#team-section');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }} 
+              className="vort-btn-secondary" 
+              style={{ border: '1px solid rgba(255,255,255,0.3)', color: '#ffffff', background: 'rgba(255,255,255,0.05)', cursor: 'pointer' }}
+            >
+              Meet Our Team ↓
             </button>
             <a href="/#inquiry" onClick={handleQuoteClick} style={{ textDecoration: 'none' }}>
               <button className="vort-btn-secondary" style={{ border: '1px solid rgba(255,255,255,0.3)', color: '#ffffff', background: 'rgba(255,255,255,0.05)', cursor: 'pointer' }}>
@@ -709,7 +815,174 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* 10. Leadership, Values and Final Trust CTA */}
+      {/* 10. Minimal Leadership & Engineering Minds Section */}
+      <section className="about-reveal-section about-team-minimal-section" id="team">
+        <div className="container-centered">
+          
+          {/* Header */}
+          <div className="team-minimal-header">
+            <span className="text-label-caps accent-red">LEADERSHIP & CRAFTSMANSHIP</span>
+            <h2 className="section-headline-lg team-minimal-title">
+              The Minds Behind Every Sanitary Seam
+            </h2>
+            <p className="team-minimal-desc">
+              Guided by hands-on engineering leadership, certified metallurgical standards, and over 120 skilled fabricators across our 8,400 m² Kalol plant.
+            </p>
+            {/* Minimal Tab Switcher */}
+            <div className="team-minimal-tab-bar" role="tablist" aria-label="Team Views">
+              <button 
+                type="button"
+                role="tab"
+                aria-selected={teamViewTab === 'leadership'}
+                className={`team-minimal-tab-btn ${teamViewTab === 'leadership' ? 'active' : ''}`}
+                onClick={() => setTeamViewTab('leadership')}
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+                <span>Core Leadership</span>
+              </button>
+              <button 
+                type="button"
+                role="tab"
+                aria-selected={teamViewTab === 'workforce'}
+                className={`team-minimal-tab-btn ${teamViewTab === 'workforce' ? 'active' : ''}`}
+                onClick={() => setTeamViewTab('workforce')}
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                <span>Whole Team &amp; Plant Photos</span>
+                <span className="team-minimal-tab-badge">120+ In Action</span>
+              </button>
+            </div>
+          </div>
+
+          {teamViewTab === 'leadership' ? (
+            /* Minimal 2-Column Showcase */
+            <div className="team-minimal-grid">
+              
+              {/* Left: Founder Spotlight */}
+              <div className="team-minimal-founder-card">
+                <div className="team-minimal-founder-img-box">
+                  <img 
+                    src={founder.image} 
+                    alt={founder.name} 
+                    className="team-minimal-founder-img" 
+                  />
+                  <div className="team-minimal-founder-badge">FOUNDER &amp; MANAGING DIRECTOR</div>
+                </div>
+                <div className="team-minimal-founder-details">
+                  <h3 className="team-minimal-founder-name">{founder.name}</h3>
+                  <div className="team-minimal-founder-tenure">{founder.tenure}</div>
+                  <blockquote className="team-minimal-founder-quote">
+                    "{founder.quote}"
+                  </blockquote>
+                  <p className="team-minimal-founder-bio">
+                    {founder.bio}
+                  </p>
+                </div>
+              </div>
+
+              {/* Right: Key Engineering Leadership Pillars */}
+              <div className="team-minimal-pillars-col">
+                {leadershipPillars.map((pillar) => (
+                  <div key={pillar.num} className="team-minimal-pillar-card">
+                    <div className="team-minimal-pillar-num">{pillar.num}</div>
+                    <div className="team-minimal-pillar-content">
+                      <span className="team-minimal-pillar-role">{pillar.role}</span>
+                      <h4 className="team-minimal-pillar-name">{pillar.name}</h4>
+                      <p className="team-minimal-pillar-desc">{pillar.desc}</p>
+                      <div className="team-minimal-pillar-tags">
+                        {pillar.tags.map((tag, idx) => (
+                          <span key={idx} className="team-minimal-tag">{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          ) : (
+            /* Whole Team & Plant Workforce Grid */
+            <div className="team-workforce-container">
+              {/* Plant Floor & Team Overview Banner */}
+              <div className="team-workforce-panorama-card">
+                <div className="team-workforce-panorama-img-wrap">
+                  <img src={aboutHeroBg} alt="Jay AMBE 120+ Plant Workforce" className="team-workforce-panorama-img" />
+                  <div className="team-workforce-panorama-gradient"></div>
+                  <div className="team-workforce-panorama-content">
+                    <span className="team-workforce-panorama-tag">SHOP FLOOR BROTHERHOOD &amp; CRAFTSMANSHIP</span>
+                    <h3 className="team-workforce-panorama-title">120+ Fabricators, Fitters &amp; Quality Auditors in Kalol</h3>
+                    <p className="team-workforce-panorama-desc">
+                      Every single dairy tank, pasteurizer, and milk can leaving our factory is shaped by the dedicated hands of our on-site team. We maintain 100% full-time, ASME-trained personnel with zero casual subcontracting.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="team-workforce-grid">
+                {workforceDivisions.map((div) => (
+                  <div key={div.id} className="team-workforce-card">
+                    <div className="team-workforce-img-wrap">
+                      <img src={div.image} alt={div.title} className="team-workforce-img" />
+                      <div className="team-workforce-img-overlay"></div>
+                      <span className="team-workforce-headcount">{div.headcount}</span>
+                    </div>
+                    <div className="team-workforce-content">
+                      <span className="team-workforce-badge">{div.badge}</span>
+                      <h4 className="team-workforce-title">{div.title}</h4>
+                      <p className="team-workforce-desc">{div.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Whole Team Summary Strip */}
+              <div className="team-workforce-summary-strip">
+                <div className="team-workforce-stat-item">
+                  <div className="team-workforce-stat-num">120+</div>
+                  <div className="team-workforce-stat-label">Full-Time Workforce</div>
+                  <div className="team-workforce-stat-sub">Fitters, machinists & fabricators</div>
+                </div>
+                <div className="team-workforce-stat-item">
+                  <div className="team-workforce-stat-num">18</div>
+                  <div className="team-workforce-stat-label">ASME Sec IX Welders</div>
+                  <div className="team-workforce-stat-sub">Argon TIG purging certified</div>
+                </div>
+                <div className="team-workforce-stat-item">
+                  <div className="team-workforce-stat-num">8,400 m²</div>
+                  <div className="team-workforce-stat-label">Shop Floor Operations</div>
+                  <div className="team-workforce-stat-sub">GIDC Kalol, Gujarat Campus</div>
+                </div>
+                <div className="team-workforce-stat-item">
+                  <div className="team-workforce-stat-num">100%</div>
+                  <div className="team-workforce-stat-label">In-House Manufacturing</div>
+                  <div className="team-workforce-stat-sub">From raw coil to dispatch</div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Minimal Bottom Trust Note */}
+          <div className="team-minimal-footer-strip">
+            <span className="team-minimal-footer-text">
+              120+ Workforce • 18 Certified ASME TIG Welders • 8,400 m² GIDC Kalol Campus
+            </span>
+            <a href="/#inquiry" onClick={handleQuoteClick} className="team-minimal-footer-cta">
+              Connect with Engineering Desk &rarr;
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 11. Leadership, Values and Final Trust CTA */}
       <section className="about-reveal-section leadership-section" style={{ padding: '100px 0', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
         <div className="container-centered">
           <div style={{ textAlign: 'center', marginBottom: '50px' }}>
@@ -773,6 +1046,8 @@ function AboutPage() {
           </div>
         </div>
       </section>
+
+
 
       <Footer />
     </div>

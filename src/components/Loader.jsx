@@ -21,9 +21,9 @@ export default function Loader({ onComplete }) {
   // Center circle
   const centerCircleRef = useRef(null);
   
-  // Cutout mask path
-  const maskPathRef = useRef(null);
+  // Laser cutter & laser line
   const laserCutterRef = useRef(null);
+  const laserCutLineRef = useRef(null);
   
   // Texts
   const textJayRef = useRef(null);
@@ -119,9 +119,10 @@ export default function Loader({ onComplete }) {
     });
 
     // Length calculations for SVG drawing animation
-    const rectLength = 440; // 100*2 + 120*2 approx
-    const circle1Length = 20; // 2 * pi * 3 approx
-    const circle2Length = 100; // 2 * pi * 16 approx
+    const rectLength = 550; // Total perimeter of sharp A emblem
+    const circle1Length = 25; // 2 * pi * 3.5 approx
+    const circle2Length = 95; // 2 * pi * 14 approx
+    const laserLineLength = 335; // 115.4 + 100 + 115.4
 
     // Reset initial animation states
     gsap.set(svgOutlineRef.current, { opacity: 0 });
@@ -136,7 +137,7 @@ export default function Loader({ onComplete }) {
     gsap.set(topDotRef.current, { y: -60, opacity: 0 });
     gsap.set(centerCircleRef.current, { y: -300, opacity: 0 });
     gsap.set(laserCutterRef.current, { opacity: 0 });
-    gsap.set(maskPathRef.current, { scaleY: 0, opacity: 0, transformOrigin: 'bottom' });
+    gsap.set(laserCutLineRef.current, { strokeDasharray: laserLineLength, strokeDashoffset: laserLineLength, opacity: 0 });
     
     gsap.set(textJayRef.current, { y: -15, opacity: 0 });
     gsap.set(textAmbeClipRef.current, { scaleX: 0 });
@@ -146,7 +147,7 @@ export default function Loader({ onComplete }) {
     tl.add(() => playSound('ambience'), 0.3);
 
     // Step 2: Draw outline dynamically in real time
-    tl.to(svgOutlineRef.current, { opacity: 0.25, duration: 0.2 }, 0.5);
+    tl.to(svgOutlineRef.current, { opacity: 0.35, duration: 0.2 }, 0.5);
     tl.to(outlineRectRef.current, { strokeDashoffset: 0, duration: 0.9, ease: 'power2.inOut' }, 0.5);
     tl.to(outlineCircle1Ref.current, { strokeDashoffset: 0, duration: 0.4, ease: 'power2.out' }, 0.6);
     tl.to(outlineCircle2Ref.current, { strokeDashoffset: 0, duration: 0.7, ease: 'power2.inOut' }, 0.7);
@@ -180,29 +181,40 @@ export default function Loader({ onComplete }) {
     tl.to(centerCircleRef.current, { y: 0, opacity: 1, duration: 0.45, ease: 'bounce.out' }, circleStart);
     tl.to(containerRef.current, { y: '+=4', duration: 0.04, repeat: 4, yoyo: true }, circleStart + 0.3);
 
-    // Step 6: Laser cutting cutout path animation
+    // Step 6: Laser precision weld / cut along inner contour
     const cutStart = 2.8;
     tl.add(() => playSound('laser'), cutStart);
     
-    // Trace outline cutter dot
-    tl.fromTo(laserCutterRef.current, { opacity: 0, x: 200, y: 45 }, { opacity: 1, duration: 0.08 }, cutStart);
-    tl.to(laserCutterRef.current, { x: 170, y: 140, duration: 0.18, ease: 'none' }, cutStart + 0.08);
-    tl.to(laserCutterRef.current, { x: 230, y: 140, duration: 0.18, ease: 'none' }, cutStart + 0.26);
-    tl.to(laserCutterRef.current, { x: 200, y: 45, duration: 0.18, ease: 'none' }, cutStart + 0.44);
-    tl.to(laserCutterRef.current, { opacity: 0, duration: 0.06 }, cutStart + 0.62);
+    // Trace sharp laser pointer around the inner contour
+    tl.fromTo(laserCutterRef.current, { opacity: 0, x: 200, y: 34 }, { opacity: 1, duration: 0.08 }, cutStart);
+    tl.to(laserCutterRef.current, { x: 150, y: 138, duration: 0.22, ease: 'power1.in' }, cutStart + 0.08);
+    
+    // Left tip spark burst
+    tl.add(() => {
+      const sparks = sparksRef.current.querySelectorAll('.spark-tip-left');
+      gsap.fromTo(sparks, { scale: 0, opacity: 1 }, { scale: 2, opacity: 0, duration: 0.25, ease: 'power2.out' });
+    }, cutStart + 0.30);
+    
+    tl.to(laserCutterRef.current, { x: 250, y: 138, duration: 0.18, ease: 'linear' }, cutStart + 0.30);
+    
+    // Right tip spark burst
+    tl.add(() => {
+      const sparks = sparksRef.current.querySelectorAll('.spark-tip-right');
+      gsap.fromTo(sparks, { scale: 0, opacity: 1 }, { scale: 2, opacity: 0, duration: 0.25, ease: 'power2.out' });
+    }, cutStart + 0.48);
+    
+    tl.to(laserCutterRef.current, { x: 200, y: 34, duration: 0.22, ease: 'power1.out' }, cutStart + 0.48);
+    tl.to(laserCutterRef.current, { opacity: 0, duration: 0.06 }, cutStart + 0.70);
 
-    // Reveal negative triangle cutout from bottom up
-    tl.to(maskPathRef.current, {
-      scaleY: 1,
-      opacity: 1,
-      duration: 0.45,
-      ease: 'power2.inOut'
-    }, cutStart + 0.1);
+    // Glowing laser incision line
+    tl.to(laserCutLineRef.current, { opacity: 0.8, duration: 0.1 }, cutStart + 0.08);
+    tl.to(laserCutLineRef.current, { strokeDashoffset: 0, duration: 0.62, ease: 'linear' }, cutStart + 0.08);
+    tl.to(laserCutLineRef.current, { opacity: 0, duration: 0.25, ease: 'power2.in' }, cutStart + 0.70);
 
     // Hide outline
     tl.to(svgOutlineRef.current, { opacity: 0, duration: 0.2 }, cutStart);
 
-    // Step 7: Typography Reveals (Sleek Apple style motion)
+    // Step 7: Typography Reveals (Sleek motion aligned under sharp emblem)
     const textStart = 3.5;
     
     // Jay slides down slightly and fades in
@@ -211,7 +223,7 @@ export default function Loader({ onComplete }) {
     // AMBE slides right reveal
     tl.to(textAmbeClipRef.current, { scaleX: 1, duration: 0.48, ease: 'power3.inOut' }, textStart + 0.08);
     
-    // Industries slides up and tracking expands slightly in CSS
+    // Industries slides up and reveals
     tl.to(textIndustriesRef.current, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, textStart + 0.22);
 
     // Step 8: Polished metallic light sweep
@@ -242,42 +254,82 @@ export default function Loader({ onComplete }) {
   return (
     <div className="jayambe-loader-screen" ref={containerRef}>
       <div className="loader-logo-wrapper">
-        <svg className="loader-logo-svg" viewBox="0 0 400 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg 
+          className="loader-logo-svg" 
+          viewBox="0 0 400 350" 
+          fill="none" 
+          xmlns="http://www.w3.org/2000/svg"
+          shapeRendering="geometricPrecision"
+          textRendering="geometricPrecision"
+        >
           <defs>
             <clipPath id="ambe-clip">
-              <rect ref={textAmbeClipRef} x="90" y="270" width="220" height="40" style={{ transformOrigin: 'left' }} />
+              <rect ref={textAmbeClipRef} x="60" y="175" width="280" height="48" style={{ transformOrigin: 'left' }} />
             </clipPath>
           </defs>
 
           {/* Dynamic Laser Drawing Outline Layer */}
           <g ref={svgOutlineRef} className="outline-layer">
-            <rect ref={outlineRectRef} x="150" y="20" width="100" height="120" stroke="#c91c1c" strokeWidth="1" />
-            <circle ref={outlineCircle1Ref} cx="200" cy="10" r="3" stroke="#c91c1c" strokeWidth="1" />
-            <circle ref={outlineCircle2Ref} cx="200" cy="102" r="16" stroke="#c91c1c" strokeWidth="1" />
+            <path 
+              ref={outlineRectRef} 
+              d="M150,32 L250,32 L250,138 L200,34 L150,138 Z" 
+              stroke="#c91c1c" 
+              strokeWidth="1.2" 
+              strokeLinejoin="miter" 
+              strokeMiterlimit="10" 
+              fill="none" 
+            />
+            <circle ref={outlineCircle1Ref} cx="200" cy="22" r="3.5" stroke="#c91c1c" strokeWidth="1" fill="none" />
+            <circle ref={outlineCircle2Ref} cx="200" cy="104" r="14" stroke="#c91c1c" strokeWidth="1" fill="none" />
           </g>
 
-          {/* Solid Left block */}
-          <path ref={leftPanelRef} d="M150,20 L200,20 L200,140 L150,140 Z" fill="#c91c1c" />
+          {/* Sharp Left Panel with Acute Needle Point */}
+          <path 
+            ref={leftPanelRef} 
+            d="M150,32 L200,32 L200,34 L150,138 Z" 
+            fill="#c91c1c" 
+            stroke="#c91c1c" 
+            strokeWidth="0.5" 
+            strokeLinejoin="miter" 
+            strokeMiterlimit="10" 
+          />
           
-          {/* Solid Right block */}
-          <path ref={rightPanelRef} d="M200,20 L250,20 L250,140 L200,140 Z" fill="#c91c1c" />
-
-          {/* Mask / Cutout layer to create the 'A' negative space */}
-          <polygon ref={maskPathRef} points="200,45 170,140 230,140" fill="#ffffff" />
+          {/* Sharp Right Panel with Acute Needle Point */}
+          <path 
+            ref={rightPanelRef} 
+            d="M200,32 L250,32 L250,138 L200,34 Z" 
+            fill="#c91c1c" 
+            stroke="#c91c1c" 
+            strokeWidth="0.5" 
+            strokeLinejoin="miter" 
+            strokeMiterlimit="10" 
+          />
 
           {/* Small red dot on top */}
-          <circle ref={topDotRef} cx="200" cy="10" r="3" fill="#c91c1c" />
+          <circle ref={topDotRef} cx="200" cy="22" r="3.5" fill="#c91c1c" />
 
           {/* Central red circle */}
-          <circle ref={centerCircleRef} cx="200" cy="102" r="16" fill="#c91c1c" />
+          <circle ref={centerCircleRef} cx="200" cy="104" r="14" fill="#c91c1c" />
 
-          {/* Texts matching exact layout */}
+          {/* Laser Incision Glowing Seam */}
+          <path 
+            ref={laserCutLineRef} 
+            d="M200,34 L150,138 L250,138 Z" 
+            stroke="#ff3333" 
+            strokeWidth="1.8" 
+            strokeLinejoin="miter" 
+            strokeMiterlimit="10" 
+            fill="none" 
+            filter="drop-shadow(0 0 5px #ff1a1a)" 
+          />
+
+          {/* Texts matching exact layout and brand typography */}
           <g className="logo-texts">
-            <text ref={textJayRef} x="200" y="260" className="text-element-jay" textAnchor="middle">Jay</text>
+            <text ref={textJayRef} x="200" y="172" className="text-element-jay" textAnchor="middle">Jay</text>
             <g clipPath="url(#ambe-clip)">
-              <text ref={textAmbeRef} x="200" y="300" className="text-element-ambe" textAnchor="middle">AMBE</text>
+              <text ref={textAmbeRef} x="200" y="215" className="text-element-ambe" textAnchor="middle">AMBE</text>
             </g>
-            <text ref={textIndustriesRef} x="200" y="325" className="text-element-ind" textAnchor="middle">Industries</text>
+            <text ref={textIndustriesRef} x="200" y="244" className="text-element-ind" textAnchor="middle">Industries</text>
           </g>
 
           {/* Laser Cut pointer */}
@@ -288,9 +340,11 @@ export default function Loader({ onComplete }) {
 
         <svg ref={sparksRef} className="sparks-layer" viewBox="0 0 400 350">
           <circle className="spark-left" cx="150" cy="80" r="2.5" fill="#ffb300" />
-          <circle className="spark-left" cx="170" cy="120" r="1.5" fill="#ff4d00" />
+          <circle className="spark-left" cx="150" cy="138" r="2" fill="#ff4d00" />
           <circle className="spark-right" cx="250" cy="80" r="2.5" fill="#ffb300" />
-          <circle className="spark-right" cx="230" cy="120" r="1.5" fill="#ff4d00" />
+          <circle className="spark-right" cx="250" cy="138" r="2" fill="#ff4d00" />
+          <circle className="spark-tip-left" cx="150" cy="138" r="3" fill="#ffdd00" opacity="0" />
+          <circle className="spark-tip-right" cx="250" cy="138" r="3" fill="#ffdd00" opacity="0" />
         </svg>
       </div>
     </div>
