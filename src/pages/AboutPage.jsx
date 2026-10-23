@@ -30,6 +30,7 @@ gsap.registerPlugin(ScrollTrigger);
 function AboutPage() {
   const navigate = useNavigate();
   const [teamViewTab, setTeamViewTab] = useState('leadership');
+  const [profileModalOpen, setProfileModalOpen] = useState(false);
 
   const milestones = [
     {
@@ -292,14 +293,38 @@ function AboutPage() {
   }, []);
 
   const handleQuoteClick = (e) => {
-    e.preventDefault();
+    if (e) e.preventDefault();
     navigate('/#inquiry');
   };
 
   const handleManufacturingClick = (e) => {
-    e.preventDefault();
-    const el = document.querySelector('#capability-section');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    if (e) e.preventDefault();
+    const el = document.getElementById('capability-section') || document.querySelector('.capability-section');
+    if (el) {
+      const navOffset = 80;
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    } else {
+      navigate('/manufacturing');
+    }
+  };
+
+  const handleMeetTeamClick = (e) => {
+    if (e) e.preventDefault();
+    const el = document.getElementById('team') || document.getElementById('team-section') || document.querySelector('.about-team-minimal-section');
+    if (el) {
+      const navOffset = 80;
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
 
@@ -331,24 +356,30 @@ function AboutPage() {
           </p>
 
           <div className="hero-cta-group" style={{ display: 'flex', gap: '16px', marginTop: '32px', flexWrap: 'wrap' }}>
-            <button onClick={handleManufacturingClick} className="vort-btn-primary" style={{ cursor: 'pointer' }}>
+            <button 
+              type="button"
+              onClick={handleManufacturingClick} 
+              className="vort-btn-primary" 
+              style={{ cursor: 'pointer' }}
+            >
               Explore Our Manufacturing &rarr;
             </button>
             <button 
-              onClick={() => {
-                const el = document.querySelector('#team-section');
-                if (el) el.scrollIntoView({ behavior: 'smooth' });
-              }} 
+              type="button"
+              onClick={handleMeetTeamClick} 
               className="vort-btn-secondary" 
               style={{ border: '1px solid rgba(255,255,255,0.3)', color: '#ffffff', background: 'rgba(255,255,255,0.05)', cursor: 'pointer' }}
             >
-              Meet Our Team ↓
+              Meet Our Team &darr;
             </button>
-            <a href="/#inquiry" onClick={handleQuoteClick} style={{ textDecoration: 'none' }}>
-              <button className="vort-btn-secondary" style={{ border: '1px solid rgba(255,255,255,0.3)', color: '#ffffff', background: 'rgba(255,255,255,0.05)', cursor: 'pointer' }}>
-                Download Company Profile ↓
-              </button>
-            </a>
+            <button 
+              type="button"
+              onClick={() => setProfileModalOpen(true)}
+              className="vort-btn-secondary" 
+              style={{ border: '1px solid rgba(255,255,255,0.3)', color: '#ffffff', background: 'rgba(255,255,255,0.05)', cursor: 'pointer' }}
+            >
+              Download Company Profile &darr;
+            </button>
           </div>
         </div>
       </header>
@@ -816,7 +847,8 @@ function AboutPage() {
       </section>
 
       {/* 10. Minimal Leadership & Engineering Minds Section */}
-      <section className="about-reveal-section about-team-minimal-section" id="team">
+      <section className="about-reveal-section about-team-minimal-section" id="team" data-section="team-section">
+        <div id="team-section" style={{ position: 'relative', top: '-80px', visibility: 'hidden' }}></div>
         <div className="container-centered">
           
           {/* Header */}
@@ -1039,15 +1071,84 @@ function AboutPage() {
               <a href="/#inquiry" onClick={handleQuoteClick} className="vort-btn-secondary" style={{ textDecoration: 'none', background: '#ffffff', color: '#111111' }}>
                 Request a Quote
               </a>
-              <a href="/#inquiry" onClick={handleQuoteClick} className="vort-btn-secondary" style={{ textDecoration: 'none', border: '1px solid rgba(255,255,255,0.3)', color: '#ffffff' }}>
-                Download Company Profile ↓
-              </a>
+              <button 
+                type="button"
+                onClick={() => setProfileModalOpen(true)}
+                className="vort-btn-secondary" 
+                style={{ border: '1px solid rgba(255,255,255,0.3)', color: '#ffffff', background: 'transparent', cursor: 'pointer' }}
+              >
+                Download Company Profile &darr;
+              </button>
             </div>
           </div>
         </div>
       </section>
 
+      {/* COMPANY PROFILE MODAL */}
+      {profileModalOpen && (
+        <div className="catalogue-modal-overlay" onClick={() => setProfileModalOpen(false)}>
+          <div className="catalogue-modal-card" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '580px', background: '#141414', border: '1px solid rgba(255,255,255,0.14)', color: '#ffffff', borderRadius: '18px', padding: '32px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '18px' }}>
+              <div>
+                <span className="text-label-caps accent-red" style={{ fontSize: '11px', letterSpacing: '0.12em', fontWeight: 700 }}>CORPORATE OVERVIEW</span>
+                <h3 style={{ fontFamily: 'var(--font-headline)', fontSize: '22px', fontWeight: 700, color: '#ffffff', margin: '4px 0 0 0' }}>
+                  Jay AMBE Industries Company Profile
+                </h3>
+              </div>
+              <button 
+                type="button" 
+                onClick={() => setProfileModalOpen(false)}
+                style={{ background: 'none', border: 'none', color: '#aaaaaa', fontSize: '22px', cursor: 'pointer', padding: '0 4px', lineHeight: 1 }}
+              >
+                ✕
+              </button>
+            </div>
 
+            <p style={{ fontSize: '14px', lineHeight: 1.6, color: '#cccccc', margin: '0 0 20px 0' }}>
+              Official technical capability brief covering our 8,400 m² Kalol manufacturing infrastructure, ASME Section IX welding procedures, certified metallurgy (SS304 / SS316L), and global export portfolio.
+            </p>
+
+            <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '16px', marginBottom: '24px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px', fontSize: '12.5px' }}>
+                <div><span style={{ color: '#888888' }}>Facility Size:</span> <strong style={{ color: '#ffffff' }}>8,400 m² Complex</strong></div>
+                <div><span style={{ color: '#888888' }}>Welding:</span> <strong style={{ color: '#ffffff' }}>ASME Sec IX Certified</strong></div>
+                <div><span style={{ color: '#888888' }}>Materials:</span> <strong style={{ color: '#ffffff' }}>SS304 / SS316L Food-Grade</strong></div>
+                <div><span style={{ color: '#888888' }}>Finishing:</span> <strong style={{ color: '#ffffff' }}>Ra &lt; 0.4 µm Mirror Buff</strong></div>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+              <button 
+                type="button"
+                onClick={() => {
+                  window.print();
+                }}
+                className="vort-btn-primary" 
+                style={{ flex: '1 1 180px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
+              >
+                <span>Print / Save Dossier (PDF)</span>
+                <span>&darr;</span>
+              </button>
+              <button 
+                type="button"
+                onClick={() => {
+                  setProfileModalOpen(false);
+                  navigate('/contact', {
+                    state: {
+                      enquiryType: 'Company Profile Request',
+                      message: 'Requesting the comprehensive Jay AMBE Industries Corporate Dossier, equipment specification catalog, and client reference list.'
+                    }
+                  });
+                }}
+                className="vort-btn-secondary" 
+                style={{ flex: '1 1 180px', border: '1px solid rgba(255,255,255,0.2)', color: '#ffffff', background: 'rgba(255,255,255,0.06)' }}
+              >
+                Request Full Dossier by Email &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>
