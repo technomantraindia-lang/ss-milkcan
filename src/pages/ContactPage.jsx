@@ -369,11 +369,15 @@ function ContactPage() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', fontSize: '14px' }}>
                 <div>
                   <span style={{ display: 'block', fontSize: '11px', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', fontFamily: 'var(--font-tech)', letterSpacing: '0.05em' }}>PHONE CALL DIRECT</span>
-                  <a href="tel:+919904000000" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 700, fontSize: '16px', display: 'block', marginTop: '3px' }}>+91 9904X XXXXX</a>
+                  <div style={{ marginTop: '4px', display: 'flex', flexDirection: 'column', gap: '3px' }}>
+                    <a href="tel:+919712095950" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 700, fontSize: '15px' }}>+91 97120 95950</a>
+                    <a href="tel:+919727095950" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 700, fontSize: '15px' }}>+91 97270 95950</a>
+                    <a href="tel:+918141095950" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 700, fontSize: '15px' }}>+91 81410 95950</a>
+                  </div>
                 </div>
                 <div>
                   <span style={{ display: 'block', fontSize: '11px', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', fontFamily: 'var(--font-tech)', letterSpacing: '0.05em' }}>EMAIL COMMUNICATIONS</span>
-                  <a href="mailto:info@jayambeindustries.example.com" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 700, display: 'block', marginTop: '3px' }}>info@jayambeindustries.example.com</a>
+                  <a href="mailto:milkcan@ssmilkcan.com" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 700, display: 'block', marginTop: '3px' }}>milkcan@ssmilkcan.com</a>
                 </div>
                 <div>
                   <span style={{ display: 'block', fontSize: '11px', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', fontFamily: 'var(--font-tech)', letterSpacing: '0.05em' }}>WORKING TIMES</span>
@@ -382,7 +386,7 @@ function ContactPage() {
               </div>
 
               <div style={{ marginTop: '24px', display: 'flex', gap: '12px' }}>
-                <a href="tel:+919904000000" className="vort-btn-primary" style={{ display: 'inline-block', textDecoration: 'none', fontSize: '12px', padding: '10px 20px' }}>
+                <a href="tel:+919712095950" className="vort-btn-primary" style={{ display: 'inline-block', textDecoration: 'none', fontSize: '12px', padding: '10px 20px' }}>
                   Call Sales Team
                 </a>
               </div>
@@ -401,11 +405,15 @@ function ContactPage() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', fontSize: '14px' }}>
                 <div>
                   <span style={{ display: 'block', fontSize: '11px', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', fontFamily: 'var(--font-tech)', letterSpacing: '0.05em' }}>EXPORT WHATSAPP & PHONE</span>
-                  <a href="https://wa.me/919825000000" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 700, fontSize: '16px', display: 'block', marginTop: '3px' }}>+91 9825X XXXXX</a>
+                  <div style={{ marginTop: '4px', display: 'flex', flexDirection: 'column', gap: '3px' }}>
+                    <a href="https://wa.me/919712095950" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 700, fontSize: '15px' }}>+91 97120 95950</a>
+                    <a href="https://wa.me/919727095950" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 700, fontSize: '15px' }}>+91 97270 95950</a>
+                    <a href="https://wa.me/918141095950" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 700, fontSize: '15px' }}>+91 81410 95950</a>
+                  </div>
                 </div>
                 <div>
                   <span style={{ display: 'block', fontSize: '11px', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', fontFamily: 'var(--font-tech)', letterSpacing: '0.05em' }}>EXPORT INQUIRIES</span>
-                  <a href="mailto:exports@jayambeindustries.com" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 700, display: 'block', marginTop: '3px' }}>exports@jayambeindustries.com</a>
+                  <a href="mailto:milkcan@ssmilkcan.com" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 700, display: 'block', marginTop: '3px' }}>milkcan@ssmilkcan.com</a>
                 </div>
                 <div>
                   <span style={{ display: 'block', fontSize: '11px', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', fontFamily: 'var(--font-tech)', letterSpacing: '0.05em' }}>INTERNATIONAL DISPATCH REGIONS</span>
@@ -414,10 +422,10 @@ function ContactPage() {
               </div>
 
               <div style={{ marginTop: '24px', display: 'flex', gap: '12px' }}>
-                <a href="https://wa.me/919825000000" target="_blank" rel="noopener noreferrer" className="vort-btn-primary" style={{ display: 'inline-block', textDecoration: 'none', fontSize: '12px', padding: '10px 20px', background: '#25D366', borderColor: '#25D366' }}>
+                <a href="https://wa.me/919712095950" target="_blank" rel="noopener noreferrer" className="vort-btn-primary" style={{ display: 'inline-block', textDecoration: 'none', fontSize: '12px', padding: '10px 20px', background: '#25D366', borderColor: '#25D366' }}>
                   Message on WhatsApp
                 </a>
-                <a href="mailto:exports@jayambeindustries.com" className="vort-btn-outline-light" style={{ display: 'inline-block', textDecoration: 'none', fontSize: '12px', padding: '10px 20px', border: '1px solid rgba(255,255,255,0.2)' }}>
+                <a href="mailto:milkcan@ssmilkcan.com" className="vort-btn-outline-light" style={{ display: 'inline-block', textDecoration: 'none', fontSize: '12px', padding: '10px 20px', border: '1px solid rgba(255,255,255,0.2)' }}>
                   Email Export Team
                 </a>
               </div>
@@ -435,7 +443,7 @@ function ContactPage() {
             <div className="contact-map-container" style={{ borderRadius: '20px', overflow: 'hidden', border: '1px solid rgba(0,0,0,0.08)', height: '400px', width: '100%' }}>
               <iframe 
                 title="Jay Ambe Industries Factory Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.3323049186676!2d72.8687313!3d22.6786851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e5ad161bcfc23%3A0xea8de54f686c0c28!2sJAY%20AMBE%20INDUSTRIES!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                src="https://maps.google.com/maps?q=Plot+No+27+GIDC+Estate+Kalol+389330+Panchmahal+Gujarat+India&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
@@ -455,8 +463,8 @@ function ContactPage() {
                 <div>
                   <h4 style={{ fontFamily: 'var(--font-headline)', fontSize: '16px', color: '#111111', margin: '0 0 4px 0' }}>Factory Address</h4>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: '14.5px', color: '#444444', lineHeight: 1.6, margin: 0 }}>
-                    Plot No. 42-A, GIDC Industrial Estate,<br />
-                    Nadiad, Gujarat - 387001, India
+                    Plot No 27 , GIDC Estate, Kalol - 389330,<br />
+                    Panchmahal, Gujarat , INDIA
                   </p>
                 </div>
 
@@ -468,10 +476,10 @@ function ContactPage() {
                 </div>
 
                 <div style={{ display: 'flex', gap: '14px', marginTop: '10px' }}>
-                  <a href="https://maps.google.com/?q=JAY+AMBE+INDUSTRIES+Nadiad+GIDC" target="_blank" rel="noopener noreferrer" className="vort-btn-primary" style={{ display: 'inline-block', textDecoration: 'none', fontSize: '13px' }}>
+                  <a href="https://maps.google.com/?q=Plot+No+27+GIDC+Estate+Kalol+389330+Panchmahal+Gujarat+India" target="_blank" rel="noopener noreferrer" className="vort-btn-primary" style={{ display: 'inline-block', textDecoration: 'none', fontSize: '13px' }}>
                     Get Directions
                   </a>
-                  <a href="tel:+919904000000" className="vort-btn-outline-light" style={{ display: 'inline-block', textDecoration: 'none', fontSize: '13px', border: '1px solid rgba(0,0,0,0.15)', color: '#111111' }}>
+                  <a href="tel:+919712095950" className="vort-btn-outline-light" style={{ display: 'inline-block', textDecoration: 'none', fontSize: '13px', border: '1px solid rgba(0,0,0,0.15)', color: '#111111' }}>
                     Schedule a Visit
                   </a>
                 </div>

@@ -672,7 +672,7 @@ function AboutPage() {
               Infrastructure Designed for Reliable Manufacturing
             </h2>
             <p style={{ fontSize: '15px', color: '#666666', marginTop: '10px' }}>
-              Real manufacturing premise in GIDC Kalol, Panchmahal, Gujarat equipped for heavy fabrication.
+              Real manufacturing premise at Plot No 27 , GIDC Estate, Kalol - 389330, Panchmahal, Gujarat equipped for heavy fabrication.
             </p>
           </div>
 

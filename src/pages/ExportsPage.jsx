@@ -662,7 +662,7 @@ function ExportsPage() {
                     <span style={{ color: 'var(--color-red)', fontSize: '16px' }}>✉</span>
                   </div>
                   <div>
-                    <span style={{ fontFamily: 'var(--font-headline)', fontSize: '14px', fontWeight: 600, color: '#ffffff' }}>exports@jayambeindustries.com</span>
+                    <a href="mailto:milkcan@ssmilkcan.com" style={{ fontFamily: 'var(--font-headline)', fontSize: '14px', fontWeight: 600, color: '#ffffff', textDecoration: 'none' }}>milkcan@ssmilkcan.com</a>
                     <span style={{ display: 'block', fontSize: '12px', color: '#777', marginTop: '2px' }}>Export Division Email</span>
                   </div>
                 </div>
@@ -672,8 +672,12 @@ function ExportsPage() {
                     <span style={{ color: 'var(--color-red)', fontSize: '16px' }}>☎</span>
                   </div>
                   <div>
-                    <span style={{ fontFamily: 'var(--font-headline)', fontSize: '14px', fontWeight: 600, color: '#ffffff' }}>+91 98250 XXXXX</span>
-                    <span style={{ display: 'block', fontSize: '12px', color: '#777', marginTop: '2px' }}>WhatsApp / Phone</span>
+                    <span style={{ fontFamily: 'var(--font-headline)', fontSize: '14px', fontWeight: 600, color: '#ffffff', display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                      <a href="tel:+919712095950" style={{ color: 'inherit', textDecoration: 'none' }}>+91 97120 95950</a>
+                      <a href="tel:+919727095950" style={{ color: 'inherit', textDecoration: 'none' }}>+91 97270 95950</a>
+                      <a href="tel:+918141095950" style={{ color: 'inherit', textDecoration: 'none' }}>+91 81410 95950</a>
+                    </span>
+                    <span style={{ display: 'block', fontSize: '12px', color: '#777', marginTop: '2px' }}>WhatsApp / Direct Contact</span>
                   </div>
                 </div>
               </div>

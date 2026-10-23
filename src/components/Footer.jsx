@@ -69,15 +69,24 @@ function Footer() {
             <div className="footer-col-links">
               <div className="footer-contact-row">
                 <span className="footer-contact-label">FACTORY SITE</span>
-                <span className="footer-contact-val">Plot No. 42-A, GIDC Industrial Estate, Gujarat, India</span>
+                <span className="footer-contact-val">
+                  Plot No 27 , GIDC Estate, Kalol - 389330<br />
+                  Panchmahal, Gujarat , INDIA
+                </span>
               </div>
               <div className="footer-contact-row">
                 <span className="footer-contact-label">TELEPHONE</span>
-                <span className="footer-contact-val">+91 9904X XXXXX</span>
+                <span className="footer-contact-val">
+                  <a href="tel:+919712095950" style={{ color: 'inherit', textDecoration: 'none' }}>+91 97120 95950</a><br />
+                  <a href="tel:+919727095950" style={{ color: 'inherit', textDecoration: 'none' }}>+91 97270 95950</a><br />
+                  <a href="tel:+918141095950" style={{ color: 'inherit', textDecoration: 'none' }}>+91 81410 95950</a>
+                </span>
               </div>
               <div className="footer-contact-row">
                 <span className="footer-contact-label">CORRESPONDENCE EMAIL</span>
-                <span className="footer-contact-val">info@jayambeindustries.example.com</span>
+                <span className="footer-contact-val">
+                  <a href="mailto:milkcan@ssmilkcan.com" style={{ color: 'inherit', textDecoration: 'none' }}>milkcan@ssmilkcan.com</a>
+                </span>
               </div>
             </div>
           </div>

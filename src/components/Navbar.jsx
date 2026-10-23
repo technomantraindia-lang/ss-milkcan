@@ -133,8 +133,9 @@ function Navbar() {
               Request a Fast Quote &rarr;
             </Link>
             <div className="mobile-contact-snippet">
-              <p>📞 <a href="tel:+919426360756">+91 94263 60756</a></p>
-              <p>✉️ <a href="mailto:jayambeindustries111@gmail.com">jayambeindustries111@gmail.com</a></p>
+              <p>📞 <a href="tel:+919712095950">+91 97120 95950</a></p>
+              <p>📞 <a href="tel:+919727095950">+91 97270 95950</a> / <a href="tel:+918141095950">+91 81410 95950</a></p>
+              <p>✉️ <a href="mailto:milkcan@ssmilkcan.com">milkcan@ssmilkcan.com</a></p>
             </div>
           </div>
         </div>

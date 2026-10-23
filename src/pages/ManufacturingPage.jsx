@@ -295,7 +295,7 @@ function ManufacturingPage() {
               <div className="facility-specs-list">
                 <div className="fac-spec">
                   <span className="fac-spec-label">LOCATION</span>
-                  <span className="fac-spec-val">Kalol, Panchmahal, Gujarat, India</span>
+                  <span className="fac-spec-val">Plot No 27 , GIDC Estate, Kalol - 389330, Panchmahal, Gujarat , INDIA</span>
                 </div>
                 <div className="fac-spec">
                   <span className="fac-spec-label">WORKZONES</span>
